@@ -6,6 +6,10 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+/*
+* WindowHandler takes care of showing the right content on the screen
+*/
+
 public class WindowHandler implements Runnable{
     
     private CardLayout cardlayout;

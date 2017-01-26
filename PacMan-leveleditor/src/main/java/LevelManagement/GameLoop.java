@@ -14,6 +14,7 @@ public class GameLoop implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         lr.move();
+        lr.checkCollision();
         lr.repaint();
     }
     
