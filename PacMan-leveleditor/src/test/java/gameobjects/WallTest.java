@@ -1,4 +1,4 @@
-package gameobjecttests;
+package gameobjects;
 
 import gameobjects.Direction;
 import gameobjects.PacMan;

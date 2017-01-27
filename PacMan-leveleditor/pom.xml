@@ -38,7 +38,7 @@
                         <param>gameobjects.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>gameobjecttests.*</param>
+                        <param>gameobjects.*</param>
                     </targetTests>
                 </configuration>
             </plugin>
