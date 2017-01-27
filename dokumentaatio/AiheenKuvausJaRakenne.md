@@ -11,4 +11,5 @@ Muokkaustilassa käyttäjä voi aloittaa uuden tason rakentamisen, muokata vanha
 ####Pelikomponentit:
 Pacman, haamut, pistekuplat, powerpelletit, seinät.
 ####Tietojen säilyttäminen:
-Luodut tasot ja niissä saadut huipputulokset tallennetaan tietokantoihin, joka mahdollistaa luotujen tasojen pelaamisen myös ohjelman sulkemisen jälkeen. Näin myös tasoissa saadut pisteet pysyvät tiedossa. 
+Luodut tasot ja niissä saadut huipputulokset tallennetaan tietokantoihin, joka mahdollistaa luotujen tasojen pelaamisen myös ohjelman sulkemisen jälkeen. Näin myös tasoissa saadut pisteet pysyvät tiedossa.
+###Määrittelyvaiheen luokkakaavio:
