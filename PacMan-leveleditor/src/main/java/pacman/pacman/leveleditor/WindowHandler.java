@@ -28,7 +28,7 @@ public class WindowHandler implements Runnable{
         JFrame frame = new JFrame("PacMan");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        frame.setPreferredSize(new Dimension(960, 640));
+        frame.getContentPane().setPreferredSize(new Dimension(960, 640));
         frame.setResizable(false);
         frame.add(cardPanel);
         frame.pack();

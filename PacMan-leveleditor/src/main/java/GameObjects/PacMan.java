@@ -6,12 +6,13 @@ import java.awt.Rectangle;
 public class PacMan implements GameObject {
 
     private int x, y, move;
-    private Direction d;
+    private Direction current, changed;
 
     public PacMan(int x, int y, Direction d) {
-        this.x = x;
-        this.y = y;
-        this.d = d;
+        this.x = 32 * x - 32;
+        this.y = 32 * y - 32;
+        this.current = d;
+        this.changed = d;
         this.move = 2;
     }
 
@@ -22,54 +23,67 @@ public class PacMan implements GameObject {
 
     @Override
     public void move() {
-        if (this.d == Direction.Right) {
+        if (this.current == Direction.Right) {
             x += move;
-        } else if (this.d == Direction.Left) {
+        } else if (this.current == Direction.Left) {
             x -= move;
-        } else if (this.d == Direction.Down) {
+        } else if (this.current == Direction.Down) {
             y += move;
-        } else if (this.d == Direction.Up) {
+        } else if (this.current == Direction.Up) {
             y -= move;
         }
-        if(x > 960){
+        outOfScreen();
+        changeDirection();
+    }
+
+    public void outOfScreen() {
+        if (x > 960) {
             x = -32;
-        } else if (x < -32){
+        } else if (x < -32) {
             x = 960;
         }
-        if(y > 640){
+        if (y > 640) {
             y = -32;
-        } else if (y < -32){
+        } else if (y < -32) {
             y = 640;
         }
     }
 
+    public void changeDirection() {
+        if (x >= 0 && x <= 928 && y >= 0 && y <= 608) {
+            if (x % 16 == 0 && y % 16 == 0) {
+                current = changed;
+            }
+        }
+    }
+
     public void right() {
-        this.d = Direction.Right;
+        this.changed = Direction.Right;
     }
 
     public void left() {
-        this.d = Direction.Left;
+        this.changed = Direction.Left;
     }
 
     public void down() {
-        this.d = Direction.Down;
+        this.changed = Direction.Down;
     }
 
     public void up() {
-        this.d = Direction.Up;
+        this.changed = Direction.Up;
     }
-    
-    public void stop(){
-        if(d == Direction.Right){
+
+    public void stop() {
+        if (current == Direction.Right) {
             x -= move;
-        } else if(d == Direction.Left){
+        } else if (current == Direction.Left) {
             x += move;
-        } else if(d == Direction.Down){
+        } else if (current == Direction.Down) {
             y -= move;
-        } else if(d == Direction.Up){
+        } else if (current == Direction.Up) {
             y += move;
         }
-        this.d = Direction.Stop;
+        this.current = Direction.Stop;
     }
 
     @Override
@@ -80,5 +94,23 @@ public class PacMan implements GameObject {
     @Override
     public boolean checkCollision(PacMan pacman) {
         return false;
+    }
+    
+    //Following classes are for test purposes
+
+    public int getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
+    }
+    public int getMove() {
+        return move;
+    }
+    public Direction getCurrent() {
+        return current;
+    }
+    public Direction getChanged() {
+        return changed;
     }
 }

@@ -33,6 +33,14 @@
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
                 <version>1.1.8</version>
+                <configuration>
+                    <targetClasses>
+                        <param>GameObjects.*</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>GameObjectTests.*</param>
+                    </targetTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>

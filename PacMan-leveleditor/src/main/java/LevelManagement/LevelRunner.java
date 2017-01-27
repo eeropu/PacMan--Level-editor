@@ -16,9 +16,8 @@ public class LevelRunner extends JPanel{
 
     public LevelRunner() {
         gl = new GameLoop(this);
-        pacman = new PacMan(100, 100, Direction.Right);
-        w = new Wall(0, 0);
-        
+        pacman = new PacMan(19, 19, Direction.Right);
+        w = new Wall(15, 15);
         ControlSetUp csu = new ControlSetUp(this);
         
         timer = new Timer(10, gl);

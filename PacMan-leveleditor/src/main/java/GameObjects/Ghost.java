@@ -1,24 +1,27 @@
 package GameObjects;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-public class Wall implements GameObject{
+public class Ghost implements GameObject{
     
-    private int x, y;
+    int x, y;
 
-    public Wall(int x, int y) {
-        this.x = 32 * x - 32;
-        this.y = 32 * y - 32;
+    public Ghost(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
     @Override
     public void paint(Graphics g) {
+        g.setColor(Color.red);
         g.fillRect(x, y, 32, 32);
     }
 
     @Override
     public void move() {
+        
     }
 
     @Override
@@ -28,17 +31,7 @@ public class Wall implements GameObject{
 
     @Override
     public boolean checkCollision(PacMan pacman) {
-        return this.getBounds().intersects(pacman.getBounds());
-    }
-    
-    //Following classes are for test purposes
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
+        return getBounds().intersects(pacman.getBounds());
     }
     
 }
