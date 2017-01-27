@@ -1,17 +1,16 @@
 package pacman.pacman.leveleditor;
 
-import LevelManagement.LevelRunner;
+import levelmanagement.LevelRunner;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /*
-* WindowHandler takes care of showing the right content on the screen
-*/
+ * WindowHandler takes care of showing the right content on the screen
+ */
+public class WindowHandler implements Runnable {
 
-public class WindowHandler implements Runnable{
-    
     private CardLayout cardlayout;
     private JPanel cardPanel;
 
@@ -33,5 +32,5 @@ public class WindowHandler implements Runnable{
         frame.add(cardPanel);
         frame.pack();
     }
-    
+
 }

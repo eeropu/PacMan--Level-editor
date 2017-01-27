@@ -1,10 +1,10 @@
-package LevelManagement;
+package levelmanagement;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GameLoop implements ActionListener{
-    
+public class GameLoop implements ActionListener {
+
     private LevelRunner lr;
 
     public GameLoop(LevelRunner lr) {
@@ -17,5 +17,5 @@ public class GameLoop implements ActionListener{
         lr.checkCollision();
         lr.repaint();
     }
-    
+
 }

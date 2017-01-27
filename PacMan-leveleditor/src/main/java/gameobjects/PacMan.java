@@ -1,4 +1,4 @@
-package GameObjects;
+package gameobjects;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
@@ -95,21 +95,24 @@ public class PacMan implements GameObject {
     public boolean checkCollision(PacMan pacman) {
         return false;
     }
-    
-    //Following classes are for test purposes
 
+    //Following classes are for test purposes
     public int getX() {
         return x;
     }
+
     public int getY() {
         return y;
     }
+
     public int getMove() {
         return move;
     }
+
     public Direction getCurrent() {
         return current;
     }
+
     public Direction getChanged() {
         return changed;
     }

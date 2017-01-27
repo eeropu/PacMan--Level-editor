@@ -1,11 +1,11 @@
-package GameObjects;
+package gameobjects;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-public class Ghost implements GameObject{
-    
+public class Ghost implements GameObject {
+
     int x, y;
 
     public Ghost(int x, int y) {
@@ -21,7 +21,7 @@ public class Ghost implements GameObject{
 
     @Override
     public void move() {
-        
+
     }
 
     @Override
@@ -33,5 +33,5 @@ public class Ghost implements GameObject{
     public boolean checkCollision(PacMan pacman) {
         return getBounds().intersects(pacman.getBounds());
     }
-    
+
 }

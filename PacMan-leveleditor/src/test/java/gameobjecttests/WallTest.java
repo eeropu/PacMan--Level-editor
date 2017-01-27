@@ -1,8 +1,8 @@
-package GameObjectTests;
+package gameobjecttests;
 
-import GameObjects.Direction;
-import GameObjects.PacMan;
-import GameObjects.Wall;
+import gameobjects.Direction;
+import gameobjects.PacMan;
+import gameobjects.Wall;
 import java.awt.Rectangle;
 import org.junit.Test;
 import static org.junit.Assert.*;

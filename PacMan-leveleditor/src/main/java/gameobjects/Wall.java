@@ -1,10 +1,10 @@
-package GameObjects;
+package gameobjects;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-public class Wall implements GameObject{
-    
+public class Wall implements GameObject {
+
     private int x, y;
 
     public Wall(int x, int y) {
@@ -30,9 +30,8 @@ public class Wall implements GameObject{
     public boolean checkCollision(PacMan pacman) {
         return this.getBounds().intersects(pacman.getBounds());
     }
-    
-    //Following classes are for test purposes
 
+    //Following classes are for test purposes
     public int getX() {
         return x;
     }
@@ -40,5 +39,5 @@ public class Wall implements GameObject{
     public int getY() {
         return y;
     }
-    
+
 }
