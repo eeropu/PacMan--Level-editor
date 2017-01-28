@@ -51,7 +51,7 @@ public class PacMan implements GameObject {
 
     public void changeDirection() {
         if (x >= 0 && x <= 928 && y >= 0 && y <= 608) {
-            if (x % 16 == 0 && y % 16 == 0) {
+            if (x % 32 == 0 && y % 32 == 0) {
                 current = changed;
             }
         }
