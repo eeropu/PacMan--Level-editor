@@ -102,7 +102,7 @@ public class LevelRunner extends JPanel {
                 + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
                 + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
                 + "WxxxxxxxxxxxxpxxxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
+                + "WxxxxxxxxxxWWWWWxxxxxxxxxxxxbW"
                 + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
                 + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
                 + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
