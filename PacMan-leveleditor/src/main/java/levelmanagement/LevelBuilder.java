@@ -1,14 +1,6 @@
 package levelmanagement;
 
-import gameobjects.Direction;
-import gameobjects.Ghost;
-import gameobjects.PacMan;
-import gameobjects.Pointbubble;
-import gameobjects.PowerPellet;
-import gameobjects.Wall;
-import gameobjects.Blinky;
-import gameobjects.Pinky;
-import java.util.HashMap;
+import gameobjects.*;
 import java.util.HashSet;
 
 public class LevelBuilder {
@@ -60,6 +52,10 @@ public class LevelBuilder {
                     Pinky pinky = new Pinky(j + 1, i + 1, pacman);
                     pinky.setGraph(graph);
                     ghosts.add(pinky);
+                } else if (c == 'C'){
+                    Clyde clyde = new Clyde(j + 1, i + 1, pacman);
+                    clyde.setGraph(graph);
+                    ghosts.add(clyde);
                 }
             }
         }

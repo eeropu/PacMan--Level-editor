@@ -94,10 +94,32 @@ public class LevelRunner extends JPanel {
         pp = lb.getPp();
     }
 
+    /*
+     * Changing the following string modifies the test level
+     * P changes the starting position of Pacman. There can be only one PacMan, 
+     * therefore it will be postioined to the corresponding coordinate of the
+     * last instance of character P.
+     * The amount of other objects is unlimited
+     * W adds a wall
+     * b adds a pointbubble
+     * p adds a powerpellet
+     * L adds a Blinky (ghost)
+     * I adds a Pinky (ghost)
+     * C adds a Clyde (ghost)
+     * Any other character leads to empty coordinate
+     * Casing is important
+     * "Opening" the border on one side of the screen but not the other will
+     * lead to error where PacMan is not controllable (this is on purpose and
+     * such positioning of the walls will not be possible in the final version)
+     * 
+     * ! THE LENGHT OF THE STRING MUST BE EXACTLY 600 CHARACTERS !
+     * 
+     */
+    
     public String testi() {
         return "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
                 + "xPxxxxxxxxxxxxxxxxxxxWxxxxxWLx"
-                + "WxWWWxxxxxxxxxxxxxxWxxxWWWxxbW"
+                + "WxWWxxxxxxxxxxxxxxxWxxxWWWxxbW"
                 + "WxxWxWWWxWxWWWWWWxWWWWxWxWWWWW"
                 + "WWxWxWbbbWxxxxxxWxxxxWxWxxxxbW"
                 + "xxxxxxbWbWWWWWWxWWWWxWxWWWWWbx"
@@ -107,7 +129,7 @@ public class LevelRunner extends JPanel {
                 + "WxxxxWWWWWxWWWWWWWWWWWWWWWWWbW"
                 + "WxWWWWxxxxxxxxxxxxxxxxxxxxxxbW"
                 + "WxWxxxxxxxxxxxxxxxxxxxxxxxxxbW"
-                + "WxWxxxxxxxxxxxxxxxxxxxxxxxxxbW"
+                + "WxWxxxxxxxxxxxxxxxxxxCxxxxxxbW"
                 + "WxWxxxxxxxxxxpxxxxxxxxxxxxxxbW"
                 + "WxWxxxxxWWxWWWWWxxxxxxxxxxxxbW"
                 + "WxWxxxxxWxxxxxxxxxxxxxxxxxxxbW"
