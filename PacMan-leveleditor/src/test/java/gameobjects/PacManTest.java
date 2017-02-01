@@ -124,7 +124,7 @@ public class PacManTest {
         pacman.move();
         assertEquals(Direction.Up, pacman.getCurrent());
         assertEquals(Direction.Right, pacman.getChanged());
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 14; i++) {
             pacman.move();
         }
         assertEquals(Direction.Right, pacman.getCurrent());
@@ -133,7 +133,7 @@ public class PacManTest {
         pacman.move();
         assertEquals(Direction.Right, pacman.getCurrent());
         assertEquals(Direction.Down, pacman.getChanged());
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 14; i++) {
             pacman.move();
         }
         assertEquals(Direction.Down, pacman.getCurrent());
@@ -142,7 +142,7 @@ public class PacManTest {
         pacman.move();
         assertEquals(Direction.Down, pacman.getCurrent());
         assertEquals(Direction.Left, pacman.getChanged());
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 14; i++) {
             pacman.move();
         }
         assertEquals(Direction.Left, pacman.getCurrent());
@@ -151,7 +151,7 @@ public class PacManTest {
         pacman.move();
         assertEquals(Direction.Left, pacman.getCurrent());
         assertEquals(Direction.Up, pacman.getChanged());
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 14; i++) {
             pacman.move();
         }
         assertEquals(Direction.Up, pacman.getCurrent());

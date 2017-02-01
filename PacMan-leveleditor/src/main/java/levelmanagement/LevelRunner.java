@@ -16,7 +16,7 @@ public class LevelRunner extends JPanel {
     private GameLoop gl;
     protected PacMan pacman;
     private HashSet<Wall> walls;
-    private HashSet<Ghost> ghosts;
+    public HashSet<Ghost> ghosts;
     private HashSet<Pointbubble> points;
     private HashSet<PowerPellet> pp;
     private Timer timer;
@@ -89,23 +89,23 @@ public class LevelRunner extends JPanel {
 
     public String testi() {
         return "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
-                + "WPxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxWWWxWxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxWbbbWxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxxbWbWxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxWbbbWxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxWWWWWxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxxxpxxxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxWWWWWxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
+                + "xPxxxxxxxxxxxxxxxxxxxWxxxxxWBx"
+                + "WxWWWxxxxxxxxxxxxxxWxxxWxWxxbW"
+                + "WxxWxWWWxWxWWWWWWxWWWWxWxWWWWW"
+                + "WWxWxWbbbWxxxxxxWxxxxWxWxxxxbW"
+                + "xxxxxxbWbWWWWWWxWWWWxWxWWWWWbx"
+                + "WxWWWWbbbWxxxxxxWxxxxWxWxxxxbW"
+                + "WxxxxWWWWWxWWWWWWxWWWWxWxWWWWW"
+                + "WWWWxxxxxxxxxxxxxxxxxxxxxxxxbW"
+                + "WxxxxWWWWWxWWWWWWWWWWWWWWWWWbW"
+                + "WxWWWWxxxxxxxxxxxxxxxxxxxxxxbW"
+                + "WxWxxxxxxxxxxxxxxxxxxxxxxxxxbW"
+                + "WxWxxxxxxxxxxxxxxxxxxxxxxxxxbW"
+                + "WxWxxxxxxxxxxpxxxxxxxxxxxxxxbW"
+                + "WxWxxxxxWWxWWWWWxxxxxxxxxxxxbW"
+                + "WxWxxxxxWxxxxxxxxxxxxxxxxxxxbW"
+                + "WxxxxxxxWxxxxxxxxxxxxxxxxxxxbW"
+                + "WxWWWxWWWWWxWWWxWWWWWxWWWxWWbW"
                 + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxbW"
                 + "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW";
     }
