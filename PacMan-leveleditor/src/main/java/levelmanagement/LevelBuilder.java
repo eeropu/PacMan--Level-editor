@@ -56,6 +56,10 @@ public class LevelBuilder {
                     Clyde clyde = new Clyde(j + 1, i + 1, pacman);
                     clyde.setGraph(graph);
                     ghosts.add(clyde);
+                } else if (c == 'R'){
+                    RandomGhost random = new RandomGhost(j + 1, i + 1, pacman);
+                    random.setGraph(graph);
+                    ghosts.add(random);
                 }
             }
         }

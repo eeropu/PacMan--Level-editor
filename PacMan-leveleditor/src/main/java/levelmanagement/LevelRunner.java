@@ -25,7 +25,7 @@ public class LevelRunner extends JPanel {
         build();
         ControlSetUp csu = new ControlSetUp(this);
         gl = new GameLoop(this);
-        timer = new Timer(10, gl);
+        timer = new Timer(15, gl);
     }
 
     @Override
@@ -115,7 +115,6 @@ public class LevelRunner extends JPanel {
      * ! THE LENGHT OF THE STRING MUST BE EXACTLY 600 CHARACTERS !
      * 
      */
-    
     public String testi() {
         return "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
                 + "xPxxxxxxxxxxxxxxxxxxxWxxxxxWLx"
@@ -129,7 +128,7 @@ public class LevelRunner extends JPanel {
                 + "WxxxxWWWWWxWWWWWWWWWWWWWWWWWbW"
                 + "WxWWWWxxxxxxxxxxxxxxxxxxxxxxbW"
                 + "WxWxxxxxxxxxxxxxxxxxxxxxxxxxbW"
-                + "WxWxxxxxxxxxxxxxxxxxxCxxxxxxbW"
+                + "WxWxxxxxxRxxxxxxxxxxxCxxxxxxbW"
                 + "WxWxxxxxxxxxxpxxxxxxxxxxxxxxbW"
                 + "WxWxxxxxWWxWWWWWxxxxxxxxxxxxbW"
                 + "WxWxxxxxWxxxxxxxxxxxxxxxxxxxbW"

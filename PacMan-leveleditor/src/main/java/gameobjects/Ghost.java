@@ -39,15 +39,7 @@ public class Ghost implements GameObject {
         } else if (d == Direction.Up) {
             y -= move;
         }
-        if (x == 960) {
-            x = -32;
-        } else if (x == -32) {
-            x = 960;
-        } else if (y == 640) {
-            y = -32;
-        } else if (y == -32) {
-            y = 640;
-        } else if (x % 32 == 0 && y % 32 == 0) {
+        if (x % 32 == 0 && y % 32 == 0) {
             setDirectionAStar(pacman.getX(), pacman.getY());
         }
     }
@@ -133,6 +125,10 @@ public class Ghost implements GameObject {
         this.graph = graph;
     }
 
+    /*
+     * Sets the direction randomly taking every possibility to consideration.
+     * Tries to avoid U-turns
+     */
     public void randomDirection() {
         if (d == Direction.Right) {
             randomDirectionRight();
@@ -324,9 +320,9 @@ public class Ghost implements GameObject {
     public void stop() {
         if (d == Direction.Right) {
             x -= move;
-        } else if (d == Direction.Left){
+        } else if (d == Direction.Left) {
             x += move;
-        } else if (d == Direction.Down){
+        } else if (d == Direction.Down) {
             y -= move;
         } else if (d == Direction.Up) {
             y += move;

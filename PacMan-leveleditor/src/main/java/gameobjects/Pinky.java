@@ -41,15 +41,7 @@ public class Pinky extends Ghost {
                 } else if (d == Direction.Up) {
                     y -= move;
                 }
-                if (x == 960) {
-                    x = -32;
-                } else if (x == -32) {
-                    x = 960;
-                } else if (y == 640) {
-                    y = -32;
-                } else if (y == -32) {
-                    y = 640;
-                } else if (x % 32 == 0 && y % 32 == 0) {
+                if (x % 32 == 0 && y % 32 == 0) {
                     if (pacman.getCurrent() == Direction.Right) {
                         setDirectionAStar(pacman.getX() + 96, pacman.getY());
                     } else if (pacman.getCurrent() == Direction.Left) {
