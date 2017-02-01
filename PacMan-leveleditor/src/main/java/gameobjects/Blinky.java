@@ -1,7 +1,4 @@
 package gameobjects;
-
-import java.util.PriorityQueue;
-
 /*
  * The ghost that tries to find PacMan
  */

@@ -89,14 +89,14 @@ public class LevelRunner extends JPanel {
 
     public String testi() {
         return "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
-                + "xPxxxxxxxxxxxxxxxxxxxWxxxxxWBx"
-                + "WxWWWxxxxxxxxxxxxxxWxxxWxWxxbW"
+                + "xPxxxxxxxxxxxxxxxxxxxWxxxxxWLx"
+                + "WxWWWxxxxxxxxxxxxxxWxxxWWWxxbW"
                 + "WxxWxWWWxWxWWWWWWxWWWWxWxWWWWW"
                 + "WWxWxWbbbWxxxxxxWxxxxWxWxxxxbW"
                 + "xxxxxxbWbWWWWWWxWWWWxWxWWWWWbx"
                 + "WxWWWWbbbWxxxxxxWxxxxWxWxxxxbW"
-                + "WxxxxWWWWWxWWWWWWxWWWWxWxWWWWW"
-                + "WWWWxxxxxxxxxxxxxxxxxxxxxxxxbW"
+                + "WxxxxWWWWWxWWWWWWxWWWWxWWWWWWW"
+                + "WWWWxxxxxxIxxxxxxxxxxxxxxxxxbW"
                 + "WxxxxWWWWWxWWWWWWWWWWWWWWWWWbW"
                 + "WxWWWWxxxxxxxxxxxxxxxxxxxxxxbW"
                 + "WxWxxxxxxxxxxxxxxxxxxxxxxxxxbW"

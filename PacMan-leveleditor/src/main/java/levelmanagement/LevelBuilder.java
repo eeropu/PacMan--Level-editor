@@ -7,6 +7,7 @@ import gameobjects.Pointbubble;
 import gameobjects.PowerPellet;
 import gameobjects.Wall;
 import gameobjects.Blinky;
+import gameobjects.Pinky;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -51,10 +52,14 @@ public class LevelBuilder {
             for (int j = 0; j < 30; j++) {
                 int p = i * 30 + j;
                 char c = objectpositioning.charAt(p);
-                if (c == 'B') {
+                if (c == 'L') {
                     Blinky blinky = new Blinky(j + 1, i + 1, pacman);
                     blinky.setGraph(graph);
                     ghosts.add(blinky);
+                } else if (c == 'I'){
+                    Pinky pinky = new Pinky(j + 1, i + 1, pacman);
+                    pinky.setGraph(graph);
+                    ghosts.add(pinky);
                 }
             }
         }
