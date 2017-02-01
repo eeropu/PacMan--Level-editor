@@ -60,15 +60,22 @@ public class LevelRunner extends JPanel {
             }
         }
         Iterator<Pointbubble> pbit = points.iterator();
-        while(pbit.hasNext()){
-            if(pbit.next().checkCollision(pacman)){
+        while (pbit.hasNext()) {
+            if (pbit.next().checkCollision(pacman)) {
                 pbit.remove();
             }
         }
         Iterator<PowerPellet> ppit = pp.iterator();
-        while(ppit.hasNext()){
-            if(ppit.next().checkCollision(pacman)){
+        while (ppit.hasNext()) {
+            if (ppit.next().checkCollision(pacman)) {
                 ppit.remove();
+            }
+        }
+        for (Ghost ghost : ghosts) {
+            for (Wall wall : walls) {
+                if (ghost.getBounds().intersects(wall.getBounds())) {
+                    ghost.stop();
+                }
             }
         }
     }

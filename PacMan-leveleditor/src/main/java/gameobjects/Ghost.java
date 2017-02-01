@@ -136,11 +136,11 @@ public class Ghost implements GameObject {
     public void randomDirection() {
         if (d == Direction.Right) {
             randomDirectionRight();
-        } else if ( d == Direction.Left){
+        } else if (d == Direction.Left) {
             randomDirectionLeft();
-        } else if (d == Direction.Up){
+        } else if (d == Direction.Up) {
             randomDirectionUp();
-        } else if (d == Direction.Down){
+        } else {
             randomDirectionDown();
         }
     }
@@ -319,6 +319,19 @@ public class Ghost implements GameObject {
                 d = Direction.Left;
             }
         }
+    }
+
+    public void stop() {
+        if (d == Direction.Right) {
+            x -= move;
+        } else if (d == Direction.Left){
+            x += move;
+        } else if (d == Direction.Down){
+            y -= move;
+        } else if (d == Direction.Up) {
+            y += move;
+        }
+        d = Direction.Stop;
     }
 
 }
