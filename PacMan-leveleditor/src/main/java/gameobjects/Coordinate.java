@@ -24,11 +24,6 @@ public class Coordinate implements Comparable<Coordinate>{
         }
     }
     
-    @Override
-    public String toString(){
-        return x + "," + y;
-    }
-    
     public void setPrevious(Coordinate previous){
         this.previous = previous;
     }

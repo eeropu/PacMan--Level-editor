@@ -46,8 +46,15 @@ public class Clyde extends Ghost {
             } else {
                 homeY--;
             }
-            i++;
+            i = i + 1;
         }
     }
 
+    public int getHomeX() {
+        return homeX;
+    }
+
+    public int getHomeY() {
+        return homeY;
+    }
 }

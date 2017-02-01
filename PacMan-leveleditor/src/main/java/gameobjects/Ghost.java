@@ -61,29 +61,33 @@ public class Ghost implements GameObject {
             if (current.getHeuristic() < 32) {
                 break;
             } //right from current
-            if (map[(current.getX() + 64) / 32][(current.getY() + 32) / 32] == 1) {
-                priorityq.add(new Coordinate(current.getX() + 32, current.getY(),
-                        current.getDistance() + 32, searchX, searchY, current));
+            try {
+                if (map[(current.getX() + 64) / 32][(current.getY() + 32) / 32] == 1) {
+                    priorityq.add(new Coordinate(current.getX() + 32, current.getY(),
+                            current.getDistance() + 32, searchX, searchY, current));
 
-                map[(current.getX() + 64) / 32][(current.getY() + 32) / 32] = 0;
-            } //left from current
-            if (map[(current.getX()) / 32][(current.getY() + 32) / 32] == 1) {
-                priorityq.add(new Coordinate(current.getX() - 32, current.getY(),
-                        current.getDistance() + 32, searchX, searchY, current));
+                    map[(current.getX() + 64) / 32][(current.getY() + 32) / 32] = 0;
+                } //left from current
+                if (map[(current.getX()) / 32][(current.getY() + 32) / 32] == 1) {
+                    priorityq.add(new Coordinate(current.getX() - 32, current.getY(),
+                            current.getDistance() + 32, searchX, searchY, current));
 
-                map[(current.getX()) / 32][(current.getY() + 32) / 32] = 0;
-            } //down from current
-            if (map[(current.getX() + 32) / 32][(current.getY() + 64) / 32] == 1) {
-                priorityq.add(new Coordinate(current.getX(), current.getY() + 32,
-                        current.getDistance() + 32, searchX, searchY, current));
+                    map[(current.getX()) / 32][(current.getY() + 32) / 32] = 0;
+                } //down from current
+                if (map[(current.getX() + 32) / 32][(current.getY() + 64) / 32] == 1) {
+                    priorityq.add(new Coordinate(current.getX(), current.getY() + 32,
+                            current.getDistance() + 32, searchX, searchY, current));
 
-                map[(current.getX() + 32) / 32][(current.getY() + 64) / 32] = 0;
-            } //up from current
-            if (map[(current.getX() + 32) / 32][(current.getY()) / 32] == 1) {
-                priorityq.add(new Coordinate(current.getX(), current.getY() - 32,
-                        current.getDistance() + 32, searchX, searchY, current));
+                    map[(current.getX() + 32) / 32][(current.getY() + 64) / 32] = 0;
+                } //up from current
+                if (map[(current.getX() + 32) / 32][(current.getY()) / 32] == 1) {
+                    priorityq.add(new Coordinate(current.getX(), current.getY() - 32,
+                            current.getDistance() + 32, searchX, searchY, current));
 
-                map[(current.getX() + 32) / 32][(current.getY()) / 32] = 0;
+                    map[(current.getX() + 32) / 32][(current.getY()) / 32] = 0;
+                }
+            } catch (ArrayIndexOutOfBoundsException e) {
+                continue;
             }
         }
         if (priorityq.isEmpty()) {
