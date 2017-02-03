@@ -10,3 +10,5 @@ Päivä | Tunnit | Kuvaus
 28.01.2017 | 2h | Ohjelmointia
 31.01.2017 | 4h | Ohjelmointia (haamut ja niiden tekoäly(ttömyys))
 01.02.2017 | 3h | testien tekemistä ja haamujen toiminnan parantelua
+02.02.2017 | 2h | Testejä ja haamujen toimintaa
+03.02.2017 | 3h | Ohjelmointia, testejä, deadline3 viimeistely

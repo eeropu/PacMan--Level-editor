@@ -19,6 +19,9 @@ public class RandomGhost extends Ghost {
     @Override
     public void move() {
         if (chasePacMan) {
+            if (x % 32 == 0 && y % 32 == 0) {
+                setDirectionAStar(pacman.getX(), pacman.getY());
+            }
             super.move();
             now = System.currentTimeMillis();
             if (now - timer >= 10000) {
@@ -29,15 +32,7 @@ public class RandomGhost extends Ghost {
             if (x % 32 == 0 && y % 32 == 0) {
                 randomDirection();
             }
-            if (d == Direction.Right) {
-                x += move;
-            } else if (d == Direction.Left) {
-                x -= move;
-            } else if (d == Direction.Down) {
-                y += move;
-            } else if (d == Direction.Up) {
-                y -= move;
-            }
+            super.move();
             now = System.currentTimeMillis();
         }
         if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) < 160) {

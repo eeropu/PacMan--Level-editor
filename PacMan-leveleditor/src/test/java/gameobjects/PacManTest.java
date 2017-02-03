@@ -16,52 +16,52 @@ import static org.junit.Assert.*;
  * @author eerop
  */
 public class PacManTest {
-    
+
     private PacMan pacman;
-    
+
     @Test
-    public void setUp(){
+    public void setUp() {
         pacman = new PacMan(11, 11, Direction.Up);
         assertEquals(320, pacman.getX());
         assertEquals(320, pacman.getY());
         assertEquals(Direction.Up, pacman.getCurrent());
         assertEquals(Direction.Up, pacman.getChanged());
     }
-    
+
     @Test
-    public void moveRight(){
+    public void moveRight() {
         pacman = new PacMan(11, 11, Direction.Right);
         pacman.move();
         assertEquals(320 + pacman.getMove(), pacman.getX());
         assertEquals(320, pacman.getY());
     }
-    
+
     @Test
-    public void moveLeft(){
+    public void moveLeft() {
         pacman = new PacMan(11, 11, Direction.Left);
         pacman.move();
         assertEquals(320 - pacman.getMove(), pacman.getX());
         assertEquals(320, pacman.getY());
     }
-    
-    @Test 
-    public void moveDown(){
+
+    @Test
+    public void moveDown() {
         pacman = new PacMan(11, 11, Direction.Down);
         pacman.move();
         assertEquals(320 + pacman.getMove(), pacman.getY());
         assertEquals(320, pacman.getX());
     }
-    
+
     @Test
-    public void moveUp(){
+    public void moveUp() {
         pacman = new PacMan(11, 11, Direction.Up);
         pacman.move();
         assertEquals(320 - pacman.getMove(), pacman.getY());
         assertEquals(320, pacman.getX());
     }
-    
+
     @Test
-    public void outOfWindowDown(){
+    public void outOfWindowDown() {
         pacman = new PacMan(11, 20, Direction.Down);
         pacman.move();
         assertEquals(320, pacman.getX());
@@ -73,9 +73,9 @@ public class PacManTest {
         pacman.move();
         assertEquals(-32, pacman.getY());
     }
-    
+
     @Test
-    public void outOfWindowUp(){
+    public void outOfWindowUp() {
         pacman = new PacMan(11, 1, Direction.Up);
         pacman.move();
         assertEquals(320, pacman.getX());
@@ -87,9 +87,9 @@ public class PacManTest {
         pacman.move();
         assertEquals(640, pacman.getY());
     }
-    
+
     @Test
-    public void outOfWindowRight(){
+    public void outOfWindowRight() {
         pacman = new PacMan(30, 11, Direction.Right);
         pacman.move();
         assertEquals(930, pacman.getX());
@@ -101,9 +101,9 @@ public class PacManTest {
         pacman.move();
         assertEquals(-32, pacman.getX());
     }
-    
+
     @Test
-    public void outOfWindowLeft(){
+    public void outOfWindowLeft() {
         pacman = new PacMan(1, 11, Direction.Left);
         pacman.move();
         assertEquals(-2, pacman.getX());
@@ -115,9 +115,9 @@ public class PacManTest {
         pacman.move();
         assertEquals(960, pacman.getX());
     }
-    
+
     @Test
-    public void directionChanging(){
+    public void directionChanging() {
         pacman = new PacMan(2, 2, Direction.Up);
         pacman.move();
         pacman.right();
@@ -158,9 +158,9 @@ public class PacManTest {
         assertEquals(32, pacman.getX());
         assertEquals(32, pacman.getY());
     }
-    
+
     @Test
-    public void directionChangingWhileGoingOutOfScreen(){
+    public void directionChangingWhileGoingOutOfScreen() {
         pacman = new PacMan(1, 1, Direction.Up);
         assertEquals(Direction.Up, pacman.getCurrent());
         assertEquals(Direction.Up, pacman.getChanged());
@@ -193,37 +193,37 @@ public class PacManTest {
         }
         assertEquals(Direction.Up, pacman.getCurrent());
     }
-    
+
     @Test
-    public void stopUp(){
+    public void stopUp() {
         pacman = new PacMan(11, 11, Direction.Up);
         pacman.stop();
         assertEquals(322, pacman.getY());
     }
-    
+
     @Test
-    public void stopDown(){
+    public void stopDown() {
         pacman = new PacMan(11, 11, Direction.Down);
         pacman.stop();
         assertEquals(318, pacman.getY());
     }
-    
+
     @Test
-    public void stopRight(){
+    public void stopRight() {
         pacman = new PacMan(11, 11, Direction.Right);
         pacman.stop();
         assertEquals(318, pacman.getX());
     }
-    
+
     @Test
-    public void stopLeft(){
+    public void stopLeft() {
         pacman = new PacMan(11, 11, Direction.Left);
         pacman.stop();
         assertEquals(322, pacman.getX());
     }
-    
+
     @Test
-    public void getBounds(){
+    public void getBounds() {
         pacman = new PacMan(11, 11, Direction.Up);
         Rectangle r = pacman.getBounds();
         assertEquals(320, r.x);
@@ -231,9 +231,9 @@ public class PacManTest {
         assertEquals(32, r.height);
         assertEquals(32, r.width);
     }
-    
+
     @Test
-    public void checkCollision(){
+    public void checkCollision() {
         pacman = new PacMan(11, 11, Direction.Up);
         assertFalse(pacman.checkCollision(pacman)); //method returns always false
     }

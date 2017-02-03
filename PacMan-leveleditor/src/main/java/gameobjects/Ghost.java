@@ -39,9 +39,6 @@ public class Ghost implements GameObject {
         } else if (d == Direction.Up) {
             y -= move;
         }
-        if (x % 32 == 0 && y % 32 == 0) {
-            setDirectionAStar(pacman.getX(), pacman.getY());
-        }
     }
 
     /*

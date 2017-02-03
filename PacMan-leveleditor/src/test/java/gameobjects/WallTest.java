@@ -12,18 +12,18 @@ import static org.junit.Assert.*;
  * @author eerop
  */
 public class WallTest {
-    
+
     private Wall wall;
-    
+
     @Test
-    public void setUp(){
+    public void setUp() {
         wall = new Wall(11, 11);
         assertEquals(320, wall.getX());
         assertEquals(320, wall.getY());
     }
-    
+
     @Test
-    public void getBounds(){
+    public void getBounds() {
         wall = new Wall(11, 11);
         Rectangle r = wall.getBounds();
         assertEquals(320, r.x);
@@ -31,9 +31,9 @@ public class WallTest {
         assertEquals(32, r.height);
         assertEquals(32, r.width);
     }
-    
+
     @Test
-    public void checkCollision(){
+    public void checkCollision() {
         PacMan pacman = new PacMan(1, 3, Direction.Up);
         wall = new Wall(1, 1);
         for (int i = 0; i < 17; i++) {

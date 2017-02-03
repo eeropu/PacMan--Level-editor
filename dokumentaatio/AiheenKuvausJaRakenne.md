@@ -14,3 +14,5 @@ Pacman, haamut, pistekuplat, powerpelletit, seinät.
 Luodut tasot ja niissä saadut huipputulokset tallennetaan tietokantoihin, joka mahdollistaa luotujen tasojen pelaamisen myös ohjelman sulkemisen jälkeen. Näin myös tasoissa saadut pisteet pysyvät tiedossa.
 ###Määrittelyvaiheen luokkakaavio:
 ![määrittelyvaiheen luokkakaavio](https://raw.githubusercontent.com/eeropu/PacMan--Level-editor/master/dokumentaatio/MaarittelyvaiheenLuokkakaavio.jpg)
+###Luokkakaavio:
+![luokkakaavio](https://raw.githubusercontent.com/eeropu/PacMan--Level-editor/master/dokumentaatio/Luokkakaavio.jpg)

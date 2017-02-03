@@ -48,15 +48,15 @@ public class LevelBuilder {
                     Blinky blinky = new Blinky(j + 1, i + 1, pacman);
                     blinky.setGraph(graph);
                     ghosts.add(blinky);
-                } else if (c == 'I'){
+                } else if (c == 'I') {
                     Pinky pinky = new Pinky(j + 1, i + 1, pacman);
                     pinky.setGraph(graph);
                     ghosts.add(pinky);
-                } else if (c == 'C'){
+                } else if (c == 'C') {
                     Clyde clyde = new Clyde(j + 1, i + 1, pacman);
                     clyde.setGraph(graph);
                     ghosts.add(clyde);
-                } else if (c == 'R'){
+                } else if (c == 'R') {
                     RandomGhost random = new RandomGhost(j + 1, i + 1, pacman);
                     random.setGraph(graph);
                     ghosts.add(random);

@@ -4,8 +4,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-public class PowerPellet implements GameObject{
-    
+public class PowerPellet implements GameObject {
+
     private int x, y;
 
     public PowerPellet(int x, int y) {
@@ -32,6 +32,16 @@ public class PowerPellet implements GameObject{
     public boolean checkCollision(PacMan pacman) {
         return this.getBounds().intersects(pacman.getBounds());
     }
-    
-    
+
+    /*
+     * Following classes are for test purposes
+     */
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
 }

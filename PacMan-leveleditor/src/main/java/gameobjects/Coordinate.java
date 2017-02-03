@@ -1,7 +1,7 @@
 package gameobjects;
 
-public class Coordinate implements Comparable<Coordinate>{
-    
+public class Coordinate implements Comparable<Coordinate> {
+
     private int x, y, distance;
     private double heuristic, expectedValue;
     private Coordinate previous;
@@ -17,14 +17,14 @@ public class Coordinate implements Comparable<Coordinate>{
 
     @Override
     public int compareTo(Coordinate o) {
-        if(this.expectedValue > o.expectedValue){
+        if (this.expectedValue > o.expectedValue) {
             return 1;
         } else {
             return -1;
         }
     }
-    
-    public void setPrevious(Coordinate previous){
+
+    public void setPrevious(Coordinate previous) {
         this.previous = previous;
     }
 
@@ -47,5 +47,5 @@ public class Coordinate implements Comparable<Coordinate>{
     public Coordinate getPrevious() {
         return previous;
     }
-    
+
 }

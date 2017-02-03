@@ -1,0 +1,45 @@
+package gameobjects;
+
+import java.awt.Rectangle;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author eerop
+ */
+public class PointbubbleTest {
+
+    private Pointbubble p;
+
+    public PointbubbleTest() {
+        p = new Pointbubble(11, 11);
+    }
+
+    @Test
+    public void setUp() {
+        assertEquals(320, p.getX());
+        assertEquals(320, p.getY());
+    }
+
+    public void getBounds() {
+        Rectangle r = p.getBounds();
+        assertEquals(332, r.x);
+        assertEquals(332, r.y);
+        assertEquals(8, r.height);
+        assertEquals(8, r.width);
+    }
+
+    @Test
+    public void checkCollision() {
+        PacMan pacman = new PacMan(10, 11, Direction.Right);
+        assertFalse(p.checkCollision(pacman));
+        for (int i = 0; i < 6; i++) {
+            pacman.move();
+            assertFalse(p.checkCollision(pacman));
+        }
+        pacman.move();
+        assertTrue(p.checkCollision(pacman));
+    }
+
+}

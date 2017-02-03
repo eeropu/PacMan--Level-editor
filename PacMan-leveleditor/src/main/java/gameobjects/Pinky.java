@@ -14,48 +14,28 @@ public class Pinky extends Ghost {
 
     @Override
     public void move() {
-        try {
-            if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) < 160
-                    || (pacman.getCurrent() == Direction.Right
-                    && graph[(pacman.getX() + 128) / 32][(pacman.getY() + 32) / 32] != 1)) {
-                super.move();
-            } else if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) < 160
-                    || (pacman.getCurrent() == Direction.Left
-                    && graph[(pacman.getX() - 64) / 32][(pacman.getY() + 32) / 32] != 1)) {
-                super.move();
-            } else if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) < 160
-                    || (pacman.getCurrent() == Direction.Down
-                    && graph[(pacman.getX() + 32) / 32][(pacman.getY() + 128) / 32] != 1)) {
-                super.move();
-            } else if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) < 160
-                    || (pacman.getCurrent() == Direction.Up
-                    && graph[(pacman.getX() + 32) / 32][(pacman.getY() - 64) / 32] != 1)) {
-                super.move();
-            } else {
-                if (d == Direction.Right) {
-                    x += move;
-                } else if (d == Direction.Left) {
-                    x -= move;
-                } else if (d == Direction.Down) {
-                    y += move;
-                } else if (d == Direction.Up) {
-                    y -= move;
-                }
-                if (x % 32 == 0 && y % 32 == 0) {
-                    if (pacman.getCurrent() == Direction.Right) {
-                        setDirectionAStar(pacman.getX() + 96, pacman.getY());
-                    } else if (pacman.getCurrent() == Direction.Left) {
-                        setDirectionAStar(pacman.getX() - 96, pacman.getY());
-                    } else if (pacman.getCurrent() == Direction.Down) {
-                        setDirectionAStar(pacman.getX(), pacman.getY() + 96);
-                    } else if (pacman.getCurrent() == Direction.Up) {
-                        setDirectionAStar(pacman.getX(), pacman.getY() - 96);
-                    }
+        if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) <= 160) {
+            if (x % 32 == 0 && y % 32 == 0) {
+                setDirectionAStar(pacman.getX(), pacman.getY());
+            }
+        } else if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) < 320) {
+            if (x % 32 == 0 && y % 32 == 0) {
+                if (pacman.getCurrent() == Direction.Right) {
+                    setDirectionAStar(pacman.getX() + 128, pacman.getY());
+                } else if (pacman.getCurrent() == Direction.Left) {
+                    setDirectionAStar(pacman.getX() - 128, pacman.getY());
+                } else if (pacman.getCurrent() == Direction.Down) {
+                    setDirectionAStar(pacman.getX(), pacman.getY() + 128);
+                } else if (pacman.getCurrent() == Direction.Up) {
+                    setDirectionAStar(pacman.getX(), pacman.getY() - 128);
                 }
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            super.move();
+        } else {
+            if (x % 32 == 0 && y % 32 == 0) {
+                randomDirection();
+            }
         }
+        super.move();
     }
 
     @Override

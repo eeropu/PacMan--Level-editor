@@ -32,11 +32,13 @@ public class CoordinateTest {
         c.setPrevious(a);
         assertTrue(c.getPrevious() == a);
     }
-    
+
     @Test
-    public void getters(){
+    public void getters() {
         assertEquals(100, c.getDistance());
         assertEquals(500, c.getHeuristic(), 0.1);
+        assertEquals(0, c.getX());
+        assertEquals(0, c.getY());
     }
 
 }
