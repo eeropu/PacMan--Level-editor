@@ -1,5 +1,8 @@
-package gameobjects;
+package pacman.gameobjects;
 
+import pacman.gameobjects.PowerPellet;
+import pacman.gameobjects.Direction;
+import pacman.gameobjects.PacMan;
 import java.awt.Rectangle;
 import org.junit.Test;
 import static org.junit.Assert.*;

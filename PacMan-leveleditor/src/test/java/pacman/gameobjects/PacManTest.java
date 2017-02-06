@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gameobjects;
+package pacman.gameobjects;
 
-import gameobjects.Direction;
-import gameobjects.PacMan;
+import pacman.gameobjects.Direction;
+import pacman.gameobjects.PacMan;
 import java.awt.Rectangle;
 import org.junit.Test;
 import static org.junit.Assert.*;

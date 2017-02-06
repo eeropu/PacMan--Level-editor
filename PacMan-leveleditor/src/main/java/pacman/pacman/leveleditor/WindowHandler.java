@@ -1,6 +1,6 @@
 package pacman.pacman.leveleditor;
 
-import levelmanagement.LevelRunner;
+import pacman.levelmanagement.LevelRunner;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import javax.swing.JFrame;

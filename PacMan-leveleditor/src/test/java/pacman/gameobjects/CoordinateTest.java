@@ -1,5 +1,6 @@
-package gameobjects;
+package pacman.gameobjects;
 
+import pacman.gameobjects.Coordinate;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

@@ -1,4 +1,4 @@
-package gameobjects;
+package pacman.gameobjects;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;

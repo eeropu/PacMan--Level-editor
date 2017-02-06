@@ -1,4 +1,4 @@
-package gameobjects;
+package pacman.gameobjects;
 
 import java.awt.Color;
 import java.awt.Graphics;

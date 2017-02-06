@@ -1,6 +1,15 @@
-package levelmanagement;
+package pacman.levelmanagement;
 
-import gameobjects.*;
+import pacman.gameobjects.Direction;
+import pacman.gameobjects.RandomGhost;
+import pacman.gameobjects.Ghost;
+import pacman.gameobjects.Blinky;
+import pacman.gameobjects.Pinky;
+import pacman.gameobjects.PowerPellet;
+import pacman.gameobjects.Clyde;
+import pacman.gameobjects.Wall;
+import pacman.gameobjects.PacMan;
+import pacman.gameobjects.Pointbubble;
 import java.util.HashSet;
 
 public class LevelBuilder {

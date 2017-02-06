@@ -1,4 +1,4 @@
-package gameobjects;
+package pacman.gameobjects;
 /*
  * The ghost that tries to find PacMan
  */

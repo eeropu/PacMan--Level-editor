@@ -1,10 +1,10 @@
-package levelmanagement;
+package pacman.levelmanagement;
 
-import gameobjects.Ghost;
-import gameobjects.PacMan;
-import gameobjects.Pointbubble;
-import gameobjects.PowerPellet;
-import gameobjects.Wall;
+import pacman.gameobjects.Ghost;
+import pacman.gameobjects.PacMan;
+import pacman.gameobjects.Pointbubble;
+import pacman.gameobjects.PowerPellet;
+import pacman.gameobjects.Wall;
 import java.awt.Graphics;
 import java.util.HashSet;
 import java.util.Iterator;

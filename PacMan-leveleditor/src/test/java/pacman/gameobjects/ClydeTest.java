@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gameobjects;
+package pacman.gameobjects;
 
+import pacman.gameobjects.Clyde;
+import pacman.gameobjects.Direction;
+import pacman.gameobjects.PacMan;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

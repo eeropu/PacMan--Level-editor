@@ -1,4 +1,4 @@
-package gameobjects;
+package pacman.gameobjects;
 
 public class Coordinate implements Comparable<Coordinate> {
 
