@@ -11,30 +11,47 @@ public class Clyde extends Ghost {
     private int homeX;
     private int homeY;
 
-    public Clyde(int x, int y, PacMan pacman) {
-        super(x, y, pacman);
+    public Clyde(int x, int y, PacMan pacman, boolean randomghost) {
+        super(x, y, pacman, randomghost);
         homeX = 1;
         homeY = 20;
     }
 
     @Override
-    public void paint(Graphics g) {
-        g.setColor(Color.ORANGE);
-        g.fillRect(x, y, 32, 32);
-    }
-
-    @Override
     public void move() {
-        if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) > 160) {
+        eatableTimer();
+        if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) < 320 && ppEaten) {
             if (x % 32 == 0 && y % 32 == 0) {
-                setDirectionAStar(pacman.getX(), pacman.getY());
+                setDirectionAStar(pacman.getX(), pacman.getY(), true);
             }
         } else {
-            if (x % 32 == 0 && y % 32 == 0) {
-                setDirectionAStar(homeX * 32 - 32, homeY * 32 - 32);
+            if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) > 160) {
+                if (x % 32 == 0 && y % 32 == 0) {
+                    setDirectionAStar(pacman.getX(), pacman.getY(), false);
+                }
+            } else {
+                if (x % 32 == 0 && y % 32 == 0) {
+                    setDirectionAStar(homeX * 32 - 32, homeY * 32 - 32, false);
+                }
             }
         }
         super.move();
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        if (ppEaten) {
+            g.setColor(Color.blue);
+            g.fillRect(x, y, 32, 32);
+        } else {
+            if (randomghost) {
+                g.setColor(Color.green);
+                g.fillRect(x, y, 32, 32);
+            } else {
+                g.setColor(Color.ORANGE);
+                g.fillRect(x, y, 32, 32);
+            }
+        }
     }
 
     @Override

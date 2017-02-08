@@ -22,7 +22,7 @@ public class ClydeTest {
 
     public ClydeTest() {
         pacman = new PacMan(7, 1, Direction.Up);
-        clyde = new Clyde(1, 1, pacman);
+        clyde = new Clyde(1, 1, pacman, false);
     }
 
     public void setGraph() {

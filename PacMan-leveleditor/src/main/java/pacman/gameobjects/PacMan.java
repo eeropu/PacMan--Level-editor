@@ -5,12 +5,14 @@ import java.awt.Rectangle;
 
 public class PacMan implements GameObject {
 
-    private int x, y, move;
+    private int x, y, origX, origY, move;
     private Direction current, changed;
 
     public PacMan(int x, int y, Direction d) {
         this.x = 32 * x - 32;
         this.y = 32 * y - 32;
+        this.origX = this.x;
+        this.origY = this.y;
         this.current = d;
         this.changed = d;
         this.move = 2;
@@ -94,6 +96,11 @@ public class PacMan implements GameObject {
     @Override
     public boolean checkCollision(PacMan pacman) {
         return false;
+    }
+    
+    public void reset(){
+        x = origX;
+        y = origY;
     }
 
     //Following classes are for test purposes

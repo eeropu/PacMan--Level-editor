@@ -1,16 +1,8 @@
 package pacman.levelmanagement;
 
-import pacman.gameobjects.Direction;
-import pacman.gameobjects.RandomGhost;
-import pacman.gameobjects.Ghost;
-import pacman.gameobjects.Blinky;
-import pacman.gameobjects.Pinky;
-import pacman.gameobjects.PowerPellet;
-import pacman.gameobjects.Clyde;
-import pacman.gameobjects.Wall;
-import pacman.gameobjects.PacMan;
-import pacman.gameobjects.Pointbubble;
+import pacman.gameobjects.*;
 import java.util.HashSet;
+import java.util.Random;
 
 public class LevelBuilder {
 
@@ -20,6 +12,7 @@ public class LevelBuilder {
     private HashSet<Pointbubble> points;
     private HashSet<PowerPellet> pp;
     private PacMan pacman;
+    private Random random;
 
     public LevelBuilder(String objectpositioning) {
         this.objectpositioning = objectpositioning;
@@ -27,6 +20,7 @@ public class LevelBuilder {
         walls = new HashSet<>();
         points = new HashSet<>();
         pp = new HashSet<>();
+        random = new Random();
     }
 
     public void build() {
@@ -54,21 +48,32 @@ public class LevelBuilder {
                 int p = i * 30 + j;
                 char c = objectpositioning.charAt(p);
                 if (c == 'L') {
-                    Blinky blinky = new Blinky(j + 1, i + 1, pacman);
+                    Blinky blinky = new Blinky(j + 1, i + 1, pacman, false);
                     blinky.setGraph(graph);
                     ghosts.add(blinky);
                 } else if (c == 'I') {
-                    Pinky pinky = new Pinky(j + 1, i + 1, pacman);
+                    Pinky pinky = new Pinky(j + 1, i + 1, pacman, false);
                     pinky.setGraph(graph);
                     ghosts.add(pinky);
                 } else if (c == 'C') {
-                    Clyde clyde = new Clyde(j + 1, i + 1, pacman);
+                    Clyde clyde = new Clyde(j + 1, i + 1, pacman, false);
                     clyde.setGraph(graph);
                     ghosts.add(clyde);
                 } else if (c == 'R') {
-                    RandomGhost random = new RandomGhost(j + 1, i + 1, pacman);
-                    random.setGraph(graph);
-                    ghosts.add(random);
+                    int r = random.nextInt(3);
+                    if(r == 0){
+                        Blinky blinky = new Blinky(j+1, i+1, pacman, true);
+                        blinky.setGraph(graph);
+                        ghosts.add(blinky);
+                    } else if(r == 1){
+                        Pinky pinky = new Pinky(j+1, i+1, pacman, true);
+                        pinky.setGraph(graph);
+                        ghosts.add(pinky);
+                    } else {
+                        Clyde clyde = new Clyde(j+1, i+1, pacman, true);
+                        clyde.setGraph(graph);
+                        ghosts.add(clyde);
+                    }
                 }
             }
         }

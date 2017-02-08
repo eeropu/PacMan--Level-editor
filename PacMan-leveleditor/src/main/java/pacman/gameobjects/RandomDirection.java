@@ -1,0 +1,196 @@
+package pacman.gameobjects;
+
+import java.util.Random;
+
+public class RandomDirection {
+
+    private final Random random = new Random();
+
+    public void randomDirection(Ghost ghost) {
+        if (ghost.d == Direction.Right) {
+            randomDirectionRight(ghost);
+        } else if (ghost.d == Direction.Left) {
+            randomDirectionLeft(ghost);
+        } else if (ghost.d == Direction.Up) {
+            randomDirectionUp(ghost);
+        } else {
+            randomDirectionDown(ghost);
+        }
+    }
+
+    public void randomDirectionRight(Ghost ghost) {
+        int i = 0;
+        if (ghost.graph[(ghost.x + 64) / 32][(ghost.y + 32) / 32] == 1) {
+            i += 1;
+        }
+        if (ghost.graph[(ghost.x + 32) / 32][(ghost.y) / 32] == 1) {
+            i += 3;
+        }
+        if (ghost.graph[(ghost.x + 32) / 32][(ghost.y + 64) / 32] == 1) {
+            i += 5;
+        }
+        if (i == 0) {
+            ghost.d = Direction.Left;
+        } else if (i == 3) {
+            ghost.d = Direction.Up;
+        } else if (i == 5) {
+            ghost.d = Direction.Down;
+        } else if (i == 4) {
+            int r = random.nextInt(2);
+            if (r == 1) {
+                ghost.d = Direction.Up;
+            }
+        } else if (i == 6) {
+            int r = random.nextInt(2);
+            if (r == 1) {
+                ghost.d = Direction.Down;
+            }
+        } else if (i == 8) {
+            int r = random.nextInt(2);
+            if (r == 0) {
+                ghost.d = Direction.Up;
+            } else {
+                ghost.d = Direction.Down;
+            }
+        } else if (i == 9) {
+            int r = random.nextInt(3);
+            if (r == 1) {
+                ghost.d = Direction.Up;
+            } else if (r == 2) {
+                ghost.d = Direction.Down;
+            }
+        }
+    }
+
+    public void randomDirectionLeft(Ghost ghost) {
+        int i = 0;
+        if (ghost.graph[(ghost.x) / 32][(ghost.y + 32) / 32] == 1) {
+            i += 1;
+        }
+        if (ghost.graph[(ghost.x + 32) / 32][(ghost.y) / 32] == 1) {
+            i += 3;
+        }
+        if (ghost.graph[(ghost.x + 32) / 32][(ghost.y + 64) / 32] == 1) {
+            i += 5;
+        }
+        if (i == 0) {
+            ghost.d = Direction.Right;
+        } else if (i == 3) {
+            ghost.d = Direction.Up;
+        } else if (i == 5) {
+            ghost.d = Direction.Down;
+        } else if (i == 4) {
+            int r = random.nextInt(2);
+            if (r == 1) {
+                ghost.d = Direction.Up;
+            }
+        } else if (i == 6) {
+            int r = random.nextInt(2);
+            if (r == 1) {
+                ghost.d = Direction.Down;
+            }
+        } else if (i == 8) {
+            int r = random.nextInt(2);
+            if (r == 0) {
+                ghost.d = Direction.Up;
+            } else {
+                ghost.d = Direction.Down;
+            }
+        } else if (i == 9) {
+            int r = random.nextInt(3);
+            if (r == 1) {
+                ghost.d = Direction.Up;
+            } else if (r == 2) {
+                ghost.d = Direction.Down;
+            }
+        }
+    }
+
+    public void randomDirectionUp(Ghost ghost) {
+        int i = 0;
+        if (ghost.graph[(ghost.x + 32) / 32][(ghost.y) / 32] == 1) {
+            i += 1;
+        }
+        if (ghost.graph[(ghost.x + 64) / 32][(ghost.y + 32) / 32] == 1) {
+            i += 3;
+        }
+        if (ghost.graph[(ghost.x) / 32][(ghost.y + 32) / 32] == 1) {
+            i += 5;
+        }
+        if (i == 0) {
+            ghost.d = Direction.Down;
+        } else if (i == 3) {
+            ghost.d = Direction.Right;
+        } else if (i == 5) {
+            ghost.d = Direction.Left;
+        } else if (i == 4) {
+            int r = random.nextInt(2);
+            if (r == 1) {
+                ghost.d = Direction.Right;
+            }
+        } else if (i == 6) {
+            int r = random.nextInt(2);
+            if (r == 1) {
+                ghost.d = Direction.Left;
+            }
+        } else if (i == 8) {
+            int r = random.nextInt(2);
+            if (r == 0) {
+                ghost.d = Direction.Right;
+            } else {
+                ghost.d = Direction.Left;
+            }
+        } else if (i == 9) {
+            int r = random.nextInt(3);
+            if (r == 1) {
+                ghost.d = Direction.Right;
+            } else if (r == 2) {
+                ghost.d = Direction.Left;
+            }
+        }
+    }
+
+    public void randomDirectionDown(Ghost ghost) {
+        int i = 0;
+        if (ghost.graph[(ghost.x + 32) / 32][(ghost.y) / 32] == 1) {
+            i += 1;
+        }
+        if (ghost.graph[(ghost.x + 64) / 32][(ghost.y + 32) / 32] == 1) {
+            i += 3;
+        }
+        if (ghost.graph[(ghost.x) / 32][(ghost.y + 32) / 32] == 1) {
+            i += 5;
+        }
+        if (i == 0) {
+            ghost.d = Direction.Up;
+        } else if (i == 3) {
+            ghost.d = Direction.Right;
+        } else if (i == 5) {
+            ghost.d = Direction.Left;
+        } else if (i == 4) {
+            int r = random.nextInt(2);
+            if (r == 1) {
+                ghost.d = Direction.Right;
+            }
+        } else if (i == 6) {
+            int r = random.nextInt(2);
+            if (r == 1) {
+                ghost.d = Direction.Left;
+            }
+        } else if (i == 8) {
+            int r = random.nextInt(2);
+            if (r == 0) {
+                ghost.d = Direction.Right;
+            } else {
+                ghost.d = Direction.Left;
+            }
+        } else if (i == 9) {
+            int r = random.nextInt(3);
+            if (r == 1) {
+                ghost.d = Direction.Right;
+            } else if (r == 2) {
+                ghost.d = Direction.Left;
+            }
+        }
+    }
+}

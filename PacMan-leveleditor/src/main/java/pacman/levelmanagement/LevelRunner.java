@@ -1,15 +1,16 @@
 package pacman.levelmanagement;
 
-import pacman.gameobjects.Ghost;
-import pacman.gameobjects.PacMan;
-import pacman.gameobjects.Pointbubble;
-import pacman.gameobjects.PowerPellet;
-import pacman.gameobjects.Wall;
+import java.awt.Color;
+import java.awt.Font;
+import pacman.gameobjects.*;
 import java.awt.Graphics;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.PriorityQueue;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import pacman.pacman.leveleditor.WindowHandler;
 
 public class LevelRunner extends JPanel {
 
@@ -19,13 +20,19 @@ public class LevelRunner extends JPanel {
     public HashSet<Ghost> ghosts;
     private HashSet<Pointbubble> points;
     private HashSet<PowerPellet> pp;
+    private HashMap<Integer, HashSet<Integer>> ghostStartingPositions;
     private Timer timer;
+    private int score, lives;
+    private long now, respawn;
+    private WindowHandler wh;
 
-    public LevelRunner() {
+    public LevelRunner(WindowHandler wh) {
+        this.wh = wh;
         build();
         ControlSetUp csu = new ControlSetUp(this);
         gl = new GameLoop(this);
         timer = new Timer(15, gl);
+        lives = 3;
     }
 
     @Override
@@ -44,12 +51,29 @@ public class LevelRunner extends JPanel {
         for (PowerPellet pp1 : pp) {
             pp1.paint(g);
         }
+        g.setColor(Color.black);
+        g.fillRect(0, 640, 960, 32);
+        g.setColor(Color.white);
+        g.setFont(new Font("Verdana", Font.BOLD, 25));
+        g.drawString("Score: " + score, 32, 665);
+        g.fillOval(850, 640, 32, 32);
+        g.drawString("x " + lives, 900, 665);
+        if (now - respawn < 3000) {
+            g.setColor(Color.black);
+            g.fillRect(85, 275, 795, 120);
+            g.setFont(new Font("Verdana", Font.BOLD, 128));
+            g.setColor(new Color(180, 0, 0));
+            g.drawString("LIFE LOST!", 90, 384);
+        }
     }
 
     public void move() {
-        pacman.move();
-        for (Ghost ghost : ghosts) {
-            ghost.move();
+        now = System.currentTimeMillis();
+        if (now - respawn > 3000) {
+            pacman.move();
+            for (Ghost ghost : ghosts) {
+                ghost.move();
+            }
         }
     }
 
@@ -63,18 +87,48 @@ public class LevelRunner extends JPanel {
         while (pbit.hasNext()) {
             if (pbit.next().checkCollision(pacman)) {
                 pbit.remove();
+                score += 10;
             }
+        }
+        if(points.isEmpty()){
+            completed();
         }
         Iterator<PowerPellet> ppit = pp.iterator();
         while (ppit.hasNext()) {
             if (ppit.next().checkCollision(pacman)) {
                 ppit.remove();
+                score += 50;
+                for (Ghost ghost : ghosts) {
+                    ghost.eatPowerpellet();
+                }
             }
         }
         for (Ghost ghost : ghosts) {
             for (Wall wall : walls) {
                 if (ghost.getBounds().intersects(wall.getBounds())) {
                     ghost.stop();
+                }
+            }
+            if (ghost.checkCollision(pacman)) {
+                if (ghost.isPpEaten()) {
+                    PriorityQueue<Coordinate> pq = new PriorityQueue();
+                    for (Integer i : ghostStartingPositions.keySet()) {
+                        for (Integer j : ghostStartingPositions.get(i)) {
+                            pq.add(new Coordinate(i, j, 0, pacman.getX(), pacman.getY(), null, true));
+                        }
+                    }
+                    Coordinate farthest = pq.poll();
+                    ghost.setX(farthest.getX());
+                    ghost.setY(farthest.getY());
+                    ghost.setPpEaten(false);
+                    score += 200;
+                } else {
+                    pacman.reset();
+                    for (Ghost g : ghosts) {
+                        g.reset();
+                    }
+                    respawn = System.currentTimeMillis();
+                    lives--;
                 }
             }
         }
@@ -92,6 +146,20 @@ public class LevelRunner extends JPanel {
         ghosts = lb.getGhosts();
         points = lb.getPoints();
         pp = lb.getPp();
+        ghostStartingPositions = new HashMap<>();
+        for (Ghost ghost : ghosts) {
+            if (ghostStartingPositions.containsKey(ghost.getX())) {
+                ghostStartingPositions.get(ghost.getX()).add(ghost.getY());
+            } else {
+                ghostStartingPositions.put(ghost.getX(), new HashSet<>());
+                ghostStartingPositions.get(ghost.getX()).add(ghost.getY());
+            }
+        }
+    }
+    
+    public void completed(){
+        timer.stop();
+        wh.lvlCompleted();
     }
 
     /*
@@ -106,6 +174,7 @@ public class LevelRunner extends JPanel {
      * L adds a Blinky (ghost)
      * I adds a Pinky (ghost)
      * C adds a Clyde (ghost)
+     * R adds a random ghost
      * Any other character leads to empty coordinate
      * Casing is important
      * "Opening" the border on one side of the screen but not the other will
@@ -116,25 +185,25 @@ public class LevelRunner extends JPanel {
      * 
      */
     public String testi() {
-        return "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
-                + "xPxxxxxxxxxxxxxxxxxxxxxxxxxxLx"
+        return "WWWWWWWWWWWWWWWWWWWWWWWWWWxWWW"
+                + "xPxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                + "WxWWWWWxWWWxWWWWWWxWWWxWWWWWxW"
+                + "WxWbbbbxxWxxWbbbbWxxWxxbbbLWxW"
+                + "WxWbWWWxxWxxxbWWbxxxWxxWWWbWxW"
+                + "xxWbWbbxxWxxWbWWbWxxWxxbbWbWxx"
+                + "WxWbWbWxxWxxWbbbbWxxWxxWbWbWxW"
+                + "WxxxxxxxxWxxWxWWxWxxWxxxxxxxxW"
+                + "WxWWWWWWxxxxxxxxxxxxxxWWWWWWxW"
+                + "WLxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
+                + "WxWxWxWxWxWxWxWWxWxWxWxWxWxWxW"
                 + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
+                + "WxWxWxWxWxWxWLWWxWxWxWxWxWxWxW"
+                + "WxWxWxWxWxWxWpWWxWxWxWxWxWxWxW"
+                + "WxWxxxxxxxxxxxxxxxxxxxxxxxxxLW"
+                + "WxWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
                 + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxxIxxxxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxRxxxxxxxxxxxCxxxxxxxW"
-                + "WxxxxxxxxxxxxpxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW";
+                + "WWWWWWWWWWWWWWWWWWWWWWWWWWWWxW"
+                + "xxxxxxxxxxxxxxxxxxxxxxxxxxxWxx"
+                + "WWWWWWWWWWWWWWWWWWWWWWWWWWxWWW";
     }
 }

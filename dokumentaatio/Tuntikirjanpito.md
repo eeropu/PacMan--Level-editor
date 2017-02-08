@@ -12,3 +12,5 @@ Päivä | Tunnit | Kuvaus
 01.02.2017 | 3h | testien tekemistä ja haamujen toiminnan parantelua
 02.02.2017 | 2h | Testejä ja haamujen toimintaa
 03.02.2017 | 3h | Ohjelmointia, testejä, deadline3 viimeistely
+07.02.2017 | 3h | Ohjelmointia (haamujen viimeistelyä)
+08.02.2017 | 5h | Ohjelmointia (Pelilogiikan "viimeistely") ja GUI (menut yms.) aloitettu

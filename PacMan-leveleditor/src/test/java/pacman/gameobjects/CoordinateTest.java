@@ -13,22 +13,22 @@ public class CoordinateTest {
     private Coordinate c;
 
     public CoordinateTest() {
-        this.c = new Coordinate(0, 0, 100, 300, 400, null);
+        this.c = new Coordinate(0, 0, 100, 300, 400, null, false);
     }
 
     @Test
     public void comparing() {
-        Coordinate a = new Coordinate(0, 0, 150, 300, 400, c);
+        Coordinate a = new Coordinate(0, 0, 150, 300, 400, c, false);
         assertEquals(-1, c.compareTo(a));
         assertEquals(1, a.compareTo(c));
-        Coordinate b = new Coordinate(0, 0, 100, 300, 400, a);
+        Coordinate b = new Coordinate(0, 0, 100, 300, 400, a, false);
         assertEquals(-1, b.compareTo(c));
         assertEquals(-1, b.compareTo(c));
     }
 
     @Test
     public void previous() {
-        Coordinate a = new Coordinate(0, 0, 150, 300, 400, c);
+        Coordinate a = new Coordinate(0, 0, 150, 300, 400, c, false);
         assertTrue(a.getPrevious() == c);
         c.setPrevious(a);
         assertTrue(c.getPrevious() == a);
