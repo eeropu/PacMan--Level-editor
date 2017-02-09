@@ -1,11 +1,15 @@
 package pacman.pacman.leveleditor;
 
+import pacman.guiobjects.StartMenu;
+import pacman.guiobjects.LevelCompleted;
 import pacman.levelmanagement.LevelRunner;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import pacman.database.LevelsDAO;
 import pacman.guilisteners.LevelCompleteListener;
+import pacman.guiobjects.LevelSelectionMenu;
 
 /*
  * WindowHandler takes care of showing the right content on the screen
@@ -16,6 +20,7 @@ public class WindowHandler implements Runnable {
     private JPanel cardPanel;
     private LevelRunner lr;
     private LevelCompleteListener lcl;
+    private LevelSelectionMenu lsm;
 
     public WindowHandler() {
         cardlayout = new CardLayout();
@@ -25,8 +30,9 @@ public class WindowHandler implements Runnable {
         
         StartMenu startmenu = new StartMenu(this);
         cardPanel.add(startmenu, "start");
-        lr = new LevelRunner(this);
-        cardPanel.add(lr, "lr");
+        
+        lsm = new LevelSelectionMenu(new LevelsDAO(), this);
+        cardPanel.add(lsm, "levelselection");
     }
 
     @Override
@@ -44,7 +50,14 @@ public class WindowHandler implements Runnable {
         cardlayout.show(cardPanel, "start");
     }
     
-    public void runLevel(){
+    public void lvlslctmenu(){
+        lsm.build();
+        cardlayout.show(cardPanel, "levelselection");
+    }
+    
+    public void runLevel(String s){
+        LevelRunner lr = new LevelRunner(this, s);
+        cardPanel.add(lr, "lr");
         cardlayout.show(cardPanel, "lr");
         lr.start();
     }

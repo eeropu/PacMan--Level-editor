@@ -20,7 +20,7 @@ public class StartMenuListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == play){
-            wh.runLevel();
+            wh.lvlslctmenu();
         } else if (e.getSource() == create){
             
         } else if (e.getSource() == highscores){

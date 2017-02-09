@@ -1,10 +1,11 @@
-package pacman.pacman.leveleditor;
+package pacman.guiobjects;
 
 import pacman.guilisteners.StartMenuListener;
 import java.awt.Font;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import pacman.pacman.leveleditor.WindowHandler;
 
 public class StartMenu extends JPanel {
 

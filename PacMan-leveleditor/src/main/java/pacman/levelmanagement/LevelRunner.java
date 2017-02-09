@@ -26,9 +26,9 @@ public class LevelRunner extends JPanel {
     private long now, respawn;
     private WindowHandler wh;
 
-    public LevelRunner(WindowHandler wh) {
+    public LevelRunner(WindowHandler wh, String level) {
         this.wh = wh;
-        build();
+        build(level);
         ControlSetUp csu = new ControlSetUp(this);
         gl = new GameLoop(this);
         timer = new Timer(15, gl);
@@ -138,8 +138,8 @@ public class LevelRunner extends JPanel {
         timer.start();
     }
 
-    public void build() {
-        LevelBuilder lb = new LevelBuilder(testi());
+    public void build(String s) {
+        LevelBuilder lb = new LevelBuilder(s);
         lb.build();
         pacman = lb.getPacman();
         walls = lb.getWalls();
@@ -160,50 +160,5 @@ public class LevelRunner extends JPanel {
     public void completed(){
         timer.stop();
         wh.lvlCompleted();
-    }
-
-    /*
-     * Changing the following string modifies the test level
-     * P changes the starting position of Pacman. There can be only one PacMan, 
-     * therefore it will be postioined to the corresponding coordinate of the
-     * last instance of character P.
-     * The amount of other objects is unlimited
-     * W adds a wall
-     * b adds a pointbubble
-     * p adds a powerpellet
-     * L adds a Blinky (ghost)
-     * I adds a Pinky (ghost)
-     * C adds a Clyde (ghost)
-     * R adds a random ghost
-     * Any other character leads to empty coordinate
-     * Casing is important
-     * "Opening" the border on one side of the screen but not the other will
-     * lead to error where PacMan is not controllable (this is on purpose and
-     * such positioning of the walls will not be possible in the final version)
-     * 
-     * ! THE LENGHT OF THE STRING MUST BE EXACTLY 600 CHARACTERS !
-     * 
-     */
-    public String testi() {
-        return "WWWWWWWWWWWWWWWWWWWWWWWWWWxWWW"
-                + "xPxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-                + "WxWWWWWxWWWxWWWWWWxWWWxWWWWWxW"
-                + "WxWbbbbxxWxxWbbbbWxxWxxbbbLWxW"
-                + "WxWbWWWxxWxxxbWWbxxxWxxWWWbWxW"
-                + "xxWbWbbxxWxxWbWWbWxxWxxbbWbWxx"
-                + "WxWbWbWxxWxxWbbbbWxxWxxWbWbWxW"
-                + "WxxxxxxxxWxxWxWWxWxxWxxxxxxxxW"
-                + "WxWWWWWWxxxxxxxxxxxxxxWWWWWWxW"
-                + "WLxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxWxWxWxWxWxWxWWxWxWxWxWxWxWxW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WxWxWxWxWxWxWLWWxWxWxWxWxWxWxW"
-                + "WxWxWxWxWxWxWpWWxWxWxWxWxWxWxW"
-                + "WxWxxxxxxxxxxxxxxxxxxxxxxxxxLW"
-                + "WxWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
-                + "WxxxxxxxxxxxxxxxxxxxxxxxxxxxxW"
-                + "WWWWWWWWWWWWWWWWWWWWWWWWWWWWxW"
-                + "xxxxxxxxxxxxxxxxxxxxxxxxxxxWxx"
-                + "WWWWWWWWWWWWWWWWWWWWWWWWWWxWWW";
     }
 }
