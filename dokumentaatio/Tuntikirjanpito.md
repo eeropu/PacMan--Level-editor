@@ -14,3 +14,4 @@ Päivä | Tunnit | Kuvaus
 03.02.2017 | 3h | Ohjelmointia, testejä, deadline3 viimeistely
 07.02.2017 | 3h | Ohjelmointia (haamujen viimeistelyä)
 08.02.2017 | 5h | Ohjelmointia (Pelilogiikan "viimeistely") ja GUI (menut yms.) aloitettu
+09.02.2017 | 4h | Tietokannan ja siihen liittyvien luokkien luonti aloitettu + testejä
