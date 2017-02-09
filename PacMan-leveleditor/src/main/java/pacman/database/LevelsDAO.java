@@ -19,14 +19,24 @@ public class LevelsDAO {
         this.orderby = "name DESC";
     }
 
-    public void add(String name, String level) {
+    public String add(String name, String level, boolean check) {
+        if (check) {
+            ArrayList<String> list = getAllLevels();
+            for (String c : list) {
+                if (c.equals(name)) {
+                    return "double";
+                }
+            }
+        }
         try {
             Connection conn = db.getConnection();
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO Levels (name, level, date) VALUES "
                     + "('" + name + "', '" + level + "', CURRENT_TIMESTAMP)");
             stmt.execute();
             conn.close();
+            return "ok";
         } catch (SQLException e) {
+            return "error";
         }
     }
 
@@ -41,7 +51,6 @@ public class LevelsDAO {
             }
             return list;
         } catch (SQLException e) {
-            System.out.println("virhe");
             return null;
         }
     }

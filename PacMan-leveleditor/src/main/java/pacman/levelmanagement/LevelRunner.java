@@ -99,7 +99,7 @@ public class LevelRunner extends JPanel {
                 ppit.remove();
                 score += 50;
                 for (Ghost ghost : ghosts) {
-                    ghost.eatPowerpellet();
+                    ghost.eatPowerpellet(System.currentTimeMillis());
                 }
             }
         }

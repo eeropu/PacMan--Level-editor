@@ -15,6 +15,16 @@ public class CoordinateTest {
     public CoordinateTest() {
         this.c = new Coordinate(0, 0, 100, 300, 400, null, false);
     }
+    
+    @Test
+    public void heuristic(){
+        Coordinate a = new Coordinate(3, 4, 0, 0, 0, c, true);
+        assertEquals(5, a.getHeuristic(), 0.1);
+        a = new Coordinate(0, 0, 0, 0, 0, c, true);
+        assertEquals(0, a.getHeuristic(), 0.1);
+        a = new Coordinate(-3, -4, 0, 0, 0, c, true);
+        assertEquals(5, a.getHeuristic(), 0.1);
+    }
 
     @Test
     public void comparing() {
@@ -22,8 +32,15 @@ public class CoordinateTest {
         assertEquals(-1, c.compareTo(a));
         assertEquals(1, a.compareTo(c));
         Coordinate b = new Coordinate(0, 0, 100, 300, 400, a, false);
+        assertEquals(-1, c.compareTo(b));
         assertEquals(-1, b.compareTo(c));
-        assertEquals(-1, b.compareTo(c));
+        c = new Coordinate(0, 0, 100, 300, 400, null, true);
+        a = new Coordinate(0, 0, 150, 300, 400, c, true);
+        assertEquals(1, c.compareTo(a));
+        assertEquals(-1, a.compareTo(c));
+        b = new Coordinate(0, 0, 100, 300, 400, a, true);
+        assertEquals(1, c.compareTo(b));
+        assertEquals(1, b.compareTo(c));
     }
 
     @Test

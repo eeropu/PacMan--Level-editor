@@ -141,14 +141,14 @@ public class Ghost implements GameObject {
         d = Direction.Stop;
     }
 
-    public void eatPowerpellet() {
+    public void eatPowerpellet(long ln) {
         ppEaten = true;
-        timer = System.currentTimeMillis();
+        timer = ln;
         move = 1;
     }
 
-    public void eatableTimer() {
-        now = System.currentTimeMillis();
+    public void eatableTimer(long now) {
+        this.now = now;
         if (now - timer > eatable) {
             ppEaten = false;
             if (x % 32 == 0 && y % 32 == 0) {

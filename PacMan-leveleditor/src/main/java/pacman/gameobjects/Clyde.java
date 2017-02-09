@@ -19,7 +19,7 @@ public class Clyde extends Ghost {
 
     @Override
     public void move() {
-        eatableTimer();
+        eatableTimer(System.currentTimeMillis());
         if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) < 320 && ppEaten) {
             if (x % 32 == 0 && y % 32 == 0) {
                 setDirectionAStar(pacman.getX(), pacman.getY(), true);
