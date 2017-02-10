@@ -1,5 +1,12 @@
 package pacman.gameobjects;
 
+/**
+ *
+ * @author eerop
+ *
+ * Coordinate is used by the Ghost-classes to find pacman and then deciding the
+ * direction where the ghost moves.
+ */
 public class Coordinate implements Comparable<Coordinate> {
 
     private int x, y, distance;

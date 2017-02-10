@@ -6,6 +6,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ *
+ * @author eerop
+ *
+ * Level data-access-object. This class is used to retrieve and send information
+ * from and to the database.
+ */
 public class LevelsDAO {
 
     private Database db;

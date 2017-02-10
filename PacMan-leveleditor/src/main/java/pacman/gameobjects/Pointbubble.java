@@ -4,6 +4,14 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+/**
+ *
+ * @author eerop
+ *
+ * This class contains the functions for the Pointbubbles. PointBubbles are
+ * collectables that PacMan needs to collect to gain points and finally complete
+ * a level.
+ */
 public class Pointbubble implements GameObject {
 
     private int x, y;

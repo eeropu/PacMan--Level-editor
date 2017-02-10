@@ -2,6 +2,13 @@ package pacman.gameobjects;
 
 import java.util.Random;
 
+/**
+ *
+ * @author eerop
+ *
+ * This class is used to set a ghosts direction randomly when PacMan is out of
+ * reach.
+ */
 public class RandomDirection {
 
     private final Random random = new Random();

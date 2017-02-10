@@ -3,8 +3,13 @@ package pacman.gameobjects;
 import java.awt.Color;
 import java.awt.Graphics;
 
-/*
- * The ghost that tries to find PacMan
+/**
+ *
+ * @author eerop
+ *
+ * This class is responsible for managing the Blinky-ghosts. Blinky is the ghost
+ * that follows and tries to catch pacman when it gets close enough. until then
+ * it moves randomly.
  */
 public class Blinky extends Ghost {
 
@@ -15,12 +20,21 @@ public class Blinky extends Ghost {
 
     @Override
     public void move() {
-        eatableTimer(System.currentTimeMillis());
+        if (ppEaten) {
+            eatableTimer(System.currentTimeMillis());
+        }
+        if (move == 1 && !ppEaten) {
+            if (x % 32 == 0 && y % 32 == 0) {
+                move = 2;
+            }
+        }
         if (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) < 192) {
+            dSetRandomly = false;
             if (x % 32 == 0 && y % 32 == 0) {
                 setDirectionAStar(pacman.getX(), pacman.getY(), ppEaten);
             }
         } else {
+            dSetRandomly = true;
             if (x % 32 == 0 && y % 32 == 0) {
                 randir.randomDirection(this);
             }

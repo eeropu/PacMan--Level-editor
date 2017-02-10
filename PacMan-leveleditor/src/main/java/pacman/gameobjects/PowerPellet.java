@@ -4,6 +4,14 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+/**
+ *
+ * @author eerop
+ *
+ * This class contains the functions of the Powerpellets. Powerpellets can be
+ * collected by PacMan. After one is collected PacMan will be able to eat the
+ * ghosts for a short period of time.
+ */
 public class PowerPellet implements GameObject {
 
     private int x, y;

@@ -5,6 +5,14 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.PriorityQueue;
 
+/**
+ *
+ * @author eerop
+ *
+ * The parent class of all ghosts that contains the needed methods for the
+ * ghosts' functions. e.g. getting the ghosts direction with a* -search
+ * algorithm.
+ */
 public class Ghost implements GameObject {
 
     protected int x, origX, y, origY, move, eatable;
@@ -14,6 +22,7 @@ public class Ghost implements GameObject {
     protected RandomDirection randir;
     protected boolean randomghost, ppEaten;
     protected long timer, now;
+    protected boolean dSetRandomly;  //This variable is for testpurposes
 
     public Ghost(int x, int y, PacMan pacman, boolean randomghost) {
         this.x = x * 32 - 32;
@@ -156,8 +165,8 @@ public class Ghost implements GameObject {
             }
         }
     }
-    
-    public long timeLeft(){
+
+    public long timeLeft() {
         return now - timer;
     }
 
@@ -184,8 +193,8 @@ public class Ghost implements GameObject {
     public int getY() {
         return y;
     }
-    
-    public void reset(){
+
+    public void reset() {
         x = origX;
         y = origY;
     }

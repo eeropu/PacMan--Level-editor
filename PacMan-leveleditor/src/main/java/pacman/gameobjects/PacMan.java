@@ -3,6 +3,12 @@ package pacman.gameobjects;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+/**
+ *
+ * @author eerop
+ *
+ * This class is responsible for PacMans operations.
+ */
 public class PacMan implements GameObject {
 
     private int x, y, origX, origY, move;
@@ -97,8 +103,8 @@ public class PacMan implements GameObject {
     public boolean checkCollision(PacMan pacman) {
         return false;
     }
-    
-    public void reset(){
+
+    public void reset() {
         x = origX;
         y = origY;
     }

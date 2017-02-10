@@ -6,8 +6,11 @@ import javax.swing.Action;
 import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
 import javax.swing.KeyStroke;
 
-/*
- * ControlSetUp enables controlling pacman
+/**
+ *
+ * @author eerop
+ *
+ * This class is used by Levelrunner and it enables controlling of PacMan
  */
 public final class ControlSetUp {
 

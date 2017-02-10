@@ -9,8 +9,14 @@ import javax.swing.JButton;
 import javax.swing.JTextPane;
 import pacman.pacman.leveleditor.WindowHandler;
 
-public class LevelCompleteListener implements ActionListener, MouseListener{
-    
+/**
+ *
+ * @author eerop
+ *
+ * Gives functionality to the components in the "Level complete" -screen.
+ */
+public class LevelCompleteListener implements ActionListener, MouseListener {
+
     private WindowHandler wh;
     private JButton submit, skip;
     private JTextPane txt;
@@ -21,25 +27,25 @@ public class LevelCompleteListener implements ActionListener, MouseListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == submit){
-            if(txt.getText().equals("")){
+        if (e.getSource() == submit) {
+            if (txt.getText().equals("")) {
                 txt.setText("Name");
                 txt.setForeground(Color.gray);
-            } else if(txt.getText().equals("Name")){
+            } else if (txt.getText().equals("Name")) {
                 txt.setForeground(Color.red);
             } else {
                 System.out.println(txt.getText());
                 wh.startMenu();
             }
-        } else if (e.getSource() == skip){
+        } else if (e.getSource() == skip) {
             wh.startMenu();
         }
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(e.getSource() == txt){
-            if(txt.getText().equals("Name")){
+        if (e.getSource() == txt) {
+            if (txt.getText().equals("Name")) {
                 txt.setForeground(Color.white);
                 txt.setText("");
             }
@@ -73,6 +79,5 @@ public class LevelCompleteListener implements ActionListener, MouseListener{
     public void setTxt(JTextPane txt) {
         this.txt = txt;
     }
-    
-    
+
 }

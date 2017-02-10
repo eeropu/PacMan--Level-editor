@@ -237,4 +237,20 @@ public class PacManTest {
         pacman = new PacMan(11, 11, Direction.Up);
         assertFalse(pacman.checkCollision(pacman)); //method returns always false
     }
+    
+    @Test
+    public void reset(){
+        pacman = new PacMan(1, 1, Direction.Down);
+        for (int i = 0; i < 16; i++) {
+            pacman.move();
+        }
+        pacman.right();
+        pacman.changeDirection();
+        pacman.move();
+        assertEquals(2, pacman.getX());
+        assertEquals(32, pacman.getY());
+        pacman.reset();
+        assertEquals(0, pacman.getX());
+        assertEquals(0, pacman.getY());
+    }
 }

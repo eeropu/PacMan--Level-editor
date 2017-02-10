@@ -21,7 +21,7 @@ public class ClydeTest {
     private PacMan pacman;
 
     public ClydeTest() {
-        pacman = new PacMan(7, 1, Direction.Up);
+        pacman = new PacMan(8, 1, Direction.Up);
         clyde = new Clyde(1, 1, pacman, false);
     }
 
@@ -105,6 +105,218 @@ public class ClydeTest {
         clyde.setGraph(clyde.graph);
         assertEquals(0, clyde.getHomeX());
         assertEquals(19, clyde.getHomeY());
+    }
+    
+    @Test
+    public void eatableTimer(){
+        clyde.graph = new int[32][22];
+        setGraph();
+        clyde.eatable =  -1;
+        clyde.eatPowerpellet(System.currentTimeMillis());
+        assertTrue(clyde.ppEaten);
+        clyde.move();
+        assertFalse(clyde.ppEaten);
+        clyde.eatable = 0;
+        clyde.eatPowerpellet(System.currentTimeMillis());
+        clyde.move();
+        assertTrue(clyde.ppEaten);
+        clyde.eatable = 1;
+        clyde.eatPowerpellet(System.currentTimeMillis());
+        clyde.move();
+        assertTrue(clyde.ppEaten);
+    }
+    
+    @Test
+    public void moveToTwo(){
+        clyde.graph = new int[32][22];
+        setGraph();
+        clyde.eatable = 100000;
+        clyde.timer = Long.MAX_VALUE;
+        clyde.move = 0;
+        clyde.ppEaten = false;
+        clyde.move();
+        assertEquals(0, clyde.move);
+        clyde.ppEaten = true;
+        clyde.move();
+        assertEquals(0, clyde.move);
+        clyde.move = 1;
+        clyde.move();
+        assertEquals(1, clyde.move);
+        clyde.ppEaten = false;
+        clyde.move();
+        assertEquals(1, clyde.move);
+        clyde.y = 321;
+        clyde.move();
+        assertEquals(1, clyde.move);
+        clyde.x = 321;
+        clyde.d = Direction.Right;
+        clyde.move();
+        assertEquals(1, clyde.move);
+        clyde.x = 319;
+        clyde.move();
+        assertEquals(1, clyde.move);
+        clyde.x = 320;
+        clyde.y = 320;
+        clyde.move();
+        
+        assertEquals(2, clyde.move);
+    }
+
+    @Test
+    public void moveDistance() {
+        clyde.graph = new int[32][22];
+        setGraph();
+        clyde.pacman = new PacMan(1, 1, Direction.Up);
+        clyde.dSetRandomly = true;
+        clyde.x = 64;
+        clyde.y = 182;
+        clyde.move();
+        assertFalse(clyde.dSetRandomly);
+        clyde.dSetRandomly = true;
+        clyde.x = -64;
+        clyde.y = 182;
+        clyde.move();
+        assertFalse(clyde.dSetRandomly);
+        clyde.dSetRandomly = true;
+        clyde.x = 64;
+        clyde.y = -182;
+        clyde.move();
+        assertFalse(clyde.dSetRandomly);
+        clyde.dSetRandomly = true;
+        clyde.x = -64;
+        clyde.y = -182;
+        clyde.move();
+        assertFalse(clyde.dSetRandomly);
+        clyde.x = 64;
+        clyde.y = 181;
+        clyde.move();
+        assertTrue(clyde.dSetRandomly);
+        clyde.dSetRandomly = false;
+        clyde.x = -64;
+        clyde.y = 181;
+        clyde.move();
+        assertTrue(clyde.dSetRandomly);
+        clyde.dSetRandomly = false;
+        clyde.x = 64;
+        clyde.y = -181;
+        clyde.move();
+        assertTrue(clyde.dSetRandomly);
+        clyde.dSetRandomly = false;
+        clyde.x = -64;
+        clyde.y = -181;
+        clyde.move();
+        assertTrue(clyde.dSetRandomly);
+        clyde.pacman = new PacMan(16, 1, Direction.Up);
+        clyde.dSetRandomly = false;
+        clyde.x = 480 + 192;
+        clyde.y = 0;
+        clyde.move();
+        assertTrue(clyde.dSetRandomly);
+        clyde.dSetRandomly = false;
+        clyde.x = 480 - 192;
+        clyde.y = 0;
+        clyde.move();
+        assertTrue(clyde.dSetRandomly);
+        clyde.dSetRandomly = false;
+        clyde.x = 480 + 191;
+        clyde.y = 0;
+        clyde.move();
+        assertTrue(clyde.dSetRandomly);
+        clyde.dSetRandomly = false;
+        clyde.x = 480 - 191;
+        clyde.y = 0;
+        clyde.move();
+        assertTrue(clyde.dSetRandomly);
+        clyde.dSetRandomly = true;
+        clyde.x = 480 + 193;
+        clyde.y = 0;
+        clyde.move();
+        assertFalse(clyde.dSetRandomly);
+        clyde.dSetRandomly = true;
+        clyde.x = 480 - 193;
+        clyde.y = 0;
+        clyde.move();
+        assertFalse(clyde.dSetRandomly);
+        clyde.pacman = new PacMan(1, 16, Direction.Up);
+        clyde.dSetRandomly = false;
+        clyde.x = 0;
+        clyde.y = 480 - 191;
+        clyde.move();
+        assertTrue(clyde.dSetRandomly);
+        clyde.dSetRandomly = false;
+        clyde.x = 0;
+        clyde.y = 480 - 192;
+        clyde.move();
+        assertTrue(clyde.dSetRandomly);
+        clyde.x = 0;
+        clyde.y = 480 - 193;
+        clyde.move();
+        assertFalse(clyde.dSetRandomly);
+    }
+    
+    @Test
+    public void moveDirection(){
+        clyde.graph = new int[32][22];
+        setGraph();
+        clyde.pacman = new PacMan(0, 11, Direction.Up);
+        clyde.x = 322;
+        clyde.move();
+        assertEquals(Direction.Up, clyde.d);
+        clyde.x = 318;
+        clyde.move();
+        assertEquals(Direction.Up, clyde.d);
+        clyde.x = 320;
+        clyde.y = 318;
+        clyde.move();
+        assertEquals(Direction.Up, clyde.d);
+        clyde.y = 322;
+        clyde.move();
+        assertEquals(Direction.Up, clyde.d);
+        clyde.move();
+        assertEquals(Direction.Left, clyde.d);
+    }
+    
+    @Test
+    public void moveDirectionHome(){
+        clyde.graph = new int[32][22];
+        setGraph();
+        clyde.pacman = new PacMan(1, 1, Direction.Up);
+        clyde.x = 0;
+        clyde.y = 62;
+        clyde.d = Direction.Up;
+        clyde.move();
+        assertEquals(Direction.Up, clyde.d);
+        clyde.y = 66;
+        clyde.move();
+        assertEquals(Direction.Up, clyde.d);
+        clyde.x = -2;
+        clyde.move();
+        assertEquals(Direction.Up, clyde.d);
+        clyde.x = 2;
+        clyde.move();
+        assertEquals(Direction.Up, clyde.d);
+        clyde.x = 0;
+        clyde.y = 64;
+        clyde.move();
+        assertEquals(Direction.Down, clyde.d);
+        clyde.x = 0;
+        clyde.y = 64;
+        clyde.setHomeX(10);
+        clyde.setHomeY(3);
+        clyde.move();
+        assertEquals(Direction.Right, clyde.d);
+        clyde.x = 64;
+        clyde.y = 64;
+        clyde.setHomeX(0);
+        clyde.setHomeY(3);
+        clyde.move();
+        assertEquals(Direction.Left, clyde.d);
+        clyde.x = 0;
+        clyde.y = 64;
+        clyde.setHomeX(1);
+        clyde.setHomeY(1);
+        clyde.move();
+        assertEquals(Direction.Up, clyde.d);
     }
 
 }

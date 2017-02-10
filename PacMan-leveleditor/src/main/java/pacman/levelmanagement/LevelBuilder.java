@@ -4,6 +4,13 @@ import pacman.gameobjects.*;
 import java.util.HashSet;
 import java.util.Random;
 
+/**
+ *
+ * @author eerop
+ *
+ * This class is used by the Levelrunner to build the Level according to the
+ * information retrieved from the database.
+ */
 public class LevelBuilder {
 
     private String objectpositioning;
@@ -61,16 +68,16 @@ public class LevelBuilder {
                     ghosts.add(clyde);
                 } else if (c == 'R') {
                     int r = random.nextInt(3);
-                    if(r == 0){
-                        Blinky blinky = new Blinky(j+1, i+1, pacman, true);
+                    if (r == 0) {
+                        Blinky blinky = new Blinky(j + 1, i + 1, pacman, true);
                         blinky.setGraph(graph);
                         ghosts.add(blinky);
-                    } else if(r == 1){
-                        Pinky pinky = new Pinky(j+1, i+1, pacman, true);
+                    } else if (r == 1) {
+                        Pinky pinky = new Pinky(j + 1, i + 1, pacman, true);
                         pinky.setGraph(graph);
                         ghosts.add(pinky);
                     } else {
-                        Clyde clyde = new Clyde(j+1, i+1, pacman, true);
+                        Clyde clyde = new Clyde(j + 1, i + 1, pacman, true);
                         clyde.setGraph(graph);
                         ghosts.add(clyde);
                     }

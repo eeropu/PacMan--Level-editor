@@ -3,6 +3,12 @@ package pacman.gameobjects;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+/**
+ *
+ * @author eerop
+ *
+ * The class that manages the wall-objects.
+ */
 public class Wall implements GameObject {
 
     private int x, y;

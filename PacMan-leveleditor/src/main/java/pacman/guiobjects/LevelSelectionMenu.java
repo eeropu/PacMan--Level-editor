@@ -11,6 +11,13 @@ import javax.swing.JScrollPane;
 import pacman.database.LevelsDAO;
 import pacman.pacman.leveleditor.WindowHandler;
 
+/**
+ *
+ * @author eerop
+ *
+ * Menu that will be shown to the player once he/she has decided to play or
+ * modify a level.
+ */
 public class LevelSelectionMenu extends JPanel {
 
     private LevelsDAO ldao;
@@ -21,20 +28,20 @@ public class LevelSelectionMenu extends JPanel {
         this.ldao = ldao;
         this.wh = wh;
     }
-    
-    public void build(){
+
+    public void build() {
         removeAll();
-        
+
         levels = ldao.getAllLevels();
 
         int h = 128;
         int w = 320;
         JPanel panel = new JPanel();
         panel.setMinimumSize(new Dimension(960, 640));
-        if (levels.size() > 30){
+        if (levels.size() > 30) {
             h = 64;
             w = 314;
-            if(levels.size() % 3 == 0){
+            if (levels.size() % 3 == 0) {
                 panel.setPreferredSize(new Dimension(942, levels.size() / 3 * 64));
             } else {
                 panel.setPreferredSize(new Dimension(942, levels.size() / 3 * 64 + 64));
@@ -52,15 +59,15 @@ public class LevelSelectionMenu extends JPanel {
         int y = 0;
         Font font = new Font("Verdana", Font.BOLD, 20);
         for (String level : levels) {
-            
+
             JButton button = new JButton(level);
             button.setBounds(x * w, y * h, w, h);
             button.setFont(font);
-            
+
             button.addActionListener((ActionEvent e) -> {
                 startLevel(button.getText());
             });
-            
+
             panel.add(button);
             if (x == 2) {
                 x = 0;

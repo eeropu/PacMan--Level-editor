@@ -11,8 +11,12 @@ import pacman.database.LevelsDAO;
 import pacman.guilisteners.LevelCompleteListener;
 import pacman.guiobjects.LevelSelectionMenu;
 
-/*
- * WindowHandler takes care of showing the right content on the screen
+/**
+ *
+ * @author eerop
+ *
+ * This class is responsible for showing the correct contents (e.g. menus) on
+ * the programs frame.
  */
 public class WindowHandler implements Runnable {
 
@@ -25,12 +29,12 @@ public class WindowHandler implements Runnable {
     public WindowHandler() {
         cardlayout = new CardLayout();
         cardPanel = new JPanel(cardlayout);
-        
+
         lcl = new LevelCompleteListener(this);
-        
+
         StartMenu startmenu = new StartMenu(this);
         cardPanel.add(startmenu, "start");
-        
+
         lsm = new LevelSelectionMenu(new LevelsDAO(), this);
         cardPanel.add(lsm, "levelselection");
     }
@@ -45,24 +49,24 @@ public class WindowHandler implements Runnable {
         frame.add(cardPanel);
         frame.pack();
     }
-    
-    public void startMenu(){
+
+    public void startMenu() {
         cardlayout.show(cardPanel, "start");
     }
-    
-    public void lvlslctmenu(){
+
+    public void lvlslctmenu() {
         lsm.build();
         cardlayout.show(cardPanel, "levelselection");
     }
-    
-    public void runLevel(String s){
+
+    public void runLevel(String s) {
         LevelRunner lr = new LevelRunner(this, s);
         cardPanel.add(lr, "lr");
         cardlayout.show(cardPanel, "lr");
         lr.start();
     }
-    
-    public void lvlCompleted(){
+
+    public void lvlCompleted() {
         cardPanel.add(new LevelCompleted(lcl), "lc");
         cardlayout.show(cardPanel, "lc");
     }

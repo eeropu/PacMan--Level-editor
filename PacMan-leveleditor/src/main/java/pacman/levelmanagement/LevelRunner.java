@@ -12,6 +12,16 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 import pacman.pacman.leveleditor.WindowHandler;
 
+/**
+ *
+ * @author eerop
+ *
+ * This class is responsible for running the game. It paints all the components,
+ * keeps track of collected points, calls necessary methods from the
+ * gameobjects, check if PacMan has collided with some of the other ojects and
+ * finally sends the program to correct screen depending on player completing
+ * the level or not.
+ */
 public class LevelRunner extends JPanel {
 
     private GameLoop gl;
@@ -90,7 +100,7 @@ public class LevelRunner extends JPanel {
                 score += 10;
             }
         }
-        if(points.isEmpty()){
+        if (points.isEmpty()) {
             completed();
         }
         Iterator<PowerPellet> ppit = pp.iterator();
@@ -156,8 +166,8 @@ public class LevelRunner extends JPanel {
             }
         }
     }
-    
-    public void completed(){
+
+    public void completed() {
         timer.stop();
         wh.lvlCompleted();
     }

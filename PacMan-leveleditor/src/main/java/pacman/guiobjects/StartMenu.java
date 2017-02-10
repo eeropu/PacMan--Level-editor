@@ -7,6 +7,14 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import pacman.pacman.leveleditor.WindowHandler;
 
+/**
+ *
+ * @author eerop
+ *
+ * Menu that will be shown to the user when the program starts. From here user
+ * can go to Levelselectionmenu and play a level, go to creation- mode to make
+ * new levels or modify existing levels or view the highscores of the levels.
+ */
 public class StartMenu extends JPanel {
 
     private JButton create, play, highscores;
@@ -14,7 +22,7 @@ public class StartMenu extends JPanel {
 
     public StartMenu(WindowHandler wh) {
         this.wh = wh;
-        
+
         setLayout(null);
 
         JPanel panel1 = new JPanel();
@@ -30,11 +38,11 @@ public class StartMenu extends JPanel {
         highscores.setFont(font);
         StartMenuListener sml = new StartMenuListener(play, create, highscores, wh);
         play.addActionListener(sml);
-        
+
         panel1.add(play);
         panel1.add(create);
         panel1.add(highscores);
-        
+
         this.add(panel1);
     }
 

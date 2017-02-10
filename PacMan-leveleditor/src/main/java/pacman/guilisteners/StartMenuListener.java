@@ -5,8 +5,14 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import pacman.pacman.leveleditor.WindowHandler;
 
-public class StartMenuListener implements ActionListener{
-    
+/**
+ *
+ * @author eerop
+ *
+ * Gives functionality to the components in the "Startmenu"-screen.
+ */
+public class StartMenuListener implements ActionListener {
+
     private JButton play, create, highscores;
     private WindowHandler wh;
 
@@ -19,14 +25,13 @@ public class StartMenuListener implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == play){
+        if (e.getSource() == play) {
             wh.lvlslctmenu();
-        } else if (e.getSource() == create){
-            
-        } else if (e.getSource() == highscores){
-            
+        } else if (e.getSource() == create) {
+
+        } else if (e.getSource() == highscores) {
+
         }
     }
-    
-    
+
 }
