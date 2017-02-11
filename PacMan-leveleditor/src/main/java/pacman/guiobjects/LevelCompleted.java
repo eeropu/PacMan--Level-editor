@@ -10,9 +10,6 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URL;
-import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -21,6 +18,7 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 import pacman.guilisteners.LevelCompleteListener;
+import pacman.pacman.leveleditor.ImageGetter;
 
 /**
  *
@@ -35,17 +33,14 @@ public class LevelCompleted extends JPanel {
     private JTextPane txt;
     private JButton submit, skip;
     private LevelCompleteListener lcl;
+    private ImageGetter imgGetter;
 
-    public LevelCompleted(LevelCompleteListener lcl) {
+    public LevelCompleted(LevelCompleteListener lcl, ImageGetter imgGetter) {
 
         this.lcl = lcl;
-
-        ClassLoader cl = this.getClass().getClassLoader();
-        URL resource = cl.getResource("Pictures/PacMan_lvlcomplete.png");
-        try {
-            image = ImageIO.read(resource);
-        } catch (IOException e) {
-        }
+        
+        this.imgGetter = imgGetter;
+        this.image = imgGetter.getImage("Pictures/PacMan_lvlcomplete.png");
         repaint();
         setLayout(null);
 

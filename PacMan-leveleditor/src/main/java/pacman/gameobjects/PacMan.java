@@ -2,6 +2,11 @@ package pacman.gameobjects;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import javax.swing.Timer;
+import pacman.levelmanagement.LevelRunner;
 
 /**
  *
@@ -13,6 +18,8 @@ public class PacMan implements GameObject {
 
     private int x, y, origX, origY, move;
     private Direction current, changed;
+    private BufferedImage drawable, mouthClosed, mouthOpen;
+    private LevelRunner lr;
 
     public PacMan(int x, int y, Direction d) {
         this.x = 32 * x - 32;
@@ -22,11 +29,20 @@ public class PacMan implements GameObject {
         this.current = d;
         this.changed = d;
         this.move = 2;
+        
+        Timer timer = new Timer(250, new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                changeImg();
+            }
+        });
+        timer.start();
     }
 
     @Override
     public void paint(Graphics g) {
-        g.fillOval(x, y, 32, 32);
+        g.drawImage(drawable, x, y, lr);
     }
 
     @Override
@@ -128,5 +144,23 @@ public class PacMan implements GameObject {
 
     public Direction getChanged() {
         return changed;
+    }
+    
+    public void setImages(BufferedImage img, BufferedImage img2){
+        this.drawable = img;
+        this.mouthOpen = img;
+        this.mouthClosed = img2;
+    }
+    
+    public void setImageObserver(LevelRunner lr){
+        this.lr = lr;
+    }
+    
+    public void changeImg(){
+        if(drawable == mouthOpen){
+            drawable = mouthClosed;
+        } else {
+            drawable = mouthOpen;
+        }
     }
 }

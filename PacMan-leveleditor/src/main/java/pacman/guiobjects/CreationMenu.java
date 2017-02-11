@@ -8,6 +8,7 @@ import java.net.URL;
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import pacman.pacman.leveleditor.ImageGetter;
 
 /**
  *
@@ -20,16 +21,14 @@ public class CreationMenu extends JPanel{
     
     private BufferedImage image;
     private JButton createNew, modifyOld, back;
+    private ImageGetter imgGetter;
 
-    public CreationMenu() {
+    public CreationMenu(ImageGetter imgGetter) {
         
-        ClassLoader cl = this.getClass().getClassLoader();
-        URL resource = cl.getResource("Pictures/PacMan_Createmode.png");
-        try{
-            image = ImageIO.read(resource);
-        } catch (IOException e){
-        }
+        this.imgGetter = imgGetter;
+        this.image = imgGetter.getImage("Pictures/PacMan_Createmode.png");
         repaint();
+        
         setLayout(null);
         
         createNew = new JButton("Create New!");

@@ -27,10 +27,12 @@ public class WindowHandler implements Runnable {
     private LevelCompleteListener lcl;
     private LevelSelectionMenu lsm;
     private CreationMenu cm;
+    private ImageGetter imgGetter;
 
     public WindowHandler() {
         cardlayout = new CardLayout();
         cardPanel = new JPanel(cardlayout);
+        imgGetter = new ImageGetter();
 
         lcl = new LevelCompleteListener(this);
 
@@ -40,7 +42,7 @@ public class WindowHandler implements Runnable {
         lsm = new LevelSelectionMenu(new LevelsDAO(), this);
         cardPanel.add(lsm, "levelselection");
         
-        cm = new CreationMenu();
+        cm = new CreationMenu(imgGetter);
         cardPanel.add(cm, "create");
     }
 
@@ -76,7 +78,7 @@ public class WindowHandler implements Runnable {
     }
 
     public void lvlCompleted() {
-        cardPanel.add(new LevelCompleted(lcl), "lc");
+        cardPanel.add(new LevelCompleted(lcl, imgGetter), "lc");
         cardlayout.show(cardPanel, "lc");
     }
 

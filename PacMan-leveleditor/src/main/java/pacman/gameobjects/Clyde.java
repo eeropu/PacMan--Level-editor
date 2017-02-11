@@ -1,7 +1,7 @@
 package pacman.gameobjects;
 
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import pacman.levelmanagement.LevelRunner;
 
 /**
  *
@@ -16,8 +16,8 @@ public class Clyde extends Ghost {
     private int homeX;
     private int homeY;
 
-    public Clyde(int x, int y, PacMan pacman, boolean randomghost) {
-        super(x, y, pacman, randomghost);
+    public Clyde(int x, int y, PacMan pacman) {
+        super(x, y, pacman);
         homeX = 1;
         homeY = 20;
     }
@@ -45,22 +45,6 @@ public class Clyde extends Ghost {
         }
 
         super.move();
-    }
-
-    @Override
-    public void paint(Graphics g) {
-        if (ppEaten) {
-            g.setColor(Color.blue);
-            g.fillRect(x, y, 32, 32);
-        } else {
-            if (randomghost) {
-                g.setColor(Color.green);
-                g.fillRect(x, y, 32, 32);
-            } else {
-                g.setColor(Color.ORANGE);
-                g.fillRect(x, y, 32, 32);
-            }
-        }
     }
 
     @Override

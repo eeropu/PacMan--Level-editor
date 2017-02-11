@@ -1,9 +1,10 @@
 package pacman.gameobjects;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
 import java.util.PriorityQueue;
+import pacman.levelmanagement.LevelRunner;
 
 /**
  *
@@ -23,23 +24,29 @@ public class Ghost implements GameObject {
     protected boolean randomghost, ppEaten;
     protected long timer, now;
     protected boolean dSetRandomly;  //This variable is for testpurposes
+    protected BufferedImage img, ppImg;
+    protected LevelRunner lr;
 
-    public Ghost(int x, int y, PacMan pacman, boolean randomghost) {
+    public Ghost(int x, int y, PacMan pacman) {
         this.x = x * 32 - 32;
         this.y = y * 32 - 32;
-        this.origX = this.x;
+        this.origX = this.x; 
         this.origY = this.y;
         this.move = 2;
         this.d = Direction.Up;
         this.pacman = pacman;
         this.randir = new RandomDirection();
-        this.randomghost = randomghost;
         this.ppEaten = false;
         this.eatable = 10000;
     }
 
     @Override
     public void paint(Graphics g) {
+        if(ppEaten){
+            g.drawImage(ppImg, x, y, lr);
+        } else {
+            g.drawImage(img, x, y, lr);
+        }
     }
 
     @Override
@@ -197,5 +204,14 @@ public class Ghost implements GameObject {
     public void reset() {
         x = origX;
         y = origY;
+    }
+    
+    public void setImages(BufferedImage img, BufferedImage ppImg){
+        this.img = img;
+        this.ppImg = ppImg;
+    }
+    
+    public void setImageObserver(LevelRunner lr){
+        this.lr = lr;
     }
 }

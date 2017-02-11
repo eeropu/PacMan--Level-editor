@@ -5,9 +5,6 @@
  */
 package pacman.gameobjects;
 
-import pacman.gameobjects.Clyde;
-import pacman.gameobjects.Direction;
-import pacman.gameobjects.PacMan;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -22,7 +19,7 @@ public class ClydeTest {
 
     public ClydeTest() {
         pacman = new PacMan(8, 1, Direction.Up);
-        clyde = new Clyde(1, 1, pacman, false);
+        clyde = new Clyde(1, 1, pacman);
     }
 
     public void setGraph() {

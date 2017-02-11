@@ -18,7 +18,7 @@ import pacman.pacman.leveleditor.WindowHandler;
  *
  * This class is responsible for running the game. It paints all the components,
  * keeps track of collected points, calls necessary methods from the
- * gameobjects, check if PacMan has collided with some of the other ojects and
+ * gameobjects, checks if PacMan has collided with some of the other ojects and
  * finally sends the program to correct screen depending on player completing
  * the level or not.
  */
@@ -149,7 +149,7 @@ public class LevelRunner extends JPanel {
     }
 
     public void build(String s) {
-        LevelBuilder lb = new LevelBuilder(s);
+        LevelBuilder lb = new LevelBuilder(this, s);
         lb.build();
         pacman = lb.getPacman();
         walls = lb.getWalls();

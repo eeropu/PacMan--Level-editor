@@ -18,7 +18,7 @@ public class GhostTest {
     private Ghost ghost;
     
     public GhostTest() {
-        this.ghost = new Ghost(11, 11, new PacMan(1, 11, Direction.Up), false);
+        this.ghost = new Ghost(11, 11, new PacMan(1, 11, Direction.Up));
     }
     
     @Test

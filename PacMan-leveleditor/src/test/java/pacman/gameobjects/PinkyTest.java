@@ -13,7 +13,7 @@ public class PinkyTest {
     private int[][] graph2;
     
     public PinkyTest() {
-        this.pinky = new Pinky(11, 11, new PacMan(1, 11, Direction.Up), false);
+        this.pinky = new Pinky(11, 11, new PacMan(1, 11, Direction.Up));
         int[][] graph = new int[32][22];
         graph2 = new int[32][22];
         for (int i = 0; i < 32; i++) {

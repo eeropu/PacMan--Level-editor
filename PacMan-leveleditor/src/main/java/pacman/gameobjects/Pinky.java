@@ -1,7 +1,7 @@
 package pacman.gameobjects;
 
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import pacman.levelmanagement.LevelRunner;
 
 /**
  *
@@ -13,8 +13,8 @@ import java.awt.Graphics;
  */
 public class Pinky extends Ghost {
 
-    public Pinky(int x, int y, PacMan pacman, boolean randomghost) {
-        super(x, y, pacman, randomghost);
+    public Pinky(int x, int y, PacMan pacman) {
+        super(x, y, pacman);
     }
 
     @Override
@@ -56,21 +56,5 @@ public class Pinky extends Ghost {
             }
         }
         super.move();
-    }
-
-    @Override
-    public void paint(Graphics g) {
-        if (ppEaten) {
-            g.setColor(Color.blue);
-            g.fillRect(x, y, 32, 32);
-        } else {
-            if (randomghost) {
-                g.setColor(Color.green);
-                g.fillRect(x, y, 32, 32);
-            } else {
-                g.setColor(Color.pink);
-                g.fillRect(x, y, 32, 32);
-            }
-        }
     }
 }

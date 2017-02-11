@@ -2,14 +2,18 @@ package pacman.gameobjects;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import pacman.levelmanagement.LevelRunner;
+import java.awt.image.BufferedImage;
+import pacman.pacman.leveleditor.WindowHandler;
 
 public class BlinkyTest {
     
     private Blinky blinky;
     private int[][] graph2;
     
+    
     public BlinkyTest() {
-        blinky = new Blinky(11, 11, new PacMan(1, 11, Direction.Up), false);
+        blinky = new Blinky(11, 11, new PacMan(1, 11, Direction.Up));
         int[][] graph = new int[32][22];
         graph2 = new int[32][22];
         for (int i = 0; i < 32; i++) {
