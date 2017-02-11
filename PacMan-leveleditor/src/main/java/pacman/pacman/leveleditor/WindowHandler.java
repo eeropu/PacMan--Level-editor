@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import pacman.database.LevelsDAO;
 import pacman.guilisteners.LevelCompleteListener;
+import pacman.guiobjects.CreationMenu;
 import pacman.guiobjects.LevelSelectionMenu;
 
 /**
@@ -25,6 +26,7 @@ public class WindowHandler implements Runnable {
     private LevelRunner lr;
     private LevelCompleteListener lcl;
     private LevelSelectionMenu lsm;
+    private CreationMenu cm;
 
     public WindowHandler() {
         cardlayout = new CardLayout();
@@ -37,6 +39,9 @@ public class WindowHandler implements Runnable {
 
         lsm = new LevelSelectionMenu(new LevelsDAO(), this);
         cardPanel.add(lsm, "levelselection");
+        
+        cm = new CreationMenu();
+        cardPanel.add(cm, "create");
     }
 
     @Override
@@ -57,6 +62,10 @@ public class WindowHandler implements Runnable {
     public void lvlslctmenu() {
         lsm.build();
         cardlayout.show(cardPanel, "levelselection");
+    }
+    
+    public void creationmenu(){
+        cardlayout.show(cardPanel, "create");
     }
 
     public void runLevel(String s) {

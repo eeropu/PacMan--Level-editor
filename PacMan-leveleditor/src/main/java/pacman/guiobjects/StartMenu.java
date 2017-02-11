@@ -38,6 +38,7 @@ public class StartMenu extends JPanel {
         highscores.setFont(font);
         StartMenuListener sml = new StartMenuListener(play, create, highscores, wh);
         play.addActionListener(sml);
+        create.addActionListener(sml);
 
         panel1.add(play);
         panel1.add(create);
