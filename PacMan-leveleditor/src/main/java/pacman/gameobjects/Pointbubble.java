@@ -3,6 +3,8 @@ package pacman.gameobjects;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
+import pacman.levelmanagement.LevelRunner;
 
 /**
  *
@@ -15,6 +17,8 @@ import java.awt.Rectangle;
 public class Pointbubble implements GameObject {
 
     private int x, y;
+    private BufferedImage image;
+    private LevelRunner lr;
 
     public Pointbubble(int x, int y) {
         this.x = x * 32 - 32;
@@ -23,8 +27,7 @@ public class Pointbubble implements GameObject {
 
     @Override
     public void paint(Graphics g) {
-        g.setColor(Color.green);
-        g.fillOval(x + 12, y + 12, 8, 8);
+        g.drawImage(image, x, y, lr);
     }
 
     @Override
@@ -40,7 +43,14 @@ public class Pointbubble implements GameObject {
     public boolean checkCollision(PacMan pacman) {
         return this.getBounds().intersects(pacman.getBounds());
     }
-
+    
+    public void setImage(BufferedImage img){
+        this.image = img;
+    }
+    
+    public void setImageObserver(LevelRunner lr){
+        this.lr = lr;
+    }
     /*
      * Following classes are for test purposes
      */

@@ -2,6 +2,8 @@ package pacman.gameobjects;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
+import pacman.levelmanagement.LevelRunner;
 
 /**
  *
@@ -12,6 +14,8 @@ import java.awt.Rectangle;
 public class Wall implements GameObject {
 
     private int x, y;
+    private BufferedImage image;
+    private LevelRunner lr;
 
     public Wall(int x, int y) {
         this.x = 32 * x - 32;
@@ -20,7 +24,7 @@ public class Wall implements GameObject {
 
     @Override
     public void paint(Graphics g) {
-        g.fillRect(x, y, 32, 32);
+        g.drawImage(image, x, y, lr);
     }
 
     @Override
@@ -35,6 +39,14 @@ public class Wall implements GameObject {
     @Override
     public boolean checkCollision(PacMan pacman) {
         return this.getBounds().intersects(pacman.getBounds());
+    }
+    
+    public void setImage(BufferedImage img){
+        this.image = img;
+    }
+    
+    public void setImageObserver(LevelRunner lr){
+        this.lr = lr;
     }
 
     //Following classes are for test purposes

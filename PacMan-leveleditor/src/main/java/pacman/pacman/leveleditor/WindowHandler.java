@@ -8,8 +8,10 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import pacman.database.LevelsDAO;
+import pacman.guilisteners.CreationMenuListener;
 import pacman.guilisteners.LevelCompleteListener;
 import pacman.guiobjects.CreationMenu;
+import pacman.guiobjects.CreationMode;
 import pacman.guiobjects.LevelSelectionMenu;
 
 /**
@@ -27,6 +29,7 @@ public class WindowHandler implements Runnable {
     private LevelCompleteListener lcl;
     private LevelSelectionMenu lsm;
     private CreationMenu cm;
+    private CreationMenuListener cml;
     private ImageGetter imgGetter;
 
     public WindowHandler() {
@@ -42,8 +45,10 @@ public class WindowHandler implements Runnable {
         lsm = new LevelSelectionMenu(new LevelsDAO(), this);
         cardPanel.add(lsm, "levelselection");
         
-        cm = new CreationMenu(imgGetter);
-        cardPanel.add(cm, "create");
+        cml = new CreationMenuListener(this);
+        
+        cm = new CreationMenu(cml, imgGetter);
+        cardPanel.add(cm, "creationmenu");
     }
 
     @Override
@@ -67,6 +72,11 @@ public class WindowHandler implements Runnable {
     }
     
     public void creationmenu(){
+        cardlayout.show(cardPanel, "creationmenu");
+    }
+    
+    public void createMode(){
+        cardPanel.add(new CreationMode(imgGetter), "create");
         cardlayout.show(cardPanel, "create");
     }
 

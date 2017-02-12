@@ -42,7 +42,9 @@ public class LevelRunner extends JPanel {
         ControlSetUp csu = new ControlSetUp(this);
         gl = new GameLoop(this);
         timer = new Timer(15, gl);
+        setBackground(Color.black);
         lives = 3;
+        
     }
 
     @Override
@@ -84,6 +86,9 @@ public class LevelRunner extends JPanel {
             for (Ghost ghost : ghosts) {
                 ghost.move();
             }
+        }
+        for (PowerPellet pp1 : pp) {
+            pp1.move();
         }
     }
 

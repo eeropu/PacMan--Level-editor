@@ -24,7 +24,7 @@ public class LevelBuilder {
     private PacMan pacman;
     private Random random;
     private ImageGetter imgGetter;
-    private BufferedImage wall, pacman1, pacman2, pink, blink, clyd, randomghost, 
+    private BufferedImage wall, pacman1, pacman2, pink, blink, clyd, randomghost,
             eatableghost, pbimg, ppimg;
 
     public LevelBuilder(LevelRunner lr, String objectpositioning) {
@@ -46,7 +46,10 @@ public class LevelBuilder {
                 int p = i * 30 + j;
                 char c = objectpositioning.charAt(p);
                 if (c == 'W') {
-                    walls.add(new Wall(j + 1, i + 1));
+                    Wall w = new Wall(j + 1, i + 1);
+                    w.setImage(wall);
+                    w.setImageObserver(lr);
+                    walls.add(w);
                 } else {
                     graph[j + 1][i + 1] = 1;
                 }
@@ -55,9 +58,15 @@ public class LevelBuilder {
                     pacman.setImages(pacman1, pacman2);
                     pacman.setImageObserver(lr);
                 } else if (c == 'p') {
-                    pp.add(new PowerPellet(j + 1, i + 1));
+                    PowerPellet power = new PowerPellet(j+1, i+1);
+                    power.setImage(ppimg);
+                    power.setImageObserver(lr);
+                    pp.add(power);
                 } else if (c == 'b') {
-                    points.add(new Pointbubble(j + 1, i + 1));
+                    Pointbubble point = new Pointbubble(j + 1, i + 1);
+                    point.setImage(pbimg);
+                    point.setImageObserver(lr);
+                    points.add(point);
                 }
             }
         }
@@ -128,8 +137,8 @@ public class LevelBuilder {
     public HashSet<PowerPellet> getPp() {
         return pp;
     }
-    
-    public void prepareImages(){
+
+    public void prepareImages() {
         this.wall = imgGetter.getSubImage(1);
         this.pacman1 = imgGetter.getSubImage(2);
         this.pacman2 = imgGetter.getSubImage(3);
