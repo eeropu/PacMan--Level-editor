@@ -4,11 +4,14 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import pacman.guilisteners.CreationModeButtonListener;
 import pacman.guilisteners.CreationModeListener;
 import pacman.pacman.leveleditor.ImageGetter;
+import pacman.pacman.leveleditor.WindowHandler;
 
 /**
  *
@@ -18,19 +21,25 @@ public class CreationMode extends JPanel{
     
     private BufferedImage grid, wall, pacman, blinky, pinky, clyde, randomghost, pb, pp;
     private JRadioButton wallR, pacmanR, blinkyR, pinkyR, clydeR, randomghostR, pbR, ppR, autofill;
+    private JButton help, ready;
     private JLabel[][] labels;
     private String[][] objectpositioning;
     private String old;
     private ImageGetter imgGetter;
+    private WindowHandler wh;
     private CreationModeListener cml;
+    private CreationModeButtonListener cmbl;
 
-    public CreationMode(ImageGetter imgGetter) {
+    public CreationMode(ImageGetter imgGetter, WindowHandler wh) {
         setLayout(null);
         this.imgGetter = imgGetter;
         getImages();
+        this.wh = wh;
         setRadioButtons();
+        
         cml = new CreationModeListener(grid, wall, pacman, blinky, pinky, clyde, randomghost, pb, pp, 
                 wallR, pacmanR, blinkyR, pinkyR, clydeR, randomghostR, pbR, ppR, autofill);
+        
         this.labels = new JLabel[30][20];
         for (int i = 0; i < 30; i++) {
             for (int j = 0; j < 20; j++) {
@@ -40,14 +49,33 @@ public class CreationMode extends JPanel{
                 add(labels[i][j]);
             }
         }
+        
         this.objectpositioning = new String[30][20];
         for (int i = 0; i < 30; i++) {
             for (int j = 0; j < 20; j++) {
                 objectpositioning[i][j] = "x";
             }
         }
+        
         cml.setLabels(labels);
         cml.setObjectPositioning(objectpositioning);
+        
+        this.help = new JButton("?");
+        help.setBounds(824, 640, 48, 32);
+        help.setBackground(Color.darkGray);
+        help.setForeground(Color.white);
+        this.ready = new JButton("ready");
+        ready.setBounds(880, 640, 80, 32);
+        ready.setBackground(Color.darkGray);
+        ready.setForeground(Color.white);
+        
+        cmbl = new CreationModeButtonListener(help, ready, wh, objectpositioning);
+        
+        help.addActionListener(cmbl);
+        ready.addActionListener(cmbl);
+        
+        add(help);
+        add(ready);
     }
     
     private void getImages(){
@@ -88,7 +116,7 @@ public class CreationMode extends JPanel{
         ppR.setBounds(678, 646, 20, 20);
         ppR.setBackground(Color.black);
         autofill = new JRadioButton("autofill");
-        autofill.setBounds(758, 646, 100, 20);
+        autofill.setBounds(758, 646, 64, 20);
         autofill.setBackground(Color.black);
         autofill.setForeground(Color.white);
         

@@ -12,6 +12,8 @@ import pacman.guilisteners.CreationMenuListener;
 import pacman.guilisteners.LevelCompleteListener;
 import pacman.guiobjects.CreationMenu;
 import pacman.guiobjects.CreationMode;
+import pacman.guiobjects.FinishCreation;
+import pacman.guiobjects.Help;
 import pacman.guiobjects.LevelSelectionMenu;
 
 /**
@@ -30,6 +32,7 @@ public class WindowHandler implements Runnable {
     private LevelSelectionMenu lsm;
     private CreationMenu cm;
     private CreationMenuListener cml;
+    private Help help;
     private ImageGetter imgGetter;
 
     public WindowHandler() {
@@ -49,6 +52,9 @@ public class WindowHandler implements Runnable {
         
         cm = new CreationMenu(cml, imgGetter);
         cardPanel.add(cm, "creationmenu");
+        
+        help = new Help(imgGetter, this);
+        cardPanel.add(help, "help");
     }
 
     @Override
@@ -76,8 +82,21 @@ public class WindowHandler implements Runnable {
     }
     
     public void createMode(){
-        cardPanel.add(new CreationMode(imgGetter), "create");
+        cardPanel.add(new CreationMode(imgGetter, this), "create");
         cardlayout.show(cardPanel, "create");
+    }
+    
+    public void help(){
+        cardlayout.show(cardPanel, "help");
+    }
+    
+    public void returnToCreation(){
+        cardlayout.show(cardPanel, "create");
+    }
+    
+    public void finishedCreating(){
+        cardPanel.add(new FinishCreation("", this), "finish");
+        cardlayout.show(cardPanel, "finish");
     }
 
     public void runLevel(String s) {

@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
+import pacman.pacman.leveleditor.WindowHandler;
 
 /**
  *
@@ -14,7 +15,7 @@ import javax.swing.JRadioButton;
  */
 public class CreationModeListener implements MouseListener {
 
-    private ImageIcon grid, wall, pacman, blinky, pinky, clyde, randomghost, pb, pp;
+    private final ImageIcon grid, wall, pacman, blinky, pinky, clyde, randomghost, pb, pp;
     private JRadioButton wallR, pacmanR, blinkyR, pinkyR, clydeR, randomghostR, pbR, ppR, autofill;
     private int previousX, previousY;
     private boolean first;
@@ -112,24 +113,45 @@ public class CreationModeListener implements MouseListener {
         } else if (pacmanR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "P";
             setImage(l, pacman);
+            if(first){
+                clearSelectable();
+            }
         } else if (blinkyR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "L";
             setImage(l, blinky);
+            if(first){
+                clearSelectable();
+            }
         } else if (pinkyR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "I";
             setImage(l, pinky);
+            if(first){
+                clearSelectable();
+            }
         } else if (clydeR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "C";
             setImage(l, clyde);
+            if(first){
+                clearSelectable();
+            }
         } else if (randomghostR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "R";
             setImage(l, randomghost);
+            if(first){
+                clearSelectable();
+            }
         } else if (pbR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "b";
             setImage(l, pb);
+            if(first){
+                clearSelectable();
+            }
         } else if (ppR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "p";
             setImage(l, pp);
+            if(first){
+                clearSelectable();
+            }
         }
     }
 
@@ -147,6 +169,19 @@ public class CreationModeListener implements MouseListener {
 
     @Override
     public void mouseExited(MouseEvent e) {
+    }
+
+    public void clearSelectable() {
+        for (int i = 0; i < 30; i++) {
+            labels[i][previousY].setBackground(null);
+            labels[i][previousY].setOpaque(false);
+        }
+        for (int i = 0; i < 20; i++) {
+            labels[previousX][i].setBackground(null);
+            labels[previousX][i].setOpaque(false);
+        }
+
+        first = false;
     }
 
     public void setImage(JLabel l, ImageIcon i) {
