@@ -6,6 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextPane;
+import pacman.database.LevelsDAO;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
@@ -19,10 +20,12 @@ public class FinishCreationListener implements ActionListener {
     private JButton button;
     private WindowHandler wh;
     private boolean ok;
+    private String level;
+    private LevelsDAO ldao;
 
     public FinishCreationListener(JTextPane txtname, JTextPane txtlives, JTextPane txttime,
             JTextPane pPerSec, JRadioButton xtrapoints, JRadioButton deadline,
-            JRadioButton fillbubbles, JButton button, WindowHandler wh) {
+            JRadioButton fillbubbles, JButton button, WindowHandler wh, String level) {
 
         this.wh = wh;
         this.txtname = txtname;
@@ -34,6 +37,9 @@ public class FinishCreationListener implements ActionListener {
         this.fillbubbles = fillbubbles;
         this.button = button;
         this.ok = true;
+
+        this.level = level;
+        this.ldao = new LevelsDAO();
     }
 
     @Override
@@ -56,7 +62,7 @@ public class FinishCreationListener implements ActionListener {
             if (xtrapoints.isSelected() || deadline.isSelected()) {
                 try {
                     int time = Integer.parseInt(txttime.getText());
-                    if(time > 300 || time < 0){
+                    if (time > 300 || time < 0) {
                         ok = false;
                         JOptionPane.showMessageDialog(null, "Wrong input in the timesetting!");
                     }
@@ -65,10 +71,10 @@ public class FinishCreationListener implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Wrong input in the timesetting!");
                 }
             }
-            if(xtrapoints.isSelected()){
-                try{
+            if (xtrapoints.isSelected()) {
+                try {
                     int pps = Integer.parseInt(pPerSec.getText());
-                    if(pps < 1 || pps > 100){
+                    if (pps < 1 || pps > 100) {
                         ok = false;
                         JOptionPane.showMessageDialog(null, "Wrong input in points per second!");
                     }
@@ -77,6 +83,55 @@ public class FinishCreationListener implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Wrong input in points per second!");
                 }
             }
+
+            if (ok) {
+                level = level + txtlives.getText();
+                if (xtrapoints.isSelected() || deadline.isSelected()) {
+
+                    if (txttime.getText().length() == 1) {
+                        level = level + 1;
+                    } else if (txttime.getText().length() == 2) {
+                        level = level + 2;
+                    } else if (txttime.getText().length() == 3) {
+                        level = level + 3;
+                    }
+                    level = level + txttime.getText();
+
+                    if (deadline.isSelected()) {
+                        level = level + 1;
+                    } else {
+                        level = level + 0;
+                    }
+
+                    if (xtrapoints.isSelected()) {
+                        level = level + 1;
+                        level = level + pPerSec.getText();
+                    } else {
+                        level = level + 0;
+                    }
+
+                } else {
+                    level = level + 0;
+                }
+                
+                if (fillbubbles.isSelected()) {
+                    for (int i = 0; i < level.length(); i++) {
+                        level = level.replace('x', 'b');
+                    }
+                }
+                String check = ldao.add(txtname.getText(), level);
+                if(check.equals("double")){
+                    JOptionPane.showMessageDialog(null, "There already exists a level with the given name!",
+                            "Warning", JOptionPane.ERROR_MESSAGE);
+                } else if (check.equals("error")){
+                    JOptionPane.showMessageDialog(null, "Something went wrong, please try again",
+                            "Warning", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    wh.startMenu();
+                }
+                
+            }
+            ok = true;
         }
     }
 

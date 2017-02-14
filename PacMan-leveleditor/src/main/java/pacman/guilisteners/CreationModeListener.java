@@ -16,7 +16,7 @@ import pacman.pacman.leveleditor.WindowHandler;
 public class CreationModeListener implements MouseListener {
 
     private final ImageIcon grid, wall, pacman, blinky, pinky, clyde, randomghost, pb, pp;
-    private JRadioButton wallR, pacmanR, blinkyR, pinkyR, clydeR, randomghostR, pbR, ppR, autofill;
+    private final JRadioButton wallR, pacmanR, blinkyR, pinkyR, clydeR, randomghostR, pbR, ppR, autofill;
     private int previousX, previousY;
     private boolean first;
     private JLabel[][] labels;
@@ -62,20 +62,24 @@ public class CreationModeListener implements MouseListener {
                     if (l.getX() / 32 == previousX) {
                         if (l.getY() / 32 < previousY) {
                             for (int i = l.getY() / 32; i <= previousY; i++) {
+                                objectPositioning[previousX][i] = "W";
                                 setImage(labels[previousX][i], wall);
                             }
                         } else {
                             for (int i = previousY; i <= l.getY() / 32; i++) {
+                                objectPositioning[previousX][i] = "W";
                                 setImage(labels[previousX][i], wall);
                             }
                         }
                     } else if (l.getY() / 32 == previousY) {
                         if (l.getX() / 32 < previousX) {
                             for (int i = l.getX() / 32; i <= previousX; i++) {
+                                objectPositioning[i][previousY] = "W";
                                 setImage(labels[i][previousY], wall);
                             }
                         } else {
                             for (int i = previousX; i <= l.getX() / 32; i++) {
+                                objectPositioning[i][previousY] = "W";
                                 setImage(labels[i][previousY], wall);
                             }
                         }

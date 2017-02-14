@@ -90,6 +90,10 @@ public class LevelRunner extends JPanel {
         for (PowerPellet pp1 : pp) {
             pp1.move();
         }
+        if(lives < 0){
+            timer.stop();
+            wh.lvlFailed();
+        }
     }
 
     public void checkCollision() {

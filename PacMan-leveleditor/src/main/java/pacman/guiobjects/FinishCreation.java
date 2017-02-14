@@ -59,7 +59,8 @@ public class FinishCreation extends JPanel{
         button.setBounds(320, 544, 320, 96);
         add(button);
         
-        FinishCreationListener fcl = new FinishCreationListener(txtname, txtlives, txttime, pPerSec, xtrapoints, deadline, fillbubbles, button, wh);
+        FinishCreationListener fcl = new FinishCreationListener(txtname, txtlives, txttime, pPerSec,
+                xtrapoints, deadline, fillbubbles, button, wh, objectPositioning);
         button.addActionListener(fcl);
     }
     

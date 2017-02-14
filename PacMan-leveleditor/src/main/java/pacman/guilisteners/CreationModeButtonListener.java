@@ -3,6 +3,7 @@ package pacman.guilisteners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
@@ -27,7 +28,23 @@ public class CreationModeButtonListener implements ActionListener{
         if(e.getSource() == help){
             wh.help();
         } else if (e.getSource() == ready){
-            wh.finishedCreating();
+            
+            String level = "";
+            for (int i = 0; i < 20; i++) {
+                for (int j = 0; j < 30; j++) {
+                    level = level + objectPositioning[j][i];
+                }
+            }
+            
+            if(!level.contains("P")){
+                JOptionPane.showMessageDialog(null, "You need to add PacMan!", "Warning", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+            if(!level.contains("b")){
+                JOptionPane.showMessageDialog(null, "There needs to be atleast one pointbubble!", "Warning", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+            wh.finishedCreating(level);
         }
     }
     

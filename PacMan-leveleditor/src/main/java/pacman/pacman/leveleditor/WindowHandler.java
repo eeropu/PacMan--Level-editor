@@ -14,6 +14,7 @@ import pacman.guiobjects.CreationMenu;
 import pacman.guiobjects.CreationMode;
 import pacman.guiobjects.FinishCreation;
 import pacman.guiobjects.Help;
+import pacman.guiobjects.LevelFailed;
 import pacman.guiobjects.LevelSelectionMenu;
 
 /**
@@ -32,6 +33,7 @@ public class WindowHandler implements Runnable {
     private LevelSelectionMenu lsm;
     private CreationMenu cm;
     private CreationMenuListener cml;
+    private LevelFailed lf;
     private Help help;
     private ImageGetter imgGetter;
 
@@ -42,7 +44,7 @@ public class WindowHandler implements Runnable {
 
         lcl = new LevelCompleteListener(this);
 
-        StartMenu startmenu = new StartMenu(this);
+        StartMenu startmenu = new StartMenu(this, imgGetter);
         cardPanel.add(startmenu, "start");
 
         lsm = new LevelSelectionMenu(new LevelsDAO(), this);
@@ -55,6 +57,9 @@ public class WindowHandler implements Runnable {
         
         help = new Help(imgGetter, this);
         cardPanel.add(help, "help");
+        
+        lf = new LevelFailed(imgGetter, this);
+        cardPanel.add(lf, "failed");
     }
 
     @Override
@@ -94,8 +99,8 @@ public class WindowHandler implements Runnable {
         cardlayout.show(cardPanel, "create");
     }
     
-    public void finishedCreating(){
-        cardPanel.add(new FinishCreation("", this), "finish");
+    public void finishedCreating(String level){
+        cardPanel.add(new FinishCreation(level, this), "finish");
         cardlayout.show(cardPanel, "finish");
     }
 
@@ -109,6 +114,10 @@ public class WindowHandler implements Runnable {
     public void lvlCompleted() {
         cardPanel.add(new LevelCompleted(lcl, imgGetter), "lc");
         cardlayout.show(cardPanel, "lc");
+    }
+    
+    public void lvlFailed(){
+        cardlayout.show(cardPanel, "failed");
     }
 
 }

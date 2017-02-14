@@ -26,15 +26,14 @@ public class LevelsDAO {
         this.orderby = "name DESC";
     }
 
-    public String add(String name, String level, boolean check) {
-        if (check) {
-            ArrayList<String> list = getAllLevels();
-            for (String c : list) {
-                if (c.equals(name)) {
-                    return "double";
-                }
+    public String add(String name, String level) {
+        ArrayList<String> list = getAllLevels();
+        for (String c : list) {
+            if (c.equals(name)) {
+                return "double";
             }
         }
+        
         try {
             Connection conn = db.getConnection();
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO Levels (name, level, date) VALUES "

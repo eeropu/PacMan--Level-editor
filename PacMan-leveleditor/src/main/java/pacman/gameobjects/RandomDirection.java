@@ -159,7 +159,7 @@ public class RandomDirection {
 
     public void randomDirectionDown(Ghost ghost) {
         int i = 0;
-        if (ghost.graph[(ghost.x + 32) / 32][(ghost.y) / 32] == 1) {
+        if (ghost.graph[(ghost.x + 32) / 32][(ghost.y + 64) / 32] == 1) {
             i += 1;
         }
         if (ghost.graph[(ghost.x + 64) / 32][(ghost.y + 32) / 32] == 1) {
