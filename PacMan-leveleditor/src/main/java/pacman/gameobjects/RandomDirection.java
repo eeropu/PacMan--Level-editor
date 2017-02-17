@@ -11,7 +11,8 @@ import java.util.Random;
  */
 public class RandomDirection {
 
-    private final Random random = new Random();
+    private Random random = new Random();
+    private int i;
 
     public void randomDirection(Ghost ghost) {
         if (ghost.d == Direction.Right) {
@@ -26,7 +27,7 @@ public class RandomDirection {
     }
 
     public void randomDirectionRight(Ghost ghost) {
-        int i = 0;
+        i = 0;
         if (ghost.graph[(ghost.x + 64) / 32][(ghost.y + 32) / 32] == 1) {
             i += 1;
         }
@@ -70,7 +71,7 @@ public class RandomDirection {
     }
 
     public void randomDirectionLeft(Ghost ghost) {
-        int i = 0;
+        i = 0;
         if (ghost.graph[(ghost.x) / 32][(ghost.y + 32) / 32] == 1) {
             i += 1;
         }
@@ -114,7 +115,7 @@ public class RandomDirection {
     }
 
     public void randomDirectionUp(Ghost ghost) {
-        int i = 0;
+        i = 0;
         if (ghost.graph[(ghost.x + 32) / 32][(ghost.y) / 32] == 1) {
             i += 1;
         }
@@ -158,7 +159,7 @@ public class RandomDirection {
     }
 
     public void randomDirectionDown(Ghost ghost) {
-        int i = 0;
+        i = 0;
         if (ghost.graph[(ghost.x + 32) / 32][(ghost.y + 64) / 32] == 1) {
             i += 1;
         }
@@ -199,5 +200,17 @@ public class RandomDirection {
                 ghost.d = Direction.Left;
             }
         }
+    }
+    
+    /*
+     * Following classes are for testpurposes.
+     */
+    
+    public void setRandom(Random random) {
+        this.random = random;
+    }
+
+    public int getI() {
+        return i;
     }
 }

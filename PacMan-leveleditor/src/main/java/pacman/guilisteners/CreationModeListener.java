@@ -7,7 +7,6 @@ import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
-import pacman.pacman.leveleditor.WindowHandler;
 
 /**
  *

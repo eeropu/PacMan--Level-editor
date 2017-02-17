@@ -13,13 +13,13 @@ public class StartMenuAnimation implements ActionListener {
     private int currentimg;
     private StartMenu sm;
     private BufferedImage[] images;
-    private boolean change;
+    private boolean b;
 
     public StartMenuAnimation(StartMenu sm, BufferedImage[] images) {
         this.sm = sm;
         this.images = images;
         currentimg = 0;
-        this.change = true;
+        this.b = true;
     }
 
     @Override
@@ -38,7 +38,7 @@ public class StartMenuAnimation implements ActionListener {
             sm.setDelay(3);
         }
         if (currentimg > 31 && currentimg <= 720) {
-            if (change) {
+            if (b) {
                 sm.pacmanrunaway();
             } else {
                 sm.pacmanchase();
@@ -46,15 +46,19 @@ public class StartMenuAnimation implements ActionListener {
         } else if (currentimg == 721) {
             currentimg = 0;
             sm.setDelay(20);
-            if (change) {
-                change = false;
+            if (b) {
+                b = false;
                 sm.resetPacmanrun();
             } else {
-                change = true;
+                b = true;
                 sm.resetPacmanchase();
             }
         }
         sm.repaint();
+    }
+
+    public boolean isb() {
+        return b;
     }
 
 }

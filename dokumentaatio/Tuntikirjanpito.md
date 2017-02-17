@@ -15,4 +15,9 @@ Päivä | Tunnit | Kuvaus
 07.02.2017 | 3h | Ohjelmointia (haamujen viimeistelyä)
 08.02.2017 | 5h | Ohjelmointia (Pelilogiikan "viimeistely") ja GUI (menut yms.) aloitettu
 09.02.2017 | 4h | Tietokannan ja siihen liittyvien luokkien luonti aloitettu + testejä
-10.02.2017 | 6h | Testejä, javadocsien aloittaminen, deadLine4
+10.02.2017 | 5h | Testejä, javadocsien aloittaminen, deadLine4
+12.02.2017 | 2h | Menujen parantelua
+13.02.2017 | 3h | Tasojen luontitilan tekoa
+14.02.2017 | 2h | Luontitilan teko jatkuu
+15.02.2017 | 2h | Kaikenlasista parantelua (pääosin viikottaisten palautteiden perusteella)
+17.02.2017 | 2h | Testejä

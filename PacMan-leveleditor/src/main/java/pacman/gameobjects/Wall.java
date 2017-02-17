@@ -58,4 +58,8 @@ public class Wall implements GameObject {
         return y;
     }
 
+    public BufferedImage getImage() {
+        return image;
+    }
+
 }

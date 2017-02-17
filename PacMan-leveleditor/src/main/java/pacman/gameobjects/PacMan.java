@@ -140,6 +140,24 @@ public class PacMan implements GameObject {
         x = origX;
         y = origY;
     }
+    
+    public void setImages(BufferedImage img, BufferedImage img2){
+        this.drawable = img;
+        this.mouthOpen = img;
+        this.mouthClosed = img2;
+    }
+    
+    public void setImageObserver(LevelRunner lr){
+        this.lr = lr;
+    }
+    
+    public void changeImg(){
+        if(drawable == mouthOpen){
+            drawable = mouthClosed;
+        } else {
+            drawable = mouthOpen;
+        }
+    }
 
     //Following classes are for test purposes
     public int getX() {
@@ -161,22 +179,16 @@ public class PacMan implements GameObject {
     public Direction getChanged() {
         return changed;
     }
-    
-    public void setImages(BufferedImage img, BufferedImage img2){
-        this.drawable = img;
-        this.mouthOpen = img;
-        this.mouthClosed = img2;
+
+    public BufferedImage getDrawable() {
+        return drawable;
     }
-    
-    public void setImageObserver(LevelRunner lr){
-        this.lr = lr;
+
+    public BufferedImage getMouthClosed() {
+        return mouthClosed;
     }
-    
-    public void changeImg(){
-        if(drawable == mouthOpen){
-            drawable = mouthClosed;
-        } else {
-            drawable = mouthOpen;
-        }
+
+    public BufferedImage getMouthOpen() {
+        return mouthOpen;
     }
 }

@@ -27,6 +27,7 @@ public class StartMenu extends JPanel {
     private BufferedImage image, pacmanRunaway, chasingGhost, ghostRunaway, chaisingPacman;
     private WindowHandler wh;
     private int pacmanrunawayX, chasingGhostX, chaisingpacmanX, ghostrunawayX;
+    private StartMenuAnimation sma;
     private Timer timer;
 
     public StartMenu(WindowHandler wh, ImageGetter imgGetter) {
@@ -43,7 +44,8 @@ public class StartMenu extends JPanel {
         this.ghostrunawayX = 960;
         setImages();
 
-        timer = new Timer(20, new StartMenuAnimation(this, images));
+        sma = new StartMenuAnimation(this, images);
+        timer = new Timer(20, sma);
         setLayout(null);
 
         JPanel panel1 = new JPanel();
@@ -85,10 +87,13 @@ public class StartMenu extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(image, 0, 0, this);
-        g.drawImage(pacmanRunaway, pacmanrunawayX, 96, this);
-        g.drawImage(chasingGhost, chasingGhostX, 96, this);
-        g.drawImage(chaisingPacman, chaisingpacmanX, 96, this);
-        g.drawImage(ghostRunaway, ghostrunawayX, 96, this);
+        if (sma.isb()) {
+            g.drawImage(pacmanRunaway, pacmanrunawayX, 96, this);
+            g.drawImage(chasingGhost, chasingGhostX, 96, this);
+        } else {
+            g.drawImage(chaisingPacman, chaisingpacmanX, 96, this);
+            g.drawImage(ghostRunaway, ghostrunawayX, 96, this);
+        }
     }
 
     public BufferedImage[] getImages() {
@@ -107,18 +112,18 @@ public class StartMenu extends JPanel {
         this.pacmanrunawayX += 2;
         this.chasingGhostX += 2;
     }
-    
-    public void resetPacmanrun(){
+
+    public void resetPacmanrun() {
         this.pacmanrunawayX = -128;
         this.chasingGhostX = -384;
     }
-    
-    public void pacmanchase(){
+
+    public void pacmanchase() {
         this.chaisingpacmanX -= 2;
         this.ghostrunawayX -= 2;
     }
-    
-    public void resetPacmanchase(){
+
+    public void resetPacmanchase() {
         this.chaisingpacmanX = 1216;
         this.ghostrunawayX = 960;
     }

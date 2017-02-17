@@ -14,7 +14,8 @@ public class Database {
     private String databaseAddress;
 
     /**
-     *
+     * Constructor that defines the address to the database.
+     * 
      * @param databaseAddress
      * @throws ClassNotFoundException
      */

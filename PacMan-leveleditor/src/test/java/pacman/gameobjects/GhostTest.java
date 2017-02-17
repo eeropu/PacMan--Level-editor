@@ -1,6 +1,7 @@
 package pacman.gameobjects;
 
 import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -8,6 +9,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import pacman.levelmanagement.LevelRunner;
+import pacman.pacman.leveleditor.ImageGetter;
+import pacman.pacman.leveleditor.WindowHandler;
 
 /**
  *
@@ -176,6 +180,16 @@ public class GhostTest {
         ghost.reset();
         assertEquals(320, ghost.x);
         assertEquals(320, ghost.y);
+    }
+    
+    @Test
+    public void setImages(){
+        ImageGetter imgGetter = new ImageGetter();
+        BufferedImage bf1 = imgGetter.getSubImage(1);
+        BufferedImage bf2 = imgGetter.getSubImage(2);
+        ghost.setImages(bf1, bf2);
+        assertEquals(bf1, ghost.img);
+        assertEquals(bf2, ghost.ppImg);
     }
     
 }

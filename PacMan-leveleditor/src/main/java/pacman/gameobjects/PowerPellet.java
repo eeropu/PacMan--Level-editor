@@ -77,4 +77,16 @@ public class PowerPellet implements GameObject {
         return y;
     }
 
+    public BufferedImage getImage() {
+        return image;
+    }
+
+    public double getRotation() {
+        return rotation;
+    }
+    
+    public void setRotation(double rotation){
+        this.rotation = rotation;
+    }
+
 }

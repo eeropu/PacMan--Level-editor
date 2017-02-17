@@ -4,8 +4,10 @@ import pacman.gameobjects.Direction;
 import pacman.gameobjects.PacMan;
 import pacman.gameobjects.Wall;
 import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import pacman.pacman.leveleditor.ImageGetter;
 
 /**
  *
@@ -41,5 +43,14 @@ public class WallTest {
             pacman.move();
         }
         assertTrue(wall.checkCollision(pacman));
+    }
+    
+    @Test
+    public void setImage(){
+        wall = new Wall(11, 11);
+        ImageGetter imgGetter = new ImageGetter();
+        BufferedImage img = imgGetter.getSubImage(1);
+        wall.setImage(img);
+        assertEquals(img, wall.getImage());
     }
 }

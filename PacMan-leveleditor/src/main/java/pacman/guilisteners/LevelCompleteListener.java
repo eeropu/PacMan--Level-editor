@@ -7,6 +7,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JTextPane;
+import pacman.database.HighscoresDAO;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
@@ -18,10 +19,14 @@ import pacman.pacman.leveleditor.WindowHandler;
 public class LevelCompleteListener implements ActionListener, MouseListener {
 
     private WindowHandler wh;
+    private HighscoresDAO hsdao;
     private JButton submit, skip;
     private JTextPane txt;
+    private int score;
+    private String level;
 
-    public LevelCompleteListener(WindowHandler wh) {
+    public LevelCompleteListener(WindowHandler wh, HighscoresDAO hsdao) {
+        this.hsdao = hsdao;
         this.wh = wh;
     }
 
@@ -34,7 +39,7 @@ public class LevelCompleteListener implements ActionListener, MouseListener {
             } else if (txt.getText().equals("Name")) {
                 txt.setForeground(Color.red);
             } else {
-                System.out.println(txt.getText());
+                hsdao.add(txt.getText(), score, level);
                 wh.startMenu();
             }
         } else if (e.getSource() == skip) {
@@ -78,6 +83,14 @@ public class LevelCompleteListener implements ActionListener, MouseListener {
 
     public void setTxt(JTextPane txt) {
         this.txt = txt;
+    }
+    
+    public void setScore(int score){
+        this.score = score;
+    }
+    
+    public void setlevel(String level){
+        this.level = level;
     }
 
 }

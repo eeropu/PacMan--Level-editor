@@ -7,6 +7,7 @@ import java.awt.CardLayout;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import pacman.database.HighscoresDAO;
 import pacman.database.LevelsDAO;
 import pacman.guilisteners.CreationMenuListener;
 import pacman.guilisteners.LevelCompleteListener;
@@ -42,7 +43,7 @@ public class WindowHandler implements Runnable {
         cardPanel = new JPanel(cardlayout);
         imgGetter = new ImageGetter();
 
-        lcl = new LevelCompleteListener(this);
+        lcl = new LevelCompleteListener(this, new HighscoresDAO());
 
         StartMenu startmenu = new StartMenu(this, imgGetter);
         cardPanel.add(startmenu, "start");
@@ -77,8 +78,8 @@ public class WindowHandler implements Runnable {
         cardlayout.show(cardPanel, "start");
     }
 
-    public void lvlslctmenu() {
-        lsm.build();
+    public void lvlslctmenu(String s) {
+        lsm.build(s);
         cardlayout.show(cardPanel, "levelselection");
     }
     
@@ -86,8 +87,8 @@ public class WindowHandler implements Runnable {
         cardlayout.show(cardPanel, "creationmenu");
     }
     
-    public void createMode(){
-        cardPanel.add(new CreationMode(imgGetter, this), "create");
+    public void createMode(String s){
+        cardPanel.add(new CreationMode(imgGetter, this, s), "create");
         cardlayout.show(cardPanel, "create");
     }
     
@@ -104,15 +105,15 @@ public class WindowHandler implements Runnable {
         cardlayout.show(cardPanel, "finish");
     }
 
-    public void runLevel(String s) {
-        LevelRunner lr = new LevelRunner(this, s);
+    public void runLevel(String name, String level) {
+        LevelRunner lr = new LevelRunner(this, name, level);
         cardPanel.add(lr, "lr");
         cardlayout.show(cardPanel, "lr");
         lr.start();
     }
 
-    public void lvlCompleted() {
-        cardPanel.add(new LevelCompleted(lcl, imgGetter), "lc");
+    public void lvlCompleted(String name, int points) {
+        cardPanel.add(new LevelCompleted(lcl, imgGetter, name, points), "lc");
         cardlayout.show(cardPanel, "lc");
     }
     

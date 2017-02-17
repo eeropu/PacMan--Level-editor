@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -24,13 +25,12 @@ public class CreationMode extends JPanel{
     private JButton help, ready;
     private JLabel[][] labels;
     private String[][] objectpositioning;
-    private String old;
     private ImageGetter imgGetter;
     private WindowHandler wh;
     private CreationModeListener cml;
     private CreationModeButtonListener cmbl;
 
-    public CreationMode(ImageGetter imgGetter, WindowHandler wh) {
+    public CreationMode(ImageGetter imgGetter, WindowHandler wh, String old) {
         setLayout(null);
         this.imgGetter = imgGetter;
         getImages();
@@ -57,25 +57,43 @@ public class CreationMode extends JPanel{
             }
         }
         
+        if(!old.equals("new")){
+            for (int i = 0; i < 20; i++) {
+                for (int j = 0; j < 30; j++) {
+                    char c = old.charAt(i * 30 + j);
+                    if(c == 'W'){
+                        objectpositioning[j][i] = "W";
+                        labels[j][i].setIcon(new ImageIcon(wall));
+                    } else if (c == 'P'){
+                        objectpositioning[j][i] = "P";
+                        labels[j][i].setIcon(new ImageIcon(pacman));
+                    } else if (c == 'L'){
+                        objectpositioning[j][i] = "L";
+                        labels[j][i].setIcon(new ImageIcon(blinky));
+                    } else if (c == 'I'){
+                        objectpositioning[j][i] = "I";
+                        labels[j][i].setIcon(new ImageIcon(pinky));
+                    } else if (c == 'C'){
+                        objectpositioning[j][i] = "C";
+                        labels[j][i].setIcon(new ImageIcon(clyde));
+                    } else if (c == 'R'){
+                        objectpositioning[j][i] = "R";
+                        labels[j][i].setIcon(new ImageIcon(randomghost));
+                    } else if (c == 'b'){
+                        objectpositioning[j][i] = "b";
+                        labels[j][i].setIcon(new ImageIcon(pb));
+                    } else if (c == 'p'){
+                        objectpositioning[j][i] = "p";
+                        labels[j][i].setIcon(new ImageIcon(pp));
+                    }
+                }
+            }
+        }
+        
         cml.setLabels(labels);
         cml.setObjectPositioning(objectpositioning);
         
-        this.help = new JButton("?");
-        help.setBounds(824, 640, 48, 32);
-        help.setBackground(Color.darkGray);
-        help.setForeground(Color.white);
-        this.ready = new JButton("ready");
-        ready.setBounds(880, 640, 80, 32);
-        ready.setBackground(Color.darkGray);
-        ready.setForeground(Color.white);
-        
-        cmbl = new CreationModeButtonListener(help, ready, wh, objectpositioning);
-        
-        help.addActionListener(cmbl);
-        ready.addActionListener(cmbl);
-        
-        add(help);
-        add(ready);
+        setButtons();
     }
     
     private void getImages(){
@@ -140,6 +158,25 @@ public class CreationMode extends JPanel{
         add(ppR);
         add(autofill);
         
+    }
+    
+    public void setButtons(){
+        this.help = new JButton("?");
+        help.setBounds(824, 640, 48, 32);
+        help.setBackground(Color.darkGray);
+        help.setForeground(Color.white);
+        this.ready = new JButton("ready");
+        ready.setBounds(880, 640, 80, 32);
+        ready.setBackground(Color.darkGray);
+        ready.setForeground(Color.white);
+        
+        cmbl = new CreationModeButtonListener(help, ready, wh, objectpositioning);
+        
+        help.addActionListener(cmbl);
+        ready.addActionListener(cmbl);
+        
+        add(help);
+        add(ready);
     }
     
     @Override

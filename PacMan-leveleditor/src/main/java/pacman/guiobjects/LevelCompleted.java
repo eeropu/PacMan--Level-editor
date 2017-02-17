@@ -34,10 +34,14 @@ public class LevelCompleted extends JPanel {
     private JButton submit, skip;
     private LevelCompleteListener lcl;
     private ImageGetter imgGetter;
+    private String name;
+    private int scores;
 
-    public LevelCompleted(LevelCompleteListener lcl, ImageGetter imgGetter) {
+    public LevelCompleted(LevelCompleteListener lcl, ImageGetter imgGetter, String name, int scores) {
 
         this.lcl = lcl;
+        this.name = name;
+        this.scores = scores;
         
         this.imgGetter = imgGetter;
         this.image = imgGetter.getImage("Pictures/PacMan_lvlcomplete.png");
@@ -48,11 +52,18 @@ public class LevelCompleted extends JPanel {
         label.setFont(new Font("Verdana", Font.BOLD, 25));
         label.setForeground(Color.white);
         label.setHorizontalAlignment((int) CENTER_ALIGNMENT);
-        label.setBounds(320, 320, 320, 40);
+        label.setBounds(336, 352, 272, 32);
         add(label);
+        
+        JLabel score = new JLabel("" + scores);
+        score.setFont(new Font("Verdana", Font.BOLD, 35));
+        score.setForeground(Color.YELLOW);
+        score.setHorizontalAlignment((int) CENTER_ALIGNMENT);
+        score.setBounds(336, 400, 272, 64);
+        add(score);
 
         JPanel panel = new JPanel(new GridLayout(2, 1));
-        panel.setBounds(320, 360, 320, 80);
+        panel.setBounds(336, 488, 272, 80);
         panel.setOpaque(true);
 
         txt = new JTextPane();
@@ -76,9 +87,12 @@ public class LevelCompleted extends JPanel {
         panel.add(submit);
 
         skip = new JButton("Skip");
-        skip.setBounds(450, 608, 64, 32);
+        skip.setBounds(446, 608, 64, 32);
         lcl.setSkip(skip);
         skip.addActionListener(lcl);
+        
+        lcl.setScore(scores);
+        lcl.setlevel(name);
 
         add(panel);
         add(skip);

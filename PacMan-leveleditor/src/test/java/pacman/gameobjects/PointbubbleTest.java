@@ -4,8 +4,10 @@ import pacman.gameobjects.Pointbubble;
 import pacman.gameobjects.Direction;
 import pacman.gameobjects.PacMan;
 import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import pacman.pacman.leveleditor.ImageGetter;
 
 /**
  *
@@ -43,6 +45,14 @@ public class PointbubbleTest {
         }
         pacman.move();
         assertTrue(p.checkCollision(pacman));
+    }
+    
+    @Test
+    public void setImage(){
+        ImageGetter imgGetter = new ImageGetter();
+        BufferedImage img = imgGetter.getSubImage(9);
+        p.setImage(img);
+        assertEquals(img, p.getImage());
     }
 
 }

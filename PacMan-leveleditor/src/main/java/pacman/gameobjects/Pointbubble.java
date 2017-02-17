@@ -61,4 +61,8 @@ public class Pointbubble implements GameObject {
     public int getY() {
         return y;
     }
+
+    public BufferedImage getImage() {
+        return image;
+    }
 }

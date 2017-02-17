@@ -16,14 +16,12 @@ import java.util.ArrayList;
 public class LevelsDAO {
 
     private Database db;
-    private String orderby;
 
     public LevelsDAO() {
         try {
             this.db = new Database("jdbc:sqlite:database.db");
         } catch (ClassNotFoundException e) {
         }
-        this.orderby = "name DESC";
     }
 
     public String add(String name, String level) {
@@ -44,17 +42,19 @@ public class LevelsDAO {
         } catch (SQLException e) {
             return "error";
         }
+        
     }
 
     public ArrayList<String> getAllLevels() {
         try {
             Connection conn = db.getConnection();
-            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Levels ORDER BY " + orderby);
+            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Levels ORDER BY name ASC;");
             ResultSet set = stmt.executeQuery();
             ArrayList<String> list = new ArrayList<>();
             while (set.next()) {
                 list.add(set.getString("name"));
             }
+            conn.close();
             return list;
         } catch (SQLException e) {
             return null;
@@ -62,13 +62,25 @@ public class LevelsDAO {
     }
 
     public String getLevel(String s) {
+        String returnable = "";
         try {
             Connection conn = db.getConnection();
             PreparedStatement stmt = conn.prepareStatement("SELECT level FROM Levels WHERE name = '" + s + "';");
             ResultSet set = stmt.executeQuery();
-            return set.getString("level");
+            returnable = set.getString("level");
+            conn.close();
         } catch (SQLException e) {
-            return "";
+        }
+        return returnable;
+    }
+    
+    public void delete(String s){
+        try{
+            Connection conn = db.getConnection();
+            PreparedStatement stmt = conn.prepareStatement("DELETE FROM Levels WHERE name = '" + s + "';");
+            stmt.execute();
+            conn.close();
+        } catch (SQLException e){
         }
     }
 }

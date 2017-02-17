@@ -126,6 +126,7 @@ public class FinishCreationListener implements ActionListener {
                 } else if (check.equals("error")){
                     JOptionPane.showMessageDialog(null, "Something went wrong, please try again",
                             "Warning", JOptionPane.ERROR_MESSAGE);
+                    System.out.println(level.length());
                 } else {
                     wh.startMenu();
                 }

@@ -25,6 +25,7 @@ import pacman.pacman.leveleditor.WindowHandler;
 public class LevelRunner extends JPanel {
 
     private GameLoop gl;
+    private CollisionChecker cc;
     protected PacMan pacman;
     private HashSet<Wall> walls;
     public HashSet<Ghost> ghosts;
@@ -32,19 +33,23 @@ public class LevelRunner extends JPanel {
     private HashSet<PowerPellet> pp;
     private HashMap<Integer, HashSet<Integer>> ghostStartingPositions;
     private Timer timer;
+    private boolean respawning;
     private int score, lives;
-    private long now, respawn;
+    private String name;
     private WindowHandler wh;
 
-    public LevelRunner(WindowHandler wh, String level) {
+    public LevelRunner(WindowHandler wh, String name, String level) {
         this.wh = wh;
         build(level);
         ControlSetUp csu = new ControlSetUp(this);
-        gl = new GameLoop(this);
+        this.gl = new GameLoop(this, pacman, walls, ghosts, points, pp, ghostStartingPositions);
+        this.cc = new CollisionChecker(this, gl, pacman, walls, ghosts, points, pp, ghostStartingPositions);
+        gl.setCc(cc);
         timer = new Timer(15, gl);
         setBackground(Color.black);
         lives = 3;
-        
+        respawning = false;
+        this.name = name;
     }
 
     @Override
@@ -54,14 +59,14 @@ public class LevelRunner extends JPanel {
         for (Wall wall : walls) {
             wall.paint(g);
         }
-        for (Ghost ghost : ghosts) {
-            ghost.paint(g);
-        }
         for (Pointbubble point : points) {
             point.paint(g);
         }
         for (PowerPellet pp1 : pp) {
             pp1.paint(g);
+        }
+        for (Ghost ghost : ghosts) {
+            ghost.paint(g);
         }
         g.setColor(Color.black);
         g.fillRect(0, 640, 960, 32);
@@ -70,87 +75,29 @@ public class LevelRunner extends JPanel {
         g.drawString("Score: " + score, 32, 665);
         g.fillOval(850, 640, 32, 32);
         g.drawString("x " + lives, 900, 665);
-        if (now - respawn < 3000) {
+        if (respawning) {
             g.setColor(Color.black);
             g.fillRect(85, 275, 795, 120);
             g.setFont(new Font("Verdana", Font.BOLD, 128));
             g.setColor(new Color(180, 0, 0));
             g.drawString("LIFE LOST!", 90, 384);
         }
-    }
-
-    public void move() {
-        now = System.currentTimeMillis();
-        if (now - respawn > 3000) {
-            pacman.move();
-            for (Ghost ghost : ghosts) {
-                ghost.move();
-            }
-        }
-        for (PowerPellet pp1 : pp) {
-            pp1.move();
-        }
         if(lives < 0){
             timer.stop();
             wh.lvlFailed();
         }
     }
+    
+    public void addScore(int s){
+        this.score += s;
+    }
+    
+    public void loseLife(){
+        this.lives--;
+    }
 
-    public void checkCollision() {
-        for (Wall wall : walls) {
-            if (wall.checkCollision(pacman)) {
-                pacman.stop();
-            }
-        }
-        Iterator<Pointbubble> pbit = points.iterator();
-        while (pbit.hasNext()) {
-            if (pbit.next().checkCollision(pacman)) {
-                pbit.remove();
-                score += 10;
-            }
-        }
-        if (points.isEmpty()) {
-            completed();
-        }
-        Iterator<PowerPellet> ppit = pp.iterator();
-        while (ppit.hasNext()) {
-            if (ppit.next().checkCollision(pacman)) {
-                ppit.remove();
-                score += 50;
-                for (Ghost ghost : ghosts) {
-                    ghost.eatPowerpellet(System.currentTimeMillis());
-                }
-            }
-        }
-        for (Ghost ghost : ghosts) {
-            for (Wall wall : walls) {
-                if (ghost.getBounds().intersects(wall.getBounds())) {
-                    ghost.stop();
-                }
-            }
-            if (ghost.checkCollision(pacman)) {
-                if (ghost.isPpEaten()) {
-                    PriorityQueue<Coordinate> pq = new PriorityQueue();
-                    for (Integer i : ghostStartingPositions.keySet()) {
-                        for (Integer j : ghostStartingPositions.get(i)) {
-                            pq.add(new Coordinate(i, j, 0, pacman.getX(), pacman.getY(), null, true));
-                        }
-                    }
-                    Coordinate farthest = pq.poll();
-                    ghost.setX(farthest.getX());
-                    ghost.setY(farthest.getY());
-                    ghost.setPpEaten(false);
-                    score += 200;
-                } else {
-                    pacman.reset();
-                    for (Ghost g : ghosts) {
-                        g.reset();
-                    }
-                    respawn = System.currentTimeMillis();
-                    lives--;
-                }
-            }
-        }
+    public void setRespawning(boolean respawning) {
+        this.respawning = respawning;
     }
 
     public void start() {
@@ -178,6 +125,11 @@ public class LevelRunner extends JPanel {
 
     public void completed() {
         timer.stop();
-        wh.lvlCompleted();
+        wh.lvlCompleted(name, score);
+    }
+    
+    public void failed(){
+        timer.stop();
+        wh.lvlFailed();
     }
 }

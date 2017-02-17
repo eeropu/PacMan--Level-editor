@@ -8,8 +8,10 @@ package pacman.gameobjects;
 import pacman.gameobjects.Direction;
 import pacman.gameobjects.PacMan;
 import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import pacman.pacman.leveleditor.ImageGetter;
 
 /**
  *
@@ -252,5 +254,21 @@ public class PacManTest {
         pacman.reset();
         assertEquals(0, pacman.getX());
         assertEquals(0, pacman.getY());
+    }
+    
+    @Test
+    public void setImages(){
+        pacman = new PacMan(11, 11, Direction.Up);
+        ImageGetter imgGetter = new ImageGetter();
+        BufferedImage img1 = imgGetter.getSubImage(2);
+        BufferedImage img2 = imgGetter.getSubImage(3);
+        pacman.setImages(img1, img2);
+        assertEquals(img1, pacman.getDrawable());
+        assertEquals(img1, pacman.getMouthOpen());
+        assertEquals(img2, pacman.getMouthClosed());
+        pacman.changeImg();
+        assertEquals(img2, pacman.getDrawable());
+        pacman.changeImg();
+        assertEquals(img1, pacman.getDrawable());
     }
 }
