@@ -11,11 +11,12 @@ import pacman.pacman.leveleditor.ImageGetter;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
+ * Screen that is shown to the player if he/she loses the level.
  *
  * @author eerop
  */
-public class LevelFailed extends JPanel{
-    
+public class LevelFailed extends JPanel {
+
     private JButton button;
     private ImageGetter imgGetter;
     private BufferedImage image;
@@ -26,9 +27,9 @@ public class LevelFailed extends JPanel{
         this.imgGetter = imgGetter;
         this.image = imgGetter.getImage("Pictures/PacMan_lvlfailed.png");
         repaint();
-        
+
         setLayout(null);
-        
+
         this.button = new JButton("Back to Menu");
         button.setFont(new Font("Verdana", Font.BOLD, 20));
         button.setBounds(704, 576, 224, 64);
@@ -39,13 +40,13 @@ public class LevelFailed extends JPanel{
                 wh.startMenu();
             }
         });
-        
+
         add(button);
     }
-    
+
     @Override
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g) {
         g.drawImage(image, 0, 0, this);
     }
-    
+
 }

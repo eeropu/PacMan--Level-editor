@@ -14,6 +14,12 @@ public class RandomDirection {
     private Random random = new Random();
     private int i;
 
+    /**
+     * Sets the ghost direction randomly taking all possible directions to
+     * consideration and avoiding U-turns.
+     *
+     * @param ghost the ghost that direction is about to be changed.
+     */
     public void randomDirection(Ghost ghost) {
         if (ghost.d == Direction.Right) {
             randomDirectionRight(ghost);
@@ -201,11 +207,10 @@ public class RandomDirection {
             }
         }
     }
-    
+
     /*
      * Following classes are for testpurposes.
      */
-    
     public void setRandom(Random random) {
         this.random = random;
     }

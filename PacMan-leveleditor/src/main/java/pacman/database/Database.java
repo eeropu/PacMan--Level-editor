@@ -6,8 +6,9 @@ import java.sql.SQLException;
 
 /**
  *
- * @author eerop This class is responsible for creating the connection to
- * databases.
+ * This class is responsible for creating the connection to databases.
+ *
+ * @author eerop.
  */
 public class Database {
 
@@ -15,7 +16,7 @@ public class Database {
 
     /**
      * Constructor that defines the address to the database.
-     * 
+     *
      * @param databaseAddress
      * @throws ClassNotFoundException
      */
@@ -27,7 +28,7 @@ public class Database {
      * This method returns the connection to databases allowing other classes to
      * access the databases contents.
      *
-     * @return
+     * @return returns the connection to the database
      * @throws SQLException
      */
     public Connection getConnection() throws SQLException {

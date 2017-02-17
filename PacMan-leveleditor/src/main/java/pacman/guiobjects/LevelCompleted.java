@@ -42,7 +42,7 @@ public class LevelCompleted extends JPanel {
         this.lcl = lcl;
         this.name = name;
         this.scores = scores;
-        
+
         this.imgGetter = imgGetter;
         this.image = imgGetter.getImage("Pictures/PacMan_lvlcomplete.png");
         repaint();
@@ -54,7 +54,7 @@ public class LevelCompleted extends JPanel {
         label.setHorizontalAlignment((int) CENTER_ALIGNMENT);
         label.setBounds(336, 352, 272, 32);
         add(label);
-        
+
         JLabel score = new JLabel("" + scores);
         score.setFont(new Font("Verdana", Font.BOLD, 35));
         score.setForeground(Color.YELLOW);
@@ -90,7 +90,7 @@ public class LevelCompleted extends JPanel {
         skip.setBounds(446, 608, 64, 32);
         lcl.setSkip(skip);
         skip.addActionListener(lcl);
-        
+
         lcl.setScore(scores);
         lcl.setlevel(name);
 

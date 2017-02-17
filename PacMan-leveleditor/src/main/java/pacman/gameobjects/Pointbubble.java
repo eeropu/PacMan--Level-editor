@@ -1,6 +1,5 @@
 package pacman.gameobjects;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
@@ -43,17 +42,18 @@ public class Pointbubble implements GameObject {
     public boolean checkCollision(PacMan pacman) {
         return this.getBounds().intersects(pacman.getBounds());
     }
-    
-    public void setImage(BufferedImage img){
+
+    public void setImage(BufferedImage img) {
         this.image = img;
     }
-    
-    public void setImageObserver(LevelRunner lr){
+
+    public void setImageObserver(LevelRunner lr) {
         this.lr = lr;
     }
     /*
      * Following classes are for test purposes
      */
+
     public int getX() {
         return x;
     }

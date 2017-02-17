@@ -3,12 +3,9 @@ package pacman.guiobjects;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashSet;
-import java.util.Set;
-import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -21,16 +18,22 @@ import pacman.pacman.leveleditor.WindowHandler;
  *
  * @author eerop
  */
-public final class Help extends JPanel{
-    
+public final class Help extends JPanel {
+
     private ImageGetter imgGetter;
     private JLabel pacman, blinky, pinky, clyde, randomghost, wall, point, power, additionalInfo;
     private WindowHandler wh;
-    
+
+    /**
+     * Used to provide the instructionscreen to creationmode
+     *
+     * @param imgGetter
+     * @param wh
+     */
     public Help(ImageGetter imgGetter, WindowHandler wh) {
         this.imgGetter = imgGetter;
         this.wh = wh;
-        
+
         JPanel panel = new JPanel();
         panel.setLayout(null);
         panel.setPreferredSize(new Dimension(942, 850));
@@ -45,11 +48,11 @@ public final class Help extends JPanel{
         panel.add(setPower());
         panel.add(setAdditionalInfo());
         panel.setOpaque(false);
-        
+
         for (JLabel l : setImages()) {
             panel.add(l);
         }
-        
+
         JButton button = new JButton("Return");
         button.setBounds(412, 800, 96, 32);
         button.addActionListener(new ActionListener() {
@@ -59,17 +62,17 @@ public final class Help extends JPanel{
                 wh.returnToCreation();
             }
         });
-        
+
         panel.add(button);
-        
+
         JScrollPane jsp = new JScrollPane(panel);
         setLayout(new BorderLayout());
         this.add(jsp);
     }
-    
-    public HashSet<JLabel> setImages(){
+
+    public HashSet<JLabel> setImages() {
         HashSet<JLabel> set = new HashSet<>();
-        
+
         JLabel a = new JLabel(new ImageIcon(imgGetter.getSubImage(3)));
         a.setBounds(32, 32, 32, 32);
         set.add(a);
@@ -94,67 +97,67 @@ public final class Help extends JPanel{
         JLabel h = new JLabel(new ImageIcon(imgGetter.getSubImage(1)));
         h.setBounds(512, 416, 32, 32);
         set.add(h);
-        
+
         return set;
     }
-    
-    public JLabel setPacman(){
+
+    public JLabel setPacman() {
         pacman = new JLabel();
         pacman.setBounds(80, 32, 384, 48);
         pacman.setText("<html><p>-This is PacMan. It's the character that player controls. It's mission is to eat all the pointbubbles as fast as possible without getting eaten by ghosts</p></html>");
         return pacman;
     }
-    
-    public JLabel setBlinky(){
+
+    public JLabel setBlinky() {
         blinky = new JLabel();
         blinky.setBounds(560, 32, 384, 32);
         blinky.setText("<html><p>-This is Blinky. He starts to follow PacMan when he gets close enough</p></html>");
         return blinky;
     }
-    
-    public JLabel setPinky(){
+
+    public JLabel setPinky() {
         pinky = new JLabel();
         pinky.setBounds(80, 160, 384, 16);
         pinky.setText("<html><p>-This is Pinky. He tries to position himself infront of pacman</p></html>");
         return pinky;
     }
-    
-    public JLabel setClyde(){
+
+    public JLabel setClyde() {
         clyde = new JLabel();
         clyde.setBounds(560, 160, 384, 32);
         clyde.setText("<html><p>-This is Clyde. He goes towards PacMan until he's too close and then turns 'home'</p></html>");
         return clyde;
     }
-    
-    public JLabel setRandomGhost(){
+
+    public JLabel setRandomGhost() {
         randomghost = new JLabel();
         randomghost.setBounds(80, 288, 384, 32);
         randomghost.setText("<html><p>-This is the randomghost. It's behaviour is set randomly every time and it mimics the actions of some of the other ghosts</p></html>");
         return randomghost;
     }
-    
-    public JLabel setPoint(){
+
+    public JLabel setPoint() {
         point = new JLabel();
         point.setBounds(560, 288, 384, 48);
         point.setText("<html><p>-This is a pointbubble. PacMan's mission is to collect all of these in a level to complete it. Every pointbubble collected grants the player 10 points.</p></html>");
         return point;
     }
-    
-    public JLabel setPower(){
+
+    public JLabel setPower() {
         power = new JLabel();
         power.setBounds(80, 416, 384, 64);
         power.setText("<html><p>-This is a Powerpellet. PacMan can eat one of these to enable him to eat ghosts, making them harmless for a while. Eating a Powerpellet grants the player 50 points and while it's active, eating a ghost grants 200 points.</p></html>");
         return power;
     }
-    
-    public JLabel setWall(){
+
+    public JLabel setWall() {
         wall = new JLabel();
         wall.setBounds(560, 416, 384, 16);
         wall.setText("<html><p>-This is a wall. It limits the movement of PacMan and the ghosts.</p></html>");
         return wall;
     }
-    
-    public JLabel setAdditionalInfo(){
+
+    public JLabel setAdditionalInfo() {
         additionalInfo = new JLabel();
         additionalInfo.setBounds(32, 480, 896, 400);
         additionalInfo.setText("<html><p>-You can add components to a level by selecting one with the radiobuttons at the bottom of the creationmode-screen and the clicking the desired position for the component."
@@ -177,5 +180,5 @@ public final class Help extends JPanel{
                 + "<br>     * fill empty squares with pointbubbles</p></html>");
         return additionalInfo;
     }
-    
+
 }

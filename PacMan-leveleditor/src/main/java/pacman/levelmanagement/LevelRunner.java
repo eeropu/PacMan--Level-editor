@@ -6,21 +6,17 @@ import pacman.gameobjects.*;
 import java.awt.Graphics;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.PriorityQueue;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
+ * This class is responsible for painting the gameobjects and Keeping track of
+ * the lives and scores, it also directs to correct screen based on compliting
+ * or failing the level.
  *
  * @author eerop
  *
- * This class is responsible for running the game. It paints all the components,
- * keeps track of collected points, calls necessary methods from the
- * gameobjects, checks if PacMan has collided with some of the other ojects and
- * finally sends the program to correct screen depending on player completing
- * the level or not.
  */
 public class LevelRunner extends JPanel {
 
@@ -82,17 +78,17 @@ public class LevelRunner extends JPanel {
             g.setColor(new Color(180, 0, 0));
             g.drawString("LIFE LOST!", 90, 384);
         }
-        if(lives < 0){
+        if (lives < 0) {
             timer.stop();
             wh.lvlFailed();
         }
     }
-    
-    public void addScore(int s){
+
+    public void addScore(int s) {
         this.score += s;
     }
-    
-    public void loseLife(){
+
+    public void loseLife() {
         this.lives--;
     }
 
@@ -127,8 +123,8 @@ public class LevelRunner extends JPanel {
         timer.stop();
         wh.lvlCompleted(name, score);
     }
-    
-    public void failed(){
+
+    public void failed() {
         timer.stop();
         wh.lvlFailed();
     }

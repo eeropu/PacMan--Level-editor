@@ -21,7 +21,7 @@ public class PacMan implements GameObject {
     private int x, y, origX, origY, move;
     private Direction current, changed;
     private double rotationCurrent, rotationChanged;
-    private AffineTransform AT;
+    private AffineTransform aT;
     private BufferedImage drawable, mouthClosed, mouthOpen;
     private LevelRunner lr;
 
@@ -35,8 +35,8 @@ public class PacMan implements GameObject {
         this.current = d;
         this.changed = d;
         this.move = 2;
-        this.AT = new AffineTransform();
-        
+        this.aT = new AffineTransform();
+
         Timer timer = new Timer(200, new ActionListener() {
 
             @Override
@@ -50,10 +50,10 @@ public class PacMan implements GameObject {
     @Override
     public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        AT.rotate(0, 0, 0);
+        aT.rotate(0, 0, 0);
         g2d.rotate(rotationCurrent, x + 16, y + 16);
         g2d.drawImage(drawable, x, y, lr);
-        g2d.setTransform(AT);
+        g2d.setTransform(aT);
     }
 
     @Override
@@ -71,6 +71,9 @@ public class PacMan implements GameObject {
         changeDirection();
     }
 
+    /**
+     * Moves the pacman to the opposite side of screen when it gets out of it.
+     */
     public void outOfScreen() {
         if (x > 960) {
             x = -32;
@@ -84,6 +87,9 @@ public class PacMan implements GameObject {
         }
     }
 
+    /**
+     * changes the direction of pacman when it gets to an allowed position.
+     */
     public void changeDirection() {
         if (x >= 0 && x <= 928 && y >= 0 && y <= 608) {
             if (x % 32 == 0 && y % 32 == 0) {
@@ -93,26 +99,42 @@ public class PacMan implements GameObject {
         }
     }
 
+    /**
+     * Changes the direction to right.
+     */
     public void right() {
         this.changed = Direction.Right;
         this.rotationChanged = 0;
     }
 
+    /**
+     * Changes the direction to left.
+     */
     public void left() {
         this.changed = Direction.Left;
         this.rotationChanged = Math.PI;
     }
 
+    /**
+     * Changes the direction to down.
+     */
     public void down() {
         this.changed = Direction.Down;
-        this.rotationChanged = Math.PI/2;
+        this.rotationChanged = Math.PI / 2;
     }
 
+    /**
+     * Changes the direction to up.
+     */
     public void up() {
         this.changed = Direction.Up;
-        this.rotationChanged = - Math.PI/2;
+        this.rotationChanged = -Math.PI / 2;
     }
 
+    /**
+     * stops pacmans movementand moves it to a new position to avoid getting
+     * stuck in a wall.
+     */
     public void stop() {
         if (current == Direction.Right) {
             x -= move;
@@ -136,23 +158,29 @@ public class PacMan implements GameObject {
         return false;
     }
 
+    /**
+     * Moves pacman to it's original position.
+     */
     public void reset() {
         x = origX;
         y = origY;
     }
-    
-    public void setImages(BufferedImage img, BufferedImage img2){
+
+    public void setImages(BufferedImage img, BufferedImage img2) {
         this.drawable = img;
         this.mouthOpen = img;
         this.mouthClosed = img2;
     }
-    
-    public void setImageObserver(LevelRunner lr){
+
+    public void setImageObserver(LevelRunner lr) {
         this.lr = lr;
     }
-    
-    public void changeImg(){
-        if(drawable == mouthOpen){
+
+    /**
+     * Changes the image of pacman (Allows pacmans mouth to open and close).
+     */
+    public void changeImg() {
+        if (drawable == mouthOpen) {
             drawable = mouthClosed;
         } else {
             drawable = mouthOpen;

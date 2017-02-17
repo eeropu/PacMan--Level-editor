@@ -10,6 +10,7 @@ import pacman.database.LevelsDAO;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
+ * Used to give actions to the buttons in the FinishCreation -screen.
  *
  * @author eerop
  */
@@ -113,24 +114,24 @@ public class FinishCreationListener implements ActionListener {
                 } else {
                     level = level + 0;
                 }
-                
+
                 if (fillbubbles.isSelected()) {
                     for (int i = 0; i < level.length(); i++) {
                         level = level.replace('x', 'b');
                     }
                 }
                 String check = ldao.add(txtname.getText(), level);
-                if(check.equals("double")){
+                if (check.equals("double")) {
                     JOptionPane.showMessageDialog(null, "There already exists a level with the given name!",
                             "Warning", JOptionPane.ERROR_MESSAGE);
-                } else if (check.equals("error")){
+                } else if (check.equals("error")) {
                     JOptionPane.showMessageDialog(null, "Something went wrong, please try again",
                             "Warning", JOptionPane.ERROR_MESSAGE);
                     System.out.println(level.length());
                 } else {
                     wh.startMenu();
                 }
-                
+
             }
             ok = true;
         }

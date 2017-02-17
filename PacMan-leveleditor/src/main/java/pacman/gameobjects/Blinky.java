@@ -1,10 +1,5 @@
 package pacman.gameobjects;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import pacman.levelmanagement.LevelRunner;
-
 /**
  *
  * @author eerop
@@ -15,10 +10,20 @@ import pacman.levelmanagement.LevelRunner;
  */
 public class Blinky extends Ghost {
 
+    /**
+     *
+     * @param x starting x position of this ghost
+     * @param y starting y position of this ghost
+     * @param pacman reference to pacman that is used to by the checkCollision
+     * method
+     */
     public Blinky(int x, int y, PacMan pacman) {
         super(x, y, pacman);
     }
 
+    /**
+     * Used to move this ghost and to set it's direction and movement speed
+     */
     @Override
     public void move() {
         if (ppEaten) {

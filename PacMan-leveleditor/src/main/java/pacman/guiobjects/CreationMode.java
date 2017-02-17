@@ -15,11 +15,12 @@ import pacman.pacman.leveleditor.ImageGetter;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
+ * Used to create and modify levels.
  *
  * @author eerop
  */
-public class CreationMode extends JPanel{
-    
+public class CreationMode extends JPanel {
+
     private BufferedImage grid, wall, pacman, blinky, pinky, clyde, randomghost, pb, pp;
     private JRadioButton wallR, pacmanR, blinkyR, pinkyR, clydeR, randomghostR, pbR, ppR, autofill;
     private JButton help, ready;
@@ -36,10 +37,10 @@ public class CreationMode extends JPanel{
         getImages();
         this.wh = wh;
         setRadioButtons();
-        
-        cml = new CreationModeListener(grid, wall, pacman, blinky, pinky, clyde, randomghost, pb, pp, 
+
+        cml = new CreationModeListener(grid, wall, pacman, blinky, pinky, clyde, randomghost, pb, pp,
                 wallR, pacmanR, blinkyR, pinkyR, clydeR, randomghostR, pbR, ppR, autofill);
-        
+
         this.labels = new JLabel[30][20];
         for (int i = 0; i < 30; i++) {
             for (int j = 0; j < 20; j++) {
@@ -49,54 +50,54 @@ public class CreationMode extends JPanel{
                 add(labels[i][j]);
             }
         }
-        
+
         this.objectpositioning = new String[30][20];
         for (int i = 0; i < 30; i++) {
             for (int j = 0; j < 20; j++) {
                 objectpositioning[i][j] = "x";
             }
         }
-        
-        if(!old.equals("new")){
+
+        if (!old.equals("new")) {
             for (int i = 0; i < 20; i++) {
                 for (int j = 0; j < 30; j++) {
                     char c = old.charAt(i * 30 + j);
-                    if(c == 'W'){
+                    if (c == 'W') {
                         objectpositioning[j][i] = "W";
                         labels[j][i].setIcon(new ImageIcon(wall));
-                    } else if (c == 'P'){
+                    } else if (c == 'P') {
                         objectpositioning[j][i] = "P";
                         labels[j][i].setIcon(new ImageIcon(pacman));
-                    } else if (c == 'L'){
+                    } else if (c == 'L') {
                         objectpositioning[j][i] = "L";
                         labels[j][i].setIcon(new ImageIcon(blinky));
-                    } else if (c == 'I'){
+                    } else if (c == 'I') {
                         objectpositioning[j][i] = "I";
                         labels[j][i].setIcon(new ImageIcon(pinky));
-                    } else if (c == 'C'){
+                    } else if (c == 'C') {
                         objectpositioning[j][i] = "C";
                         labels[j][i].setIcon(new ImageIcon(clyde));
-                    } else if (c == 'R'){
+                    } else if (c == 'R') {
                         objectpositioning[j][i] = "R";
                         labels[j][i].setIcon(new ImageIcon(randomghost));
-                    } else if (c == 'b'){
+                    } else if (c == 'b') {
                         objectpositioning[j][i] = "b";
                         labels[j][i].setIcon(new ImageIcon(pb));
-                    } else if (c == 'p'){
+                    } else if (c == 'p') {
                         objectpositioning[j][i] = "p";
                         labels[j][i].setIcon(new ImageIcon(pp));
                     }
                 }
             }
         }
-        
+
         cml.setLabels(labels);
         cml.setObjectPositioning(objectpositioning);
-        
+
         setButtons();
     }
-    
-    private void getImages(){
+
+    private void getImages() {
         grid = imgGetter.getImage("Pictures/PacMan_Createmodegrid.png");
         wall = imgGetter.getSubImage(1);
         pacman = imgGetter.getSubImage(3);
@@ -107,8 +108,8 @@ public class CreationMode extends JPanel{
         pb = imgGetter.getSubImage(9);
         pp = imgGetter.getSubImage(10);
     }
-    
-    private void setRadioButtons(){
+
+    private void setRadioButtons() {
         wallR = new JRadioButton();
         wallR.setBounds(38, 646, 20, 20);
         wallR.setBackground(Color.black);
@@ -137,7 +138,7 @@ public class CreationMode extends JPanel{
         autofill.setBounds(758, 646, 64, 20);
         autofill.setBackground(Color.black);
         autofill.setForeground(Color.white);
-        
+
         ButtonGroup bg = new ButtonGroup();
         bg.add(wallR);
         bg.add(pacmanR);
@@ -147,7 +148,7 @@ public class CreationMode extends JPanel{
         bg.add(randomghostR);
         bg.add(pbR);
         bg.add(ppR);
-        
+
         add(wallR);
         add(pacmanR);
         add(blinkyR);
@@ -157,10 +158,10 @@ public class CreationMode extends JPanel{
         add(pbR);
         add(ppR);
         add(autofill);
-        
+
     }
-    
-    public void setButtons(){
+
+    private void setButtons() {
         this.help = new JButton("?");
         help.setBounds(824, 640, 48, 32);
         help.setBackground(Color.darkGray);
@@ -169,18 +170,18 @@ public class CreationMode extends JPanel{
         ready.setBounds(880, 640, 80, 32);
         ready.setBackground(Color.darkGray);
         ready.setForeground(Color.white);
-        
+
         cmbl = new CreationModeButtonListener(help, ready, wh, objectpositioning);
-        
+
         help.addActionListener(cmbl);
         ready.addActionListener(cmbl);
-        
+
         add(help);
         add(ready);
     }
-    
+
     @Override
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g) {
         g.drawImage(grid, 0, 0, this);
         g.setColor(Color.black);
         g.fillRect(0, 640, 960, 32);
@@ -193,5 +194,5 @@ public class CreationMode extends JPanel{
         g.drawImage(pb, 624, 640, this);
         g.drawImage(pp, 704, 640, this);
     }
-    
+
 }

@@ -8,69 +8,69 @@
 <div id="overview"><a href="../../../apidocs/pacman/gameobjects/Clyde.html">View Javadoc</a></div><pre>
 <a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> pacman.gameobjects;
 <a class="jxr_linenumber" name="L2" href="#L2">2</a>   
-<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> java.awt.Color;
-<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> java.awt.Graphics;
-<a class="jxr_linenumber" name="L5" href="#L5">5</a>   
-<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment"> * @author eerop</em>
-<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment"> * This class is responsible for managing the Clyde-ghost. Clyde is the Ghost</em>
-<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> * that follows pacman until it gets close enough and then it runs away towards</em>
-<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> * "home".</em>
-<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../pacman/gameobjects/Clyde.html">Clyde</a> <strong class="jxr_keyword">extends</strong> <a href="../../pacman/gameobjects/Ghost.html">Ghost</a> {
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_javadoccomment"> * @author eerop</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_javadoccomment"> * This class is responsible for managing the Clyde-ghost. Clyde is the Ghost</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment"> * that follows pacman until it gets close enough and then it runs away towards</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> * "home".</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../pacman/gameobjects/Clyde.html">Clyde</a> <strong class="jxr_keyword">extends</strong> <a href="../../pacman/gameobjects/Ghost.html">Ghost</a> {
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> homeX;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> homeY;
 <a class="jxr_linenumber" name="L15" href="#L15">15</a>  
-<a class="jxr_linenumber" name="L16" href="#L16">16</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> homeX;
-<a class="jxr_linenumber" name="L17" href="#L17">17</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> homeY;
-<a class="jxr_linenumber" name="L18" href="#L18">18</a>  
-<a class="jxr_linenumber" name="L19" href="#L19">19</a>      <strong class="jxr_keyword">public</strong> <a href="../../pacman/gameobjects/Clyde.html">Clyde</a>(<strong class="jxr_keyword">int</strong> x, <strong class="jxr_keyword">int</strong> y, <a href="../../pacman/gameobjects/PacMan.html">PacMan</a> pacman, <strong class="jxr_keyword">boolean</strong> randomghost) {
-<a class="jxr_linenumber" name="L20" href="#L20">20</a>          <strong class="jxr_keyword">super</strong>(x, y, pacman, randomghost);
-<a class="jxr_linenumber" name="L21" href="#L21">21</a>          homeX = 1;
-<a class="jxr_linenumber" name="L22" href="#L22">22</a>          homeY = 20;
-<a class="jxr_linenumber" name="L23" href="#L23">23</a>      }
-<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
-<a class="jxr_linenumber" name="L25" href="#L25">25</a>      @Override
-<a class="jxr_linenumber" name="L26" href="#L26">26</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> move() {
-<a class="jxr_linenumber" name="L27" href="#L27">27</a>          <strong class="jxr_keyword">if</strong> (ppEaten) {
-<a class="jxr_linenumber" name="L28" href="#L28">28</a>              eatableTimer(System.currentTimeMillis());
-<a class="jxr_linenumber" name="L29" href="#L29">29</a>          }
-<a class="jxr_linenumber" name="L30" href="#L30">30</a>          <strong class="jxr_keyword">if</strong> (move == 1 &amp;&amp; !ppEaten) {
-<a class="jxr_linenumber" name="L31" href="#L31">31</a>              <strong class="jxr_keyword">if</strong> (x % 32 == 0 &amp;&amp; y % 32 == 0) {
-<a class="jxr_linenumber" name="L32" href="#L32">32</a>                  move = 2;
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>              }
-<a class="jxr_linenumber" name="L34" href="#L34">34</a>          }
-<a class="jxr_linenumber" name="L35" href="#L35">35</a>          <strong class="jxr_keyword">if</strong> (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) &gt; 192) {
-<a class="jxr_linenumber" name="L36" href="#L36">36</a>              dSetRandomly = false;
-<a class="jxr_linenumber" name="L37" href="#L37">37</a>              <strong class="jxr_keyword">if</strong> (x % 32 == 0 &amp;&amp; y % 32 == 0) {
-<a class="jxr_linenumber" name="L38" href="#L38">38</a>                  setDirectionAStar(pacman.getX(), pacman.getY(), ppEaten);
-<a class="jxr_linenumber" name="L39" href="#L39">39</a>              }
-<a class="jxr_linenumber" name="L40" href="#L40">40</a>          } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="L41" href="#L41">41</a>              dSetRandomly = <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="L42" href="#L42">42</a>              <strong class="jxr_keyword">if</strong> (x % 32 == 0 &amp;&amp; y % 32 == 0) {
-<a class="jxr_linenumber" name="L43" href="#L43">43</a>                  setDirectionAStar(homeX * 32 - 32, homeY * 32 - 32, false);
-<a class="jxr_linenumber" name="L44" href="#L44">44</a>              }
-<a class="jxr_linenumber" name="L45" href="#L45">45</a>          }
-<a class="jxr_linenumber" name="L46" href="#L46">46</a>  
-<a class="jxr_linenumber" name="L47" href="#L47">47</a>          <strong class="jxr_keyword">super</strong>.move();
-<a class="jxr_linenumber" name="L48" href="#L48">48</a>      }
-<a class="jxr_linenumber" name="L49" href="#L49">49</a>  
-<a class="jxr_linenumber" name="L50" href="#L50">50</a>      @Override
-<a class="jxr_linenumber" name="L51" href="#L51">51</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> paint(Graphics g) {
-<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <strong class="jxr_keyword">if</strong> (ppEaten) {
-<a class="jxr_linenumber" name="L53" href="#L53">53</a>              g.setColor(Color.blue);
-<a class="jxr_linenumber" name="L54" href="#L54">54</a>              g.fillRect(x, y, 32, 32);
-<a class="jxr_linenumber" name="L55" href="#L55">55</a>          } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="L56" href="#L56">56</a>              <strong class="jxr_keyword">if</strong> (randomghost) {
-<a class="jxr_linenumber" name="L57" href="#L57">57</a>                  g.setColor(Color.green);
-<a class="jxr_linenumber" name="L58" href="#L58">58</a>                  g.fillRect(x, y, 32, 32);
-<a class="jxr_linenumber" name="L59" href="#L59">59</a>              } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="L60" href="#L60">60</a>                  g.setColor(Color.ORANGE);
-<a class="jxr_linenumber" name="L61" href="#L61">61</a>                  g.fillRect(x, y, 32, 32);
-<a class="jxr_linenumber" name="L62" href="#L62">62</a>              }
-<a class="jxr_linenumber" name="L63" href="#L63">63</a>          }
-<a class="jxr_linenumber" name="L64" href="#L64">64</a>      }
-<a class="jxr_linenumber" name="L65" href="#L65">65</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment">     * Constructor that defines the basic x, y and pacman of all ghosts and sets</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment">     * the homecoordinates to (1, 20) by default.</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <em class="jxr_javadoccomment">     * @param x starting x position of this ghost.</em>
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <em class="jxr_javadoccomment">     * @param y starting y position of this ghost.</em>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <em class="jxr_javadoccomment">     * @param pacman reference to pacman that is used to by the checkCollision</em>
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <em class="jxr_javadoccomment">     * method.</em>
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      <strong class="jxr_keyword">public</strong> <a href="../../pacman/gameobjects/Clyde.html">Clyde</a>(<strong class="jxr_keyword">int</strong> x, <strong class="jxr_keyword">int</strong> y, <a href="../../pacman/gameobjects/PacMan.html">PacMan</a> pacman) {
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          <strong class="jxr_keyword">super</strong>(x, y, pacman);
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          homeX = 1;
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          homeY = 20;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      }
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  <em class="jxr_javadoccomment">     * Used to move this ghost and to set its' direction and movement speed.</em>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>      @Override
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> move() {
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          <strong class="jxr_keyword">if</strong> (ppEaten) {
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>              eatableTimer(System.currentTimeMillis());
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          }
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          <strong class="jxr_keyword">if</strong> (move == 1 &amp;&amp; !ppEaten) {
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>              <strong class="jxr_keyword">if</strong> (x % 32 == 0 &amp;&amp; y % 32 == 0) {
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>                  move = 2;
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>              }
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          }
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          <strong class="jxr_keyword">if</strong> (Math.sqrt(Math.pow(pacman.getX() - x, 2) + Math.pow(pacman.getY() - y, 2)) &gt; 192) {
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>              dSetRandomly = false;
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>              <strong class="jxr_keyword">if</strong> (x % 32 == 0 &amp;&amp; y % 32 == 0) {
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>                  setDirectionAStar(pacman.getX(), pacman.getY(), ppEaten);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>              }
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>              dSetRandomly = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>              <strong class="jxr_keyword">if</strong> (x % 32 == 0 &amp;&amp; y % 32 == 0) {
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>                  setDirectionAStar(homeX * 32 - 32, homeY * 32 - 32, false);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>              }
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          }
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          <strong class="jxr_keyword">super</strong>.move();
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>      }
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>  
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  <em class="jxr_javadoccomment">     * Sets the graph that is used for updating direction of this ghost. Changes</em>
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  <em class="jxr_javadoccomment">     * the home coordinate if it's not reachable.</em>
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>  <em class="jxr_javadoccomment">     * @param graph</em>
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>  <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L66" href="#L66">66</a>      @Override
 <a class="jxr_linenumber" name="L67" href="#L67">67</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setGraph(<strong class="jxr_keyword">int</strong>[][] graph) {
 <a class="jxr_linenumber" name="L68" href="#L68">68</a>          <strong class="jxr_keyword">this</strong>.graph = graph;

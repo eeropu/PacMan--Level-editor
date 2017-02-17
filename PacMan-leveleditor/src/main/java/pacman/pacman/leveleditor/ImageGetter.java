@@ -5,31 +5,36 @@ import java.io.IOException;
 import java.net.URL;
 import javax.imageio.ImageIO;
 
+/**
+ * Used to retrieve images from the resources
+ *
+ * @author eerop
+ */
 public class ImageGetter {
-    
+
     private ClassLoader cl;
     private BufferedImage spriteSheet;
 
     public ImageGetter() {
         cl = this.getClass().getClassLoader();
         URL resource = cl.getResource("Pictures/PacMan_SpriteSheet.png");
-        try{
+        try {
             spriteSheet = ImageIO.read(resource);
-        } catch (IOException e){
+        } catch (IOException e) {
         }
     }
-    
-    public BufferedImage getImage(String address){
+
+    public BufferedImage getImage(String address) {
         URL resource = cl.getResource(address);
         BufferedImage image = null;
-        try{
+        try {
             image = ImageIO.read(resource);
-        } catch (IOException e){
+        } catch (IOException e) {
         }
         return image;
     }
-    
-    public BufferedImage getSubImage(int x){
+
+    public BufferedImage getSubImage(int x) {
         return spriteSheet.getSubimage(x * 32 - 32, 0, 32, 32);
     }
 }

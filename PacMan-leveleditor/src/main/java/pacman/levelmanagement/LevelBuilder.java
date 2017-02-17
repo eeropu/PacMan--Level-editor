@@ -39,6 +39,10 @@ public class LevelBuilder {
         prepareImages();
     }
 
+    /**
+     * Builds the level by adding objects with correct coordinates to the
+     * object-sets based on the objectPositioning-string;
+     */
     public void build() {
         int[][] graph = new int[32][22];
         for (int i = 0; i < 20; i++) {
@@ -58,7 +62,7 @@ public class LevelBuilder {
                     pacman.setImages(pacman1, pacman2);
                     pacman.setImageObserver(lr);
                 } else if (c == 'p') {
-                    PowerPellet power = new PowerPellet(j+1, i+1);
+                    PowerPellet power = new PowerPellet(j + 1, i + 1);
                     power.setImage(ppimg);
                     power.setImageObserver(lr);
                     pp.add(power);
@@ -138,6 +142,9 @@ public class LevelBuilder {
         return pp;
     }
 
+    /**
+     * Uses imageGetter to prepare images for the use of build-method.
+     */
     public void prepareImages() {
         this.wall = imgGetter.getSubImage(1);
         this.pacman1 = imgGetter.getSubImage(2);

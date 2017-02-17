@@ -7,11 +7,12 @@ import javax.swing.JOptionPane;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
+ * Used to set actions for the buttons in the creationmode.
  *
  * @author eerop
  */
-public class CreationModeButtonListener implements ActionListener{
-    
+public class CreationModeButtonListener implements ActionListener {
+
     private JButton help, ready;
     private WindowHandler wh;
     private String[][] objectPositioning;
@@ -25,27 +26,27 @@ public class CreationModeButtonListener implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == help){
+        if (e.getSource() == help) {
             wh.help();
-        } else if (e.getSource() == ready){
-            
+        } else if (e.getSource() == ready) {
+
             String level = "";
             for (int i = 0; i < 20; i++) {
                 for (int j = 0; j < 30; j++) {
                     level = level + objectPositioning[j][i];
                 }
             }
-            
-            if(!level.contains("P")){
+
+            if (!level.contains("P")) {
                 JOptionPane.showMessageDialog(null, "You need to add PacMan!", "Warning", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if(!level.contains("b")){
+            if (!level.contains("b")) {
                 JOptionPane.showMessageDialog(null, "There needs to be atleast one pointbubble!", "Warning", JOptionPane.WARNING_MESSAGE);
                 return;
             }
             wh.finishedCreating(level);
         }
     }
-    
+
 }

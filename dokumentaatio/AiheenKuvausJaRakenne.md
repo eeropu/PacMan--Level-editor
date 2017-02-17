@@ -16,5 +16,5 @@ Luodut tasot ja niissä saadut huipputulokset tallennetaan tietokantoihin, joka 
 ![määrittelyvaiheen luokkakaavio](https://raw.githubusercontent.com/eeropu/PacMan--Level-editor/master/dokumentaatio/MaarittelyvaiheenLuokkakaavio.jpg)
 ###Luokkakaavio:
 ![luokkakaavio](https://raw.githubusercontent.com/eeropu/PacMan--Level-editor/master/dokumentaatio/Luokkakaavio.jpg)
-#####Huom!
+####Huom!
 Uusin versio ei enää sisällä luokkaa randomGhost. Kyseinen toiminnallisuus on toteutettu muualla ja luokkakaavio tullaan päivittämään myöhemmin.

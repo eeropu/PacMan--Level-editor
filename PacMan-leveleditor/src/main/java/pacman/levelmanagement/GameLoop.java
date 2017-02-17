@@ -30,7 +30,7 @@ public class GameLoop implements ActionListener {
 
     public GameLoop(LevelRunner lr, PacMan pacman, HashSet<Wall> walls, HashSet<Ghost> ghosts, HashSet<Pointbubble> points,
             HashSet<PowerPellet> pp, HashMap<Integer, HashSet<Integer>> ghostStartingPositions) {
-        
+
         this.lr = lr;
         this.pacman = pacman;
         this.walls = walls;
@@ -46,8 +46,11 @@ public class GameLoop implements ActionListener {
         cc.checkCollision();
         lr.repaint();
     }
-    
-    public void move(){
+
+    /**
+     * Moves the gameobjects
+     */
+    public void move() {
         now = System.currentTimeMillis();
         if (now - respawn > 3000) {
             lr.setRespawning(false);

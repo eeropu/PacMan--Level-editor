@@ -50,15 +50,15 @@ public class WindowHandler implements Runnable {
 
         lsm = new LevelSelectionMenu(new LevelsDAO(), this);
         cardPanel.add(lsm, "levelselection");
-        
+
         cml = new CreationMenuListener(this);
-        
+
         cm = new CreationMenu(cml, imgGetter);
         cardPanel.add(cm, "creationmenu");
-        
+
         help = new Help(imgGetter, this);
         cardPanel.add(help, "help");
-        
+
         lf = new LevelFailed(imgGetter, this);
         cardPanel.add(lf, "failed");
     }
@@ -74,37 +74,72 @@ public class WindowHandler implements Runnable {
         frame.pack();
     }
 
+    /**
+     * shows the startmenu
+     */
     public void startMenu() {
         cardlayout.show(cardPanel, "start");
     }
 
+    /**
+     * Shows the levelselectionmenu.
+     *
+     * @param s defines what happends when a button is clicked (start, modify or
+     * delete a level)
+     */
     public void lvlslctmenu(String s) {
         lsm.build(s);
         cardlayout.show(cardPanel, "levelselection");
     }
-    
-    public void creationmenu(){
+
+    /**
+     * Shows the creation menu
+     */
+    public void creationmenu() {
         cardlayout.show(cardPanel, "creationmenu");
     }
-    
-    public void createMode(String s){
+
+    /**
+     * Shows the creationmode for a new level
+     *
+     * @param s Defines if the creationmode should show an existing level or an
+     * empty grid.
+     */
+    public void createMode(String s) {
         cardPanel.add(new CreationMode(imgGetter, this, s), "create");
         cardlayout.show(cardPanel, "create");
     }
-    
-    public void help(){
+
+    /**
+     * Shows the creationmodes instructionscreen.
+     */
+    public void help() {
         cardlayout.show(cardPanel, "help");
     }
-    
-    public void returnToCreation(){
+
+    /**
+     * shows the previous creationmodescreen.
+     */
+    public void returnToCreation() {
         cardlayout.show(cardPanel, "create");
     }
-    
-    public void finishedCreating(String level){
+
+    /**
+     * Shows the finishcreation-screen
+     *
+     * @param level
+     */
+    public void finishedCreating(String level) {
         cardPanel.add(new FinishCreation(level, this), "finish");
         cardlayout.show(cardPanel, "finish");
     }
 
+    /**
+     * Shows and starts a new level
+     *
+     * @param name name of the level
+     * @param level the objectpositioning-string
+     */
     public void runLevel(String name, String level) {
         LevelRunner lr = new LevelRunner(this, name, level);
         cardPanel.add(lr, "lr");
@@ -112,12 +147,21 @@ public class WindowHandler implements Runnable {
         lr.start();
     }
 
+    /**
+     * Shows the levelcompleted-screen
+     *
+     * @param name name of the level
+     * @param points users scores;
+     */
     public void lvlCompleted(String name, int points) {
         cardPanel.add(new LevelCompleted(lcl, imgGetter, name, points), "lc");
         cardlayout.show(cardPanel, "lc");
     }
-    
-    public void lvlFailed(){
+
+    /**
+     * Shown if user loses a level
+     */
+    public void lvlFailed() {
         cardlayout.show(cardPanel, "failed");
     }
 

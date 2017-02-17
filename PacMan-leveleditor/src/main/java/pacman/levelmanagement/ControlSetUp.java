@@ -10,7 +10,7 @@ import javax.swing.KeyStroke;
  *
  * @author eerop
  *
- * This class is used by Levelrunner and it enables controlling of PacMan
+ * This class is used by Levelrunner and it enables controlling of PacMan.
  */
 public final class ControlSetUp {
 
@@ -24,6 +24,9 @@ public final class ControlSetUp {
         up();
     }
 
+    /**
+     * Sets the action for the right arrow-key.
+     */
     public void right() {
         Action right = new AbstractAction() {
 
@@ -37,6 +40,9 @@ public final class ControlSetUp {
         lr.getActionMap().put("right", right);
     }
 
+    /**
+     * Sets the action for the left arrow-key.
+     */
     public void left() {
         Action left = new AbstractAction() {
 
@@ -50,6 +56,9 @@ public final class ControlSetUp {
         lr.getActionMap().put("left", left);
     }
 
+    /**
+     * Sets the action for the down arrow-key.
+     */
     public void down() {
         Action down = new AbstractAction() {
 
@@ -63,6 +72,9 @@ public final class ControlSetUp {
         lr.getActionMap().put("down", down);
     }
 
+    /**
+     * Sets the action for the up arrow-key.
+     */
     public void up() {
         Action up = new AbstractAction() {
 

@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 
 /**
+ * Used to set the functionality of creationmode.
  *
  * @author eerop
  */
@@ -116,43 +117,43 @@ public class CreationModeListener implements MouseListener {
         } else if (pacmanR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "P";
             setImage(l, pacman);
-            if(first){
+            if (first) {
                 clearSelectable();
             }
         } else if (blinkyR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "L";
             setImage(l, blinky);
-            if(first){
+            if (first) {
                 clearSelectable();
             }
         } else if (pinkyR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "I";
             setImage(l, pinky);
-            if(first){
+            if (first) {
                 clearSelectable();
             }
         } else if (clydeR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "C";
             setImage(l, clyde);
-            if(first){
+            if (first) {
                 clearSelectable();
             }
         } else if (randomghostR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "R";
             setImage(l, randomghost);
-            if(first){
+            if (first) {
                 clearSelectable();
             }
         } else if (pbR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "b";
             setImage(l, pb);
-            if(first){
+            if (first) {
                 clearSelectable();
             }
         } else if (ppR.isSelected()) {
             objectPositioning[l.getX() / 32][l.getY() / 32] = "p";
             setImage(l, pp);
-            if(first){
+            if (first) {
                 clearSelectable();
             }
         }
@@ -174,6 +175,9 @@ public class CreationModeListener implements MouseListener {
     public void mouseExited(MouseEvent e) {
     }
 
+    /**
+     * Removes the changes in the background of the boxes.
+     */
     public void clearSelectable() {
         for (int i = 0; i < 30; i++) {
             labels[i][previousY].setBackground(null);
@@ -187,6 +191,13 @@ public class CreationModeListener implements MouseListener {
         first = false;
     }
 
+    /**
+     * Sets the correct image to the JLabel in the clicked box.
+     *
+     * @param l the label in the clicked box.
+     * @param i the icon that is going to be set (or removed if the label
+     * already contains it).
+     */
     public void setImage(JLabel l, ImageIcon i) {
         try {
             if (l.getIcon().equals(i)) {
@@ -222,6 +233,12 @@ public class CreationModeListener implements MouseListener {
         }
     }
 
+    /**
+     * Removes the corresponding wall from the other side of screen if one wall
+     * is removed
+     *
+     * @param l the first modified label
+     */
     public void removeOtherWall(JLabel l) {
         if (l.getX() == 0) {
             labels[29][l.getY() / 32].setIcon(null);
@@ -253,6 +270,12 @@ public class CreationModeListener implements MouseListener {
         }
     }
 
+    /**
+     * adds a wall to the other side of screen if one wall is added.
+     *
+     * @param l first clicked label
+     * @param i
+     */
     public void wallCheck(JLabel l, ImageIcon i) {
         try {
             if (l.getX() == 0) {

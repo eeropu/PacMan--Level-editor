@@ -17,6 +17,9 @@ public class LevelsDAO {
 
     private Database db;
 
+    /**
+     * Constructor used to define the database object that this class uses.
+     */
     public LevelsDAO() {
         try {
             this.db = new Database("jdbc:sqlite:database.db");
@@ -24,6 +27,15 @@ public class LevelsDAO {
         }
     }
 
+    /**
+     * This method is used to add levels to the database that contains them.
+     *
+     * @param name the name of the level.
+     * @param level the string that contains the instructions that are used by
+     * levelbuilder to build the level.
+     * @return returns a string that tells the calling method if something has
+     * gone wrong and what's the problem.
+     */
     public String add(String name, String level) {
         ArrayList<String> list = getAllLevels();
         for (String c : list) {
@@ -31,7 +43,7 @@ public class LevelsDAO {
                 return "double";
             }
         }
-        
+
         try {
             Connection conn = db.getConnection();
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO Levels (name, level, date) VALUES "
@@ -42,9 +54,14 @@ public class LevelsDAO {
         } catch (SQLException e) {
             return "error";
         }
-        
+
     }
 
+    /**
+     * Used to retrieve all Levels in the database.
+     *
+     * @return returns an ArrayList containing the names of all levels.
+     */
     public ArrayList<String> getAllLevels() {
         try {
             Connection conn = db.getConnection();
@@ -61,6 +78,13 @@ public class LevelsDAO {
         }
     }
 
+    /**
+     *
+     * Used to retrieve the string containing levelbuilding information.
+     *
+     * @param s the name of the level.
+     * @return the string containing levelbuilding information.
+     */
     public String getLevel(String s) {
         String returnable = "";
         try {
@@ -73,14 +97,19 @@ public class LevelsDAO {
         }
         return returnable;
     }
-    
-    public void delete(String s){
-        try{
+
+    /**
+     * Used to delete a particular level from the database.
+     *
+     * @param s the name of the level.
+     */
+    public void delete(String s) {
+        try {
             Connection conn = db.getConnection();
             PreparedStatement stmt = conn.prepareStatement("DELETE FROM Levels WHERE name = '" + s + "';");
             stmt.execute();
             conn.close();
-        } catch (SQLException e){
+        } catch (SQLException e) {
         }
     }
 }

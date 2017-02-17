@@ -1,8 +1,5 @@
 package pacman.gameobjects;
 
-import java.awt.image.BufferedImage;
-import pacman.levelmanagement.LevelRunner;
-
 /**
  *
  * @author eerop

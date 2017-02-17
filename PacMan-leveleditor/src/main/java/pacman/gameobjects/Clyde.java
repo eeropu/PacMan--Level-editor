@@ -1,8 +1,5 @@
 package pacman.gameobjects;
 
-import java.awt.image.BufferedImage;
-import pacman.levelmanagement.LevelRunner;
-
 /**
  *
  * @author eerop
@@ -16,12 +13,24 @@ public class Clyde extends Ghost {
     private int homeX;
     private int homeY;
 
+    /**
+     * Constructor that defines the basic x, y and pacman of all ghosts and sets
+     * the homecoordinates to (1, 20) by default.
+     *
+     * @param x starting x position of this ghost.
+     * @param y starting y position of this ghost.
+     * @param pacman reference to pacman that is used to by the checkCollision
+     * method.
+     */
     public Clyde(int x, int y, PacMan pacman) {
         super(x, y, pacman);
         homeX = 1;
         homeY = 20;
     }
 
+    /**
+     * Used to move this ghost and to set its' direction and movement speed.
+     */
     @Override
     public void move() {
         if (ppEaten) {
@@ -47,6 +56,13 @@ public class Clyde extends Ghost {
         super.move();
     }
 
+    /**
+     *
+     * Sets the graph that is used for updating direction of this ghost. Changes
+     * the home coordinate if it's not reachable.
+     *
+     * @param graph
+     */
     @Override
     public void setGraph(int[][] graph) {
         this.graph = graph;

@@ -33,6 +33,11 @@ public class LevelSelectionMenu extends JPanel {
         this.wh = wh;
     }
 
+    /**
+     * Sets the buttons to the levelselection screen.
+     *
+     * @param s defines what will happen when a button has been clicked.
+     */
     public void build(String s) {
         this.selection = s;
 
@@ -102,23 +107,29 @@ public class LevelSelectionMenu extends JPanel {
         this.add(panel2);
     }
 
+    /**
+     * Used to start playing, modifying or to delete a level based on the
+     * parameter s in the build-method.
+     *
+     * @param s
+     */
     public void levelAction(String s) {
         if (selection.equals("play")) {
             wh.runLevel(s, ldao.getLevel(s));
         } else if (selection.equals("modify")) {
             int dialogresult = JOptionPane.showConfirmDialog(null, "Warning! this will permanently delete all "
                     + "information regarding the chosen level, including highscores and the older "
-                    + "version of the level. Continue?", 
+                    + "version of the level. Continue?",
                     "Warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
             if (dialogresult == JOptionPane.YES_OPTION) {
                 wh.createMode(ldao.getLevel(s));
                 ldao.delete(s);
             }
-        } else if (selection.equals("delete")){
+        } else if (selection.equals("delete")) {
             int dialogresult = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete"
-                    + "this level and all information regarding it?", "Warning!", 
+                    + "this level and all information regarding it?", "Warning!",
                     JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
-            if(dialogresult == JOptionPane.YES_OPTION){
+            if (dialogresult == JOptionPane.YES_OPTION) {
                 ldao.delete(s);
                 wh.creationmenu();
             }

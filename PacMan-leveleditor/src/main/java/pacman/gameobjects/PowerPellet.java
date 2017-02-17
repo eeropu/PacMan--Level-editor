@@ -1,6 +1,5 @@
 package pacman.gameobjects;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -21,29 +20,29 @@ public class PowerPellet implements GameObject {
     private int x, y;
     private BufferedImage image;
     private LevelRunner lr;
-    private AffineTransform AT;
+    private AffineTransform aT;
     private double rotation;
 
     public PowerPellet(int x, int y) {
         this.x = x * 32 - 32;
         this.y = y * 32 - 32;
-        this.AT = new AffineTransform();
+        this.aT = new AffineTransform();
         this.rotation = 0;
     }
 
     @Override
     public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        AT.rotate(0, 0, 0);
+        aT.rotate(0, 0, 0);
         g2d.rotate(rotation, x + 16, y + 16);
         g2d.drawImage(image, x, y, lr);
-        g2d.setTransform(AT);
+        g2d.setTransform(aT);
     }
 
     @Override
     public void move() {
         rotation += 0.1;
-        if(rotation >=  Math.PI * 2){
+        if (rotation >= Math.PI * 2) {
             rotation = 0;
         }
     }
@@ -57,12 +56,12 @@ public class PowerPellet implements GameObject {
     public boolean checkCollision(PacMan pacman) {
         return this.getBounds().intersects(pacman.getBounds());
     }
-    
-    public void setImage(BufferedImage img){
+
+    public void setImage(BufferedImage img) {
         this.image = img;
     }
-    
-    public void setImageObserver(LevelRunner lr){
+
+    public void setImageObserver(LevelRunner lr) {
         this.lr = lr;
     }
 
@@ -84,8 +83,8 @@ public class PowerPellet implements GameObject {
     public double getRotation() {
         return rotation;
     }
-    
-    public void setRotation(double rotation){
+
+    public void setRotation(double rotation) {
         this.rotation = rotation;
     }
 

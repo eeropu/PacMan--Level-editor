@@ -12,11 +12,12 @@ import pacman.gameobjects.PowerPellet;
 import pacman.gameobjects.Wall;
 
 /**
+ * Used to check if components collide with pacman
  *
  * @author eerop
  */
 public class CollisionChecker {
-    
+
     private LevelRunner lr;
     private PacMan pacman;
     private HashSet<Wall> walls;
@@ -37,7 +38,7 @@ public class CollisionChecker {
         this.pp = pp;
         this.ghostStartingPositions = ghostStartingPositions;
     }
-    
+
     public void checkCollision() {
         for (Wall wall : walls) {
             if (wall.checkCollision(pacman)) {
@@ -95,5 +96,5 @@ public class CollisionChecker {
             }
         }
     }
-    
+
 }

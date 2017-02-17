@@ -30,7 +30,7 @@ public class Ghost implements GameObject {
     public Ghost(int x, int y, PacMan pacman) {
         this.x = x * 32 - 32;
         this.y = y * 32 - 32;
-        this.origX = this.x; 
+        this.origX = this.x;
         this.origY = this.y;
         this.move = 2;
         this.d = Direction.Up;
@@ -42,7 +42,7 @@ public class Ghost implements GameObject {
 
     @Override
     public void paint(Graphics g) {
-        if(ppEaten){
+        if (ppEaten) {
             g.drawImage(ppImg, x, y, lr);
         } else {
             g.drawImage(img, x, y, lr);
@@ -62,6 +62,15 @@ public class Ghost implements GameObject {
         }
     }
 
+    /**
+     * Uses A*-algorithm to find the best route to the destination of the ghost
+     * and sets the Direction.
+     *
+     * @param searchX x-coordinate of the destination.
+     * @param searchY y-coordinate of the destination.
+     * @param runAway false, if goal is to get to the target and true if goal is
+     * to get away from it.
+     */
     protected void setDirectionAStar(int searchX, int searchY, boolean runAway) {
         int[][] map = new int[graph.length][];
         for (int i = 0; i < graph.length; i++) {
@@ -144,6 +153,10 @@ public class Ghost implements GameObject {
         this.graph = graph;
     }
 
+    /**
+     * Used to stop the movement of ghost and change it position so that it
+     * doesn't get stuck in a wall
+     */
     public void stop() {
         if (d == Direction.Right) {
             x -= move;
@@ -157,12 +170,25 @@ public class Ghost implements GameObject {
         d = Direction.Stop;
     }
 
+    /**
+     * Changes the ppEaten value of this ghost that makes it eatable for pacman.
+     * Also slows the ghosts movementand sets the timers value.
+     *
+     * @param ln current time
+     */
     public void eatPowerpellet(long ln) {
         ppEaten = true;
         timer = ln;
         move = 1;
     }
 
+    /**
+     *
+     * checks how long the ghost has been in eatale state. If the time has
+     * expired it returns it to the normal state.
+     *
+     * @param now current time
+     */
     public void eatableTimer(long now) {
         this.now = now;
         if (now - timer > eatable) {
@@ -173,6 +199,10 @@ public class Ghost implements GameObject {
         }
     }
 
+    /**
+     *
+     * @return the time that the ghost has been eatable
+     */
     public long timeLeft() {
         return now - timer;
     }
@@ -201,17 +231,25 @@ public class Ghost implements GameObject {
         return y;
     }
 
+    /**
+     * moves the ghost to it's starting position.
+     */
     public void reset() {
         x = origX;
         y = origY;
     }
-    
-    public void setImages(BufferedImage img, BufferedImage ppImg){
+
+    public void setImages(BufferedImage img, BufferedImage ppImg) {
         this.img = img;
         this.ppImg = ppImg;
     }
-    
-    public void setImageObserver(LevelRunner lr){
+
+    /**
+     * Sets the imageObserver that is used to draw the ghost.
+     *
+     * @param lr Imageobserver that's class is LevelRunner
+     */
+    public void setImageObserver(LevelRunner lr) {
         this.lr = lr;
     }
 }

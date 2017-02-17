@@ -84,12 +84,12 @@ public class LevelCompleteListener implements ActionListener, MouseListener {
     public void setTxt(JTextPane txt) {
         this.txt = txt;
     }
-    
-    public void setScore(int score){
+
+    public void setScore(int score) {
         this.score = score;
     }
-    
-    public void setlevel(String level){
+
+    public void setlevel(String level) {
         this.level = level;
     }
 

@@ -13,8 +13,8 @@ import pacman.pacman.leveleditor.WindowHandler;
  *
  * @author eerop
  */
-public class FinishCreation extends JPanel{
-    
+public class FinishCreation extends JPanel {
+
     private String objectPositioning;
     private JTextPane txtname, txtlives, txttime, pPerSec;
     private Font font;
@@ -43,7 +43,7 @@ public class FinishCreation extends JPanel{
         add(txtlives);
         add(txttime);
         add(pPerSec);
-        
+
         xtrapoints = new JRadioButton();
         xtrapoints.setBounds(288, 304, 32, 32);
         add(xtrapoints);
@@ -53,18 +53,18 @@ public class FinishCreation extends JPanel{
         fillbubbles = new JRadioButton();
         fillbubbles.setBounds(544, 448, 32, 32);
         add(fillbubbles);
-        
+
         button = new JButton("FINISH!");
         button.setFont(new Font("Verdana", Font.BOLD, 35));
         button.setBounds(320, 544, 320, 96);
         add(button);
-        
+
         FinishCreationListener fcl = new FinishCreationListener(txtname, txtlives, txttime, pPerSec,
                 xtrapoints, deadline, fillbubbles, button, wh, objectPositioning);
         button.addActionListener(fcl);
     }
-    
-    public void createLabels(){
+
+    private void createLabels() {
         font = new Font("Verdana", Font.BOLD, 20);
         JLabel name = new JLabel("Give your level a name! (MAX 30 characters)");
         name.setFont(font);
@@ -95,6 +95,5 @@ public class FinishCreation extends JPanel{
         fill.setBounds(32, 448, 544, 32);
         add(fill);
     }
-    
-    
+
 }

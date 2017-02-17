@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 25,
-             Errors: 4,
+      <title>File: 38,
+             Errors: 10,
              Warnings: 0,
              Infos: 0
       </title>
@@ -60,7 +60,35 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#pacman.levelmanagement.CollisionChecker.java">pacman/levelmanagement/CollisionChecker.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#pacman.levelmanagement.GameLoop.java">pacman/levelmanagement/GameLoop.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pacman.database.HighscoresDAO.java">pacman/database/HighscoresDAO.java</a>
                 </td>
                 <td>
                   0
@@ -116,7 +144,35 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#pacman.pacman.leveleditor.ImageGetter.java">pacman/pacman/leveleditor/ImageGetter.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#pacman.gameobjects.Wall.java">pacman/gameobjects/Wall.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pacman.guiobjects.CreationMode.java">pacman/guiobjects/CreationMode.java</a>
                 </td>
                 <td>
                   0
@@ -167,7 +223,21 @@ under the License.
                   0
                 </td>
                 <td>
-                  2
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pacman.guiobjects.StartMenuAnimation.java">pacman/guiobjects/StartMenuAnimation.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
                 </td>
               </tr>
                           <tr>
@@ -182,6 +252,20 @@ under the License.
                 </td>
                 <td>
                   1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pacman.guiobjects.FinishCreation.java">pacman/guiobjects/FinishCreation.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
                 </td>
               </tr>
                           <tr>
@@ -201,6 +285,20 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#pacman.pacman.leveleditor.Main.java">pacman/pacman/leveleditor/Main.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pacman.guiobjects.CreationMenu.java">pacman/guiobjects/CreationMenu.java</a>
                 </td>
                 <td>
                   0
@@ -279,7 +377,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  0
+                  1
                 </td>
               </tr>
                           <tr>
@@ -298,7 +396,49 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#pacman.guilisteners.CreationMenuListener.java">pacman/guilisteners/CreationMenuListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#pacman.gameobjects.Pointbubble.java">pacman/gameobjects/Pointbubble.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pacman.guilisteners.CreationModeListener.java">pacman/guilisteners/CreationModeListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pacman.guiobjects.LevelFailed.java">pacman/guiobjects/LevelFailed.java</a>
                 </td>
                 <td>
                   0
@@ -354,6 +494,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#pacman.guilisteners.CreationModeButtonListener.java">pacman/guilisteners/CreationModeButtonListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#pacman.levelmanagement.ControlSetUp.java">pacman/levelmanagement/ControlSetUp.java</a>
                 </td>
                 <td>
@@ -382,6 +536,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#pacman.guiobjects.Help.java">pacman/guiobjects/Help.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#pacman.pacman.leveleditor.WindowHandler.java">pacman/pacman/leveleditor/WindowHandler.java</a>
                 </td>
                 <td>
@@ -392,6 +560,20 @@ under the License.
                 </td>
                 <td>
                   0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pacman.guilisteners.FinishCreationListener.java">pacman/guilisteners/FinishCreationListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
                 </td>
               </tr>
                       </tbody>

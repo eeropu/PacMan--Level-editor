@@ -71,6 +71,9 @@ public class StartMenu extends JPanel {
         timer.start();
     }
 
+    /**
+     * Sets the images used for the start menu animation
+     */
     public void setImages() {
         for (int i = 1; i <= 16; i++) {
             String s = "Pictures/Startmenu/PacMan_Animation" + i + ".png";
@@ -104,25 +107,42 @@ public class StartMenu extends JPanel {
         this.image = image;
     }
 
+    /**
+     * Sets the delay of the timer.
+     *
+     * @param delay
+     */
     public void setDelay(int delay) {
         timer.setDelay(delay);
     }
 
+    /**
+     * Used for the animation in the start screen
+     */
     public void pacmanrunaway() {
         this.pacmanrunawayX += 2;
         this.chasingGhostX += 2;
     }
 
+    /**
+     * Used for the animation in the start screen
+     */
     public void resetPacmanrun() {
         this.pacmanrunawayX = -128;
         this.chasingGhostX = -384;
     }
 
+    /**
+     * Used for the animation in the start screen
+     */
     public void pacmanchase() {
         this.chaisingpacmanX -= 2;
         this.ghostrunawayX -= 2;
     }
 
+    /**
+     * Used for the animation in the start screen
+     */
     public void resetPacmanchase() {
         this.chaisingpacmanX = 1216;
         this.ghostrunawayX = 960;

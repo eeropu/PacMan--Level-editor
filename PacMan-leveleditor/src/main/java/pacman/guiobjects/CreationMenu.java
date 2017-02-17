@@ -37,9 +37,9 @@ public class CreationMenu extends JPanel {
         modifyOld = new JButton("Modify Existing!");
         modifyOld.setBounds(64, 192, 320, 128);
         modifyOld.setFont(new Font("Verdana", Font.BOLD, 30));
-        
+
         delete = new JButton("Delete");
-        
+
         delete.setBounds(96, 352, 256, 32);
 
         back = new JButton("back");
