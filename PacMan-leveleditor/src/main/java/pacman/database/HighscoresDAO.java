@@ -2,7 +2,9 @@ package pacman.database;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,6 +43,45 @@ public class HighscoresDAO {
             conn.close();
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Score submitting failed. Please try again");
+        }
+    }
+    
+    public String[][] getScores(String level){
+        try{
+            Connection conn = db.getConnection();
+            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM "
+                    + "Highscores WHERE level = '" + level + "' ORDER BY score DESC;");
+            ResultSet set = stmt.executeQuery();
+            ArrayList<String> names = new ArrayList<>();
+            ArrayList<String> score = new ArrayList<>();
+            ArrayList<String> dates = new ArrayList<>();
+            while (set.next()){
+                names.add(set.getString("name"));
+                score.add(set.getString("score"));
+                dates.add(set.getString("date"));
+            }
+            
+            String[][] r = new String[3][names.size()];
+            for (int i = 0; i < names.size(); i++) {
+                r[0][i] = names.get(i);
+                r[1][i] = score.get(i);
+                r[2][i] = dates.get(i);
+            }
+            conn.close();
+            return r;
+        } catch (SQLException e){
+            return null;
+        }    
+    }
+    
+    public void delete(String level){
+        try{
+            Connection conn = db.getConnection();
+            PreparedStatement stmt = conn.prepareStatement("DELETE FROM Highscores WHERE level = '" + level + "';");
+            stmt.execute();
+            conn.close();
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null, "Deleting failed, please try again");
         }
     }
 

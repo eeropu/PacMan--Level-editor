@@ -1,5 +1,6 @@
 package pacman.guiobjects;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -30,20 +31,29 @@ public class CreationMenu extends JPanel {
 
         setLayout(null);
 
+        Color c = new Color(87, 0, 127);
         createNew = new JButton("Create New!");
         createNew.setBounds(64, 64, 320, 128);
         createNew.setFont(new Font("Verdana", Font.BOLD, 30));
+        createNew.setBackground(c);
+        createNew.setForeground(Color.black);
 
         modifyOld = new JButton("Modify Existing!");
         modifyOld.setBounds(64, 192, 320, 128);
         modifyOld.setFont(new Font("Verdana", Font.BOLD, 30));
+        modifyOld.setBackground(c);
+        modifyOld.setForeground(Color.black);
 
         delete = new JButton("Delete");
+        delete.setBackground(c);
+        delete.setForeground(Color.black);
 
         delete.setBounds(96, 352, 256, 32);
 
         back = new JButton("back");
         back.setBounds(64, 608, 96, 32);
+        back.setBackground(c);
+        back.setForeground(Color.black);
 
         cml.setButtons(createNew, modifyOld, back, delete);
         modifyOld.addActionListener(cml);

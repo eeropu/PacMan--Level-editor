@@ -29,6 +29,8 @@ public class StartMenuListener implements ActionListener {
             wh.lvlslctmenu("play");
         } else if (e.getSource() == create) {
             wh.creationmenu();
+        } else if (e.getSource() == highscores) {
+            wh.lvlslctmenu("highscores");
         }
     }
 

@@ -15,6 +15,7 @@ import pacman.guiobjects.CreationMenu;
 import pacman.guiobjects.CreationMode;
 import pacman.guiobjects.FinishCreation;
 import pacman.guiobjects.Help;
+import pacman.guiobjects.Highscores;
 import pacman.guiobjects.LevelFailed;
 import pacman.guiobjects.LevelSelectionMenu;
 
@@ -145,6 +146,11 @@ public class WindowHandler implements Runnable {
         cardPanel.add(lr, "lr");
         cardlayout.show(cardPanel, "lr");
         lr.start();
+    }
+    
+    public void highscores(String s){
+        cardPanel.add(new Highscores(this, s), "hs");
+        cardlayout.show(cardPanel, "hs");
     }
 
     /**

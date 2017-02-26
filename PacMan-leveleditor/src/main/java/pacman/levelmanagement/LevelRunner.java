@@ -4,6 +4,9 @@ import java.awt.Color;
 import java.awt.Font;
 import pacman.gameobjects.*;
 import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.HashSet;
 import javax.swing.JPanel;
@@ -23,29 +26,34 @@ public class LevelRunner extends JPanel {
     private GameLoop gl;
     private CollisionChecker cc;
     protected PacMan pacman;
+    private BufferedImage img;
     private HashSet<Wall> walls;
     public HashSet<Ghost> ghosts;
     private HashSet<Pointbubble> points;
     private HashSet<PowerPellet> pp;
     private HashMap<Integer, HashSet<Integer>> ghostStartingPositions;
-    private Timer timer;
-    private boolean respawning;
-    private int score, lives;
+    private Timer loop, timer;
+    private boolean respawning, deadline;
+    private int score, lives, time, pointspersec;
     private String name;
     private WindowHandler wh;
 
     public LevelRunner(WindowHandler wh, String name, String level) {
         this.wh = wh;
+        this.name = name;
+        this.deadline = false;
+        this.time = 0;
+        this.pointspersec = 0;
         build(level);
         ControlSetUp csu = new ControlSetUp(this);
         this.gl = new GameLoop(this, pacman, walls, ghosts, points, pp, ghostStartingPositions);
         this.cc = new CollisionChecker(this, gl, pacman, walls, ghosts, points, pp, ghostStartingPositions);
         gl.setCc(cc);
-        timer = new Timer(15, gl);
+        loop = new Timer(15, gl);
         setBackground(Color.black);
-        lives = 3;
         respawning = false;
-        this.name = name;
+        img = pacman.getMouthClosed();
+        this.setTImer();
     }
 
     @Override
@@ -69,7 +77,7 @@ public class LevelRunner extends JPanel {
         g.setColor(Color.white);
         g.setFont(new Font("Verdana", Font.BOLD, 25));
         g.drawString("Score: " + score, 32, 665);
-        g.fillOval(850, 640, 32, 32);
+        g.drawImage(img, 850, 640, this);
         g.drawString("x " + lives, 900, 665);
         if (respawning) {
             g.setColor(Color.black);
@@ -79,8 +87,34 @@ public class LevelRunner extends JPanel {
             g.drawString("LIFE LOST!", 90, 384);
         }
         if (lives < 0) {
-            timer.stop();
             wh.lvlFailed();
+        }
+        if (deadline) {
+            g.setColor(Color.red);
+        } else {
+            g.setColor(Color.white);
+        }
+        if (time > 0) {
+            g.setFont(new Font("Verdana", Font.BOLD, 25));
+            if (time >= 300) {
+                g.drawString("5:", 448, 665);
+                g.drawString("" + (time % 60), 475, 665);
+            } else if (time >= 240) {
+                g.drawString("4:", 448, 665);
+                g.drawString("" + (time % 60), 475, 665);
+            } else if (time >= 180) {
+                g.drawString("3:", 448, 665);
+                g.drawString("" + (time % 60), 475, 665);
+            } else if (time >= 120) {
+                g.drawString("2:", 448, 665);
+                g.drawString("" + (time % 60), 475, 665);
+            } else if (time >= 60) {
+                g.drawString("1:", 448, 665);
+                g.drawString("" + (time % 60), 475, 665);
+            } else {
+                g.drawString("0:", 448, 665);
+                g.drawString("" + (time % 60), 475, 665);
+            }
         }
     }
 
@@ -97,7 +131,7 @@ public class LevelRunner extends JPanel {
     }
 
     public void start() {
-        timer.start();
+        loop.start();
     }
 
     public void build(String s) {
@@ -119,12 +153,45 @@ public class LevelRunner extends JPanel {
         }
     }
 
+    public void setLives(int lives) {
+        this.lives = lives;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
+
+    public void setPointspersec(int pointspersec) {
+        this.pointspersec = pointspersec;
+    }
+
+    public void setDeadline(boolean deadline) {
+        this.deadline = deadline;
+    }
+
+    public void setTImer() {
+        this.timer = new Timer(1000, (ActionEvent e) -> {
+            time = time - 1;
+            if (deadline && time <= 0) {
+                failed();
+            }
+        });
+        timer.start();
+    }
+
     public void completed() {
+        loop.stop();
         timer.stop();
-        wh.lvlCompleted(name, score);
+        int i = 0;
+        if (time > 0) {
+            i = time * pointspersec;
+        }
+        i += lives * 1000;
+        wh.lvlCompleted(name, score + i);
     }
 
     public void failed() {
+        loop.stop();
         timer.stop();
         wh.lvlFailed();
     }

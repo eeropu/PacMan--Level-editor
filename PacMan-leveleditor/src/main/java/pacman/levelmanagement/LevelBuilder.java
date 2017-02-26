@@ -120,6 +120,24 @@ public class LevelBuilder {
                 }
             }
         }
+        int i = Integer.parseInt("" + objectpositioning.charAt(600));
+        lr.setLives(i);
+        if (objectpositioning.charAt(601) != '0') {
+            if (objectpositioning.charAt(601) == '1') {
+                i = 1;
+            } else if (objectpositioning.charAt(601) == '2') {
+                i = 2;
+            } else if (objectpositioning.charAt(601) == '3') {
+                i = 3;
+            }
+            lr.setTime(Integer.parseInt(objectpositioning.substring(602, 602 + i)));
+            if(objectpositioning.charAt(602 + i) == '1'){
+                lr.setDeadline(true);
+            }
+            if(objectpositioning.charAt(603 + i) == '1'){
+                lr.setPointspersec(Integer.parseInt(objectpositioning.substring(604 + i)));
+            }
+        }
     }
 
     public HashSet<Ghost> getGhosts() {
@@ -142,10 +160,7 @@ public class LevelBuilder {
         return pp;
     }
 
-    /**
-     * Uses imageGetter to prepare images for the use of build-method.
-     */
-    public void prepareImages() {
+    private void prepareImages() {
         this.wall = imgGetter.getSubImage(1);
         this.pacman1 = imgGetter.getSubImage(2);
         this.pacman2 = imgGetter.getSubImage(3);

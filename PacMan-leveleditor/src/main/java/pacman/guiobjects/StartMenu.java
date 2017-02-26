@@ -1,10 +1,12 @@
 package pacman.guiobjects;
 
+import java.awt.Color;
 import pacman.guilisteners.StartMenuListener;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -24,7 +26,7 @@ public class StartMenu extends JPanel {
     private JButton create, play, highscores;
     private ImageGetter imgGetter;
     private BufferedImage[] images;
-    private BufferedImage image, pacmanRunaway, chasingGhost, ghostRunaway, chaisingPacman;
+    private BufferedImage image, pacmanRunaway, chasingGhost, ghostRunaway, chaisingPacman, buttons;
     private WindowHandler wh;
     private int pacmanrunawayX, chasingGhostX, chaisingpacmanX, ghostrunawayX;
     private StartMenuAnimation sma;
@@ -38,6 +40,7 @@ public class StartMenu extends JPanel {
         this.chasingGhost = imgGetter.getImage("Pictures/Startmenu/chaising-ghost.png");
         this.chaisingPacman = imgGetter.getImage("Pictures/Startmenu/chaising-pacman.png");
         this.ghostRunaway = imgGetter.getImage("Pictures/Startmenu/ghost-runaway.png");
+        this.buttons = imgGetter.getImage("Pictures/Button_background.png");
         this.pacmanrunawayX = -128;
         this.chasingGhostX = -384;
         this.chaisingpacmanX = 1216;
@@ -55,13 +58,20 @@ public class StartMenu extends JPanel {
         play = new JButton("PLAY");
         create = new JButton("CREATE");
         highscores = new JButton("HIGHSCORES");
-        Font font = new Font("Verdana", Font.BOLD, 30);
+        Font font = new Font("Verdana", Font.BOLD, 48);
         play.setFont(font);
+        play.setBackground(new Color(87, 0, 127));
+        play.setForeground(Color.black);
         create.setFont(font);
+        create.setBackground(new Color(87, 0, 127));
+        create.setForeground(Color.black);
         highscores.setFont(font);
+        highscores.setBackground(new Color(87, 0, 127));
+        highscores.setForeground(Color.black);
         StartMenuListener sml = new StartMenuListener(play, create, highscores, wh);
         play.addActionListener(sml);
         create.addActionListener(sml);
+        highscores.addActionListener(sml);
 
         panel1.add(play);
         panel1.add(create);
