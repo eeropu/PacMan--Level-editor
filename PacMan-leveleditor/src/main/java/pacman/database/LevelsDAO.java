@@ -21,7 +21,7 @@ public class LevelsDAO {
      */
     public LevelsDAO() {
         try {
-            this.db = new Database("jdbc:sqlite:database.db");
+            this.db = new Database("jdbc:sqlite::resource:database.db");
         } catch (ClassNotFoundException e) {
         }
     }
