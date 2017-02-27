@@ -4,10 +4,9 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 
 /**
+ * Interface that is implemented by all in-game objects.
  *
  * @author eerop
- *
- * Interface that is implemented by all in-game objects.
  */
 public interface GameObject {
 
@@ -19,21 +18,21 @@ public interface GameObject {
     public void paint(Graphics g);
 
     /**
-     * Used to move the gameobject
+     * Used to move the gameobject.
      */
     public void move();
 
     /**
      * Returns a rectangle that represents the area this object occupies.
      *
-     * @return
+     * @return rectangle-object
      */
     public Rectangle getBounds();
 
     /**
      * Checs if this object hits the PacMan.
      *
-     * @param pacman
+     * @param pacman reference to current levels pacman
      * @return true if pacman hits this object, else false.
      */
     public boolean checkCollision(PacMan pacman);

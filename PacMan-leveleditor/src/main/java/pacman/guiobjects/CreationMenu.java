@@ -10,11 +10,10 @@ import pacman.guilisteners.CreationMenuListener;
 import pacman.pacman.leveleditor.ImageGetter;
 
 /**
- *
- * @author eerop
- *
  * This class manages the creationmenu, that allows user to create a new level
  * or modify an old one.
+ *
+ * @author eerop
  */
 public class CreationMenu extends JPanel {
 
@@ -23,6 +22,13 @@ public class CreationMenu extends JPanel {
     private CreationMenuListener cml;
     private ImageGetter imgGetter;
 
+    /**
+     * Constructor for the CreationMenu-class.
+     *
+     * @param cml CreationMenuListener that gives functionality for the buttons
+     * in this menu
+     * @param imgGetter used to get all the graphical components in this screen
+     */
     public CreationMenu(CreationMenuListener cml, ImageGetter imgGetter) {
         this.cml = cml;
         this.imgGetter = imgGetter;

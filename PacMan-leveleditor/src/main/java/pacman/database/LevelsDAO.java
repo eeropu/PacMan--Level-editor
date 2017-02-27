@@ -7,11 +7,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
+ * Level data-access-object; This class is used to retrieve and send information
+ * from and to the database.
  *
  * @author eerop
- *
- * Level data-access-object. This class is used to retrieve and send information
- * from and to the database.
  */
 public class LevelsDAO {
 

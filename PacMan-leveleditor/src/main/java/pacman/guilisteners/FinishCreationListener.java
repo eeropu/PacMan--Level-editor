@@ -18,15 +18,35 @@ public class FinishCreationListener implements ActionListener {
 
     private JTextPane txtname, txtlives, txttime, pPerSec;
     private JRadioButton xtrapoints, deadline, fillbubbles;
-    private JButton button;
+    private JButton finished;
     private WindowHandler wh;
     private boolean ok;
     private String level;
     private LevelsDAO ldao;
 
+    /**
+     * Constructor for the FinishCreationListener-class.
+     *
+     * @param txtname user inputs name of the level
+     * @param txtlives user inputs the amount of lives for the level
+     * @param txttime user inputs the timeframe in which the level is supposed
+     * to be completed
+     * @param pPerSec user inputs the amount of points player gets for
+     * compliting the level in time
+     * @param xtrapoints Radiobutton used to enable extra points for every
+     * second faster than the given timeframe when compliting the level
+     * @param deadline Radiobutton used to enable the absolute timeframe in
+     * which the level must be completed or the level will be failed
+     * @param fillbubbles Radiobutton used to fill all empty spaces in the level
+     * with pointbubbles
+     * @param finished Button that directs to the startmenu and saves the
+     * created level if all inputs are acceptable
+     * @param wh windowhandler used to change the content on the screen
+     * @param level String format of the objectpositioning for the level
+     */
     public FinishCreationListener(JTextPane txtname, JTextPane txtlives, JTextPane txttime,
             JTextPane pPerSec, JRadioButton xtrapoints, JRadioButton deadline,
-            JRadioButton fillbubbles, JButton button, WindowHandler wh, String level) {
+            JRadioButton fillbubbles, JButton finished, WindowHandler wh, String level) {
 
         this.wh = wh;
         this.txtname = txtname;
@@ -36,7 +56,7 @@ public class FinishCreationListener implements ActionListener {
         this.xtrapoints = xtrapoints;
         this.deadline = deadline;
         this.fillbubbles = fillbubbles;
-        this.button = button;
+        this.finished = finished;
         this.ok = true;
 
         this.level = level;
@@ -45,7 +65,7 @@ public class FinishCreationListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == button) {
+        if (e.getSource() == finished) {
             if (txtname.getText().length() < 1 || txtname.getText().length() > 30) {
                 ok = false;
                 JOptionPane.showMessageDialog(null, "Wrong input in the name-field!");

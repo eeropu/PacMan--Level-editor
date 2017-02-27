@@ -20,11 +20,10 @@ import pacman.guiobjects.LevelFailed;
 import pacman.guiobjects.LevelSelectionMenu;
 
 /**
- *
- * @author eerop
- *
  * This class is responsible for showing the correct contents (e.g. menus) on
  * the programs frame.
+ *
+ * @author eerop
  */
 public class WindowHandler implements Runnable {
 
@@ -39,6 +38,9 @@ public class WindowHandler implements Runnable {
     private Help help;
     private ImageGetter imgGetter;
 
+    /**
+     * Constructor for the Windowhandler-class.
+     */
     public WindowHandler() {
         cardlayout = new CardLayout();
         cardPanel = new JPanel(cardlayout);
@@ -76,7 +78,7 @@ public class WindowHandler implements Runnable {
     }
 
     /**
-     * shows the startmenu
+     * shows the startmenu.
      */
     public void startMenu() {
         cardlayout.show(cardPanel, "start");
@@ -94,14 +96,14 @@ public class WindowHandler implements Runnable {
     }
 
     /**
-     * Shows the creation menu
+     * Shows the creation menu.
      */
     public void creationmenu() {
         cardlayout.show(cardPanel, "creationmenu");
     }
 
     /**
-     * Shows the creationmode for a new level
+     * Shows the creationmode for a new level.
      *
      * @param s Defines if the creationmode should show an existing level or an
      * empty grid.
@@ -126,9 +128,10 @@ public class WindowHandler implements Runnable {
     }
 
     /**
-     * Shows the finishcreation-screen
+     * Shows the finishcreation-screen.
      *
-     * @param level
+     * @param level the String presentation of the objectpositioning of the new
+     * level in creation
      */
     public void finishedCreating(String level) {
         cardPanel.add(new FinishCreation(level, this), "finish");
@@ -136,7 +139,7 @@ public class WindowHandler implements Runnable {
     }
 
     /**
-     * Shows and starts a new level
+     * Shows and starts a new level.
      *
      * @param name name of the level
      * @param level the objectpositioning-string
@@ -147,14 +150,19 @@ public class WindowHandler implements Runnable {
         cardlayout.show(cardPanel, "lr");
         lr.start();
     }
-    
-    public void highscores(String s){
+
+    /**
+     * Used to show the highscores of a level.
+     *
+     * @param s name of the level
+     */
+    public void highscores(String s) {
         cardPanel.add(new Highscores(this, s), "hs");
         cardlayout.show(cardPanel, "hs");
     }
 
     /**
-     * Shows the levelcompleted-screen
+     * Shows the levelcompleted-screen.
      *
      * @param name name of the level
      * @param points users scores;
@@ -165,7 +173,7 @@ public class WindowHandler implements Runnable {
     }
 
     /**
-     * Shown if user loses a level
+     * Shown if user loses a level.
      */
     public void lvlFailed() {
         cardlayout.show(cardPanel, "failed");

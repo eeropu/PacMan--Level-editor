@@ -12,7 +12,7 @@ import pacman.gameobjects.PowerPellet;
 import pacman.gameobjects.Wall;
 
 /**
- * Used to check if components collide with pacman
+ * Used to check if components collide with pacman.
  *
  * @author eerop
  */
@@ -27,6 +27,18 @@ public class CollisionChecker {
     private HashMap<Integer, HashSet<Integer>> ghostStartingPositions;
     private GameLoop gl;
 
+    /**
+     * Constructor for the CollisionChecker-class.
+     *
+     * @param lr reference to the levelrunner
+     * @param gl reference to the gameloop
+     * @param pacman current levels pacman
+     * @param walls current levels walls
+     * @param ghosts current levels ghosts
+     * @param points current levels pointbubbles
+     * @param pp current levels powerpellets
+     * @param ghostStartingPositions current levels ghostStartingPositions
+     */
     public CollisionChecker(LevelRunner lr, GameLoop gl, PacMan pacman, HashSet<Wall> walls, HashSet<Ghost> ghosts,
             HashSet<Pointbubble> points, HashSet<PowerPellet> pp, HashMap<Integer, HashSet<Integer>> ghostStartingPositions) {
         this.lr = lr;
@@ -39,6 +51,9 @@ public class CollisionChecker {
         this.ghostStartingPositions = ghostStartingPositions;
     }
 
+    /**
+     * Checks if some of the gameobjects collide with Pacman.
+     */
     public void checkCollision() {
         for (Wall wall : walls) {
             if (wall.checkCollision(pacman)) {

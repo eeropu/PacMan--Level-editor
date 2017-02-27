@@ -8,12 +8,11 @@ import java.awt.image.BufferedImage;
 import pacman.levelmanagement.LevelRunner;
 
 /**
- *
- * @author eerop
- *
  * This class contains the functions of the Powerpellets. Powerpellets can be
  * collected by PacMan. After one is collected PacMan will be able to eat the
  * ghosts for a short period of time.
+ *
+ * @author eerop
  */
 public class PowerPellet implements GameObject {
 
@@ -23,6 +22,12 @@ public class PowerPellet implements GameObject {
     private AffineTransform aT;
     private double rotation;
 
+    /**
+     * Costructor for the PowerPellet-class.
+     *
+     * @param x x coordinate
+     * @param y y coordinate
+     */
     public PowerPellet(int x, int y) {
         this.x = x * 32 - 32;
         this.y = y * 32 - 32;

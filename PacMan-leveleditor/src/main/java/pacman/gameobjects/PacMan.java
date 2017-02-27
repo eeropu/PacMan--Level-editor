@@ -11,10 +11,10 @@ import javax.swing.Timer;
 import pacman.levelmanagement.LevelRunner;
 
 /**
+ * This class is responsible for PacMan.
  *
  * @author eerop
  *
- * This class is responsible for PacMans operations.
  */
 public class PacMan implements GameObject {
 
@@ -25,6 +25,13 @@ public class PacMan implements GameObject {
     private BufferedImage drawable, mouthClosed, mouthOpen;
     private LevelRunner lr;
 
+    /**
+     * Constructor for the class PacMan.
+     *
+     * @param x x coordinate
+     * @param y y coordinate
+     * @param d Starting direction
+     */
     public PacMan(int x, int y, Direction d) {
         this.x = 32 * x - 32;
         this.y = 32 * y - 32;
@@ -166,6 +173,12 @@ public class PacMan implements GameObject {
         y = origY;
     }
 
+    /**
+     * Sets the images for pacman.
+     *
+     * @param img image where pacmans mouth is open
+     * @param img2 image where pacmans mouth is closed
+     */
     public void setImages(BufferedImage img, BufferedImage img2) {
         this.drawable = img;
         this.mouthOpen = img;

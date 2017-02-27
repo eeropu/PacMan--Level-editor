@@ -31,6 +31,15 @@ public class CreationMode extends JPanel {
     private CreationModeListener cml;
     private CreationModeButtonListener cmbl;
 
+    /**
+     * Constructor for the CreationMode-class.
+     *
+     * @param imgGetter used to get all graphical components in this screen
+     * @param wh windowhandler that is used to change contents on the screen
+     * @param old String that is "new" if a new level is being created or it
+     * contains the String representation of the objectpositioning of an
+     * existing level that is going to be modified
+     */
     public CreationMode(ImageGetter imgGetter, WindowHandler wh, String old) {
         setLayout(null);
         this.imgGetter = imgGetter;

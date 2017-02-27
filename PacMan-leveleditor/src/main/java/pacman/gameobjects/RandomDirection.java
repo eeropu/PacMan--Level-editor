@@ -3,11 +3,10 @@ package pacman.gameobjects;
 import java.util.Random;
 
 /**
- *
- * @author eerop
- *
  * This class is used to set a ghosts direction randomly when PacMan is out of
  * reach.
+ *
+ * @author eerop
  */
 public class RandomDirection {
 
@@ -32,7 +31,7 @@ public class RandomDirection {
         }
     }
 
-    public void randomDirectionRight(Ghost ghost) {
+    private void randomDirectionRight(Ghost ghost) {
         i = 0;
         if (ghost.graph[(ghost.x + 64) / 32][(ghost.y + 32) / 32] == 1) {
             i += 1;
@@ -76,7 +75,7 @@ public class RandomDirection {
         }
     }
 
-    public void randomDirectionLeft(Ghost ghost) {
+    private void randomDirectionLeft(Ghost ghost) {
         i = 0;
         if (ghost.graph[(ghost.x) / 32][(ghost.y + 32) / 32] == 1) {
             i += 1;
@@ -120,7 +119,7 @@ public class RandomDirection {
         }
     }
 
-    public void randomDirectionUp(Ghost ghost) {
+    private void randomDirectionUp(Ghost ghost) {
         i = 0;
         if (ghost.graph[(ghost.x + 32) / 32][(ghost.y) / 32] == 1) {
             i += 1;
@@ -164,7 +163,7 @@ public class RandomDirection {
         }
     }
 
-    public void randomDirectionDown(Ghost ghost) {
+    private void randomDirectionDown(Ghost ghost) {
         i = 0;
         if (ghost.graph[(ghost.x + 32) / 32][(ghost.y + 64) / 32] == 1) {
             i += 1;

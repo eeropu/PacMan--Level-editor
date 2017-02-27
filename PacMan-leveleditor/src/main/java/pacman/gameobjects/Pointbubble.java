@@ -6,12 +6,11 @@ import java.awt.image.BufferedImage;
 import pacman.levelmanagement.LevelRunner;
 
 /**
- *
- * @author eerop
- *
  * This class contains the functions for the Pointbubbles. PointBubbles are
  * collectables that PacMan needs to collect to gain points and finally complete
  * a level.
+ *
+ * @author eerop
  */
 public class Pointbubble implements GameObject {
 
@@ -19,6 +18,12 @@ public class Pointbubble implements GameObject {
     private BufferedImage image;
     private LevelRunner lr;
 
+    /**
+     * Constructor for Pointbubble-class.
+     *
+     * @param x x coordinate
+     * @param y y coordinate
+     */
     public Pointbubble(int x, int y) {
         this.x = x * 32 - 32;
         this.y = y * 32 - 32;

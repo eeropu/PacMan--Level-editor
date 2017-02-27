@@ -11,10 +11,9 @@ import pacman.database.HighscoresDAO;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
+ * Gives functionality to the components in the "Level complete" -screen.
  *
  * @author eerop
- *
- * Gives functionality to the components in the "Level complete" -screen.
  */
 public class LevelCompleteListener implements ActionListener, MouseListener {
 
@@ -25,6 +24,12 @@ public class LevelCompleteListener implements ActionListener, MouseListener {
     private int score;
     private String level;
 
+    /**
+     * Constructor for the LevelCompleteListener-class.
+     *
+     * @param wh windowhandler that is used to change the content on the screen
+     * @param hsdao HighscoresDAO that is used to access the highscores database
+     */
     public LevelCompleteListener(WindowHandler wh, HighscoresDAO hsdao) {
         this.hsdao = hsdao;
         this.wh = wh;
@@ -89,6 +94,11 @@ public class LevelCompleteListener implements ActionListener, MouseListener {
         this.score = score;
     }
 
+    /**
+     * Used to set the name of the level.
+     *
+     * @param level name of the level
+     */
     public void setlevel(String level) {
         this.level = level;
     }

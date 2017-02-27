@@ -21,3 +21,5 @@ Päivä | Tunnit | Kuvaus
 14.02.2017 | 2h | Luontitilan teko jatkuu
 15.02.2017 | 2h | Kaikenlasista parantelua (pääosin viikottaisten palautteiden perusteella)
 17.02.2017 | 5h | Testejä ja javadocseja, deadline5 (ilman kaavioita)
+25.02.2017 | 5h | Huipputulosten lisäys
+26.02.2017 | 6h | javadocseja ja monenlaista parantelua

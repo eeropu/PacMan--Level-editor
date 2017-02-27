@@ -5,7 +5,6 @@ import java.awt.Font;
 import pacman.gameobjects.*;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -38,6 +37,14 @@ public class LevelRunner extends JPanel {
     private String name;
     private WindowHandler wh;
 
+    /**
+     * Constructor for the LevelRunner-class.
+     *
+     * @param wh windowhandler that is used to change the contents on the screen
+     * @param name name of the level
+     * @param level String presentation of the objectpositioning for the current
+     * level
+     */
     public LevelRunner(WindowHandler wh, String name, String level) {
         this.wh = wh;
         this.name = name;
@@ -118,10 +125,18 @@ public class LevelRunner extends JPanel {
         }
     }
 
+    /**
+     * This method is used to add points to the score-counter.
+     *
+     * @param s amount of points to be added
+     */
     public void addScore(int s) {
         this.score += s;
     }
 
+    /**
+     * used to decrease lifecount by one.
+     */
     public void loseLife() {
         this.lives--;
     }
@@ -130,10 +145,19 @@ public class LevelRunner extends JPanel {
         this.respawning = respawning;
     }
 
+    /**
+     * Starts the gameloop.
+     */
     public void start() {
         loop.start();
     }
 
+    /**
+     * This method builds the level using the LevelBuilder-class.
+     *
+     * @param s the String presentation of the objectpositioning for the current
+     * level
+     */
     public void build(String s) {
         LevelBuilder lb = new LevelBuilder(this, s);
         lb.build();
@@ -169,6 +193,9 @@ public class LevelRunner extends JPanel {
         this.deadline = deadline;
     }
 
+    /**
+     * Creates a timer that is used to display the time left in the level.
+     */
     public void setTImer() {
         this.timer = new Timer(1000, (ActionEvent e) -> {
             time = time - 1;
@@ -179,6 +206,9 @@ public class LevelRunner extends JPanel {
         timer.start();
     }
 
+    /**
+     * Stops the gameloop and directs to the LevelCompleted-screen.
+     */
     public void completed() {
         loop.stop();
         timer.stop();
@@ -190,6 +220,9 @@ public class LevelRunner extends JPanel {
         wh.lvlCompleted(name, score + i);
     }
 
+    /**
+     * Stops the gameloop and directs to the LevelFailed-screen.
+     */
     public void failed() {
         loop.stop();
         timer.stop();

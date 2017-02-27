@@ -17,6 +17,17 @@ public class CreationModeButtonListener implements ActionListener {
     private WindowHandler wh;
     private String[][] objectPositioning;
 
+    /**
+     * Constructor for the CreationModeButtonListener-class.
+     *
+     * @param help directs to the help-screen
+     * @param ready directs to the second phase of levelcreation
+     * @param wh reference to windowhandler that allows buttons in this class to
+     * change the contents on the screen
+     * @param op two dimensional array of Strings that contains the
+     * text-representation of the objectpositioning for the level that's being
+     * created
+     */
     public CreationModeButtonListener(JButton help, JButton ready, WindowHandler wh, String[][] op) {
         this.help = help;
         this.ready = ready;

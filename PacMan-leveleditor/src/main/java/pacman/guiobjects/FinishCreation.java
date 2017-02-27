@@ -10,6 +10,8 @@ import pacman.guilisteners.FinishCreationListener;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
+ * Menu where user can define the name and timeframe of a level and fill it with
+ * pointbubbles.
  *
  * @author eerop
  */
@@ -22,6 +24,13 @@ public class FinishCreation extends JPanel {
     private JButton button;
     private WindowHandler wh;
 
+    /**
+     * Constructor for the FinishCreation-class.
+     *
+     * @param objectPositioning string representation of the objectpositioning
+     * for the level that is being created or modified
+     * @param wh windowhandler that is used to change the contents on the screen
+     */
     public FinishCreation(String objectPositioning, WindowHandler wh) {
         this.objectPositioning = objectPositioning;
         this.wh = wh;

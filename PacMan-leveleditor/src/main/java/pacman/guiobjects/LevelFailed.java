@@ -22,6 +22,12 @@ public class LevelFailed extends JPanel {
     private BufferedImage image;
     private WindowHandler wh;
 
+    /**
+     * Constructor for the LevelFailed-class.
+     *
+     * @param imgGetter provides the images used in this screen
+     * @param wh windowhandler that is used to change the contents on the screen
+     */
     public LevelFailed(ImageGetter imgGetter, WindowHandler wh) {
         this.wh = wh;
         this.imgGetter = imgGetter;

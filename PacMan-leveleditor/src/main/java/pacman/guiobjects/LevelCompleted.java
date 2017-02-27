@@ -21,10 +21,9 @@ import pacman.guilisteners.LevelCompleteListener;
 import pacman.pacman.leveleditor.ImageGetter;
 
 /**
+ * Menu that will be shown to the player once a level is finished.
  *
  * @author eerop
- *
- * Menu that will be shown to the player once a level is finished.
  */
 public class LevelCompleted extends JPanel {
 
@@ -37,6 +36,15 @@ public class LevelCompleted extends JPanel {
     private String name;
     private int scores;
 
+    /**
+     * Constructor for the LevelCompleted-class.
+     *
+     * @param lcl LevelCompletedListener that gives funcionality to the
+     * components in this screen
+     * @param imgGetter provides the images for this menu
+     * @param name name of the level
+     * @param scores users score
+     */
     public LevelCompleted(LevelCompleteListener lcl, ImageGetter imgGetter, String name, int scores) {
 
         this.lcl = lcl;

@@ -15,6 +15,7 @@ import pacman.pacman.leveleditor.ImageGetter;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
+ * Used to provide the instructionscreen to creationmode.
  *
  * @author eerop
  */
@@ -25,10 +26,10 @@ public final class Help extends JPanel {
     private WindowHandler wh;
 
     /**
-     * Used to provide the instructionscreen to creationmode
+     * Constructor for the Help-class.
      *
-     * @param imgGetter
-     * @param wh
+     * @param imgGetter provides the graphical contents for this screen
+     * @param wh windowhandler that is used to change the contents on the screen
      */
     public Help(ImageGetter imgGetter, WindowHandler wh) {
         this.imgGetter = imgGetter;
@@ -70,7 +71,7 @@ public final class Help extends JPanel {
         this.add(jsp);
     }
 
-    public HashSet<JLabel> setImages() {
+    private HashSet<JLabel> setImages() {
         HashSet<JLabel> set = new HashSet<>();
 
         JLabel a = new JLabel(new ImageIcon(imgGetter.getSubImage(3)));
@@ -101,63 +102,63 @@ public final class Help extends JPanel {
         return set;
     }
 
-    public JLabel setPacman() {
+    private JLabel setPacman() {
         pacman = new JLabel();
         pacman.setBounds(80, 32, 384, 48);
         pacman.setText("<html><p>-This is PacMan. It's the character that player controls. It's mission is to eat all the pointbubbles as fast as possible without getting eaten by ghosts</p></html>");
         return pacman;
     }
 
-    public JLabel setBlinky() {
+    private JLabel setBlinky() {
         blinky = new JLabel();
         blinky.setBounds(560, 32, 384, 32);
         blinky.setText("<html><p>-This is Blinky. He starts to follow PacMan when he gets close enough</p></html>");
         return blinky;
     }
 
-    public JLabel setPinky() {
+    private JLabel setPinky() {
         pinky = new JLabel();
         pinky.setBounds(80, 160, 384, 16);
         pinky.setText("<html><p>-This is Pinky. He tries to position himself infront of pacman</p></html>");
         return pinky;
     }
 
-    public JLabel setClyde() {
+    private JLabel setClyde() {
         clyde = new JLabel();
         clyde.setBounds(560, 160, 384, 32);
         clyde.setText("<html><p>-This is Clyde. He goes towards PacMan until he's too close and then turns 'home'</p></html>");
         return clyde;
     }
 
-    public JLabel setRandomGhost() {
+    private JLabel setRandomGhost() {
         randomghost = new JLabel();
         randomghost.setBounds(80, 288, 384, 32);
         randomghost.setText("<html><p>-This is the randomghost. It's behaviour is set randomly every time and it mimics the actions of some of the other ghosts</p></html>");
         return randomghost;
     }
 
-    public JLabel setPoint() {
+    private JLabel setPoint() {
         point = new JLabel();
         point.setBounds(560, 288, 384, 48);
         point.setText("<html><p>-This is a pointbubble. PacMan's mission is to collect all of these in a level to complete it. Every pointbubble collected grants the player 10 points.</p></html>");
         return point;
     }
 
-    public JLabel setPower() {
+    private JLabel setPower() {
         power = new JLabel();
         power.setBounds(80, 416, 384, 64);
         power.setText("<html><p>-This is a Powerpellet. PacMan can eat one of these to enable him to eat ghosts, making them harmless for a while. Eating a Powerpellet grants the player 50 points and while it's active, eating a ghost grants 200 points.</p></html>");
         return power;
     }
 
-    public JLabel setWall() {
+    private JLabel setWall() {
         wall = new JLabel();
         wall.setBounds(560, 416, 384, 16);
         wall.setText("<html><p>-This is a wall. It limits the movement of PacMan and the ghosts.</p></html>");
         return wall;
     }
 
-    public JLabel setAdditionalInfo() {
+    private JLabel setAdditionalInfo() {
         additionalInfo = new JLabel();
         additionalInfo.setBounds(32, 480, 896, 400);
         additionalInfo.setText("<html><p>-You can add components to a level by selecting one with the radiobuttons at the bottom of the creationmode-screen and the clicking the desired position for the component."

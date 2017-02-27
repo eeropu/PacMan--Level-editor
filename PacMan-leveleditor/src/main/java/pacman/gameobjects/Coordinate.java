@@ -1,11 +1,10 @@
 package pacman.gameobjects;
 
 /**
- *
- * @author eerop
- *
  * Coordinate is used by the Ghost-classes to find pacman and then deciding the
  * direction where the ghost moves.
+ *
+ * @author eerop
  */
 public class Coordinate implements Comparable<Coordinate> {
 
@@ -14,6 +13,17 @@ public class Coordinate implements Comparable<Coordinate> {
     private Coordinate previous;
     private boolean runAway;
 
+    /**
+     * Constructor used to define a coordinate.
+     *
+     * @param x x coordinate
+     * @param y y coordinate
+     * @param distance distance travelled so far
+     * @param pacmanX pacmans x
+     * @param pacmanY pacmans y
+     * @param previous previous coordinate
+     * @param runaway boolean value that tells if ghost is supposed to run to or from pacman
+     */
     public Coordinate(int x, int y, int distance, int pacmanX, int pacmanY, Coordinate previous, boolean runaway) {
         this.x = x;
         this.y = y;

@@ -18,7 +18,7 @@ public class HighscoresDAO {
     private Database db;
 
     /**
-     * Constructor where the Database is defined
+     * Constructor where the Database is defined.
      */
     public HighscoresDAO() {
         try {
@@ -28,7 +28,7 @@ public class HighscoresDAO {
     }
 
     /**
-     * This method is used to add information to the database
+     * This method is used to add information to the database.
      *
      * @param name the name of the player that completed the level
      * @param points the score that player got in the previously played level
@@ -45,9 +45,16 @@ public class HighscoresDAO {
             JOptionPane.showMessageDialog(null, "Score submitting failed. Please try again");
         }
     }
-    
-    public String[][] getScores(String level){
-        try{
+
+    /**
+     * Used to get the highscores of a level.
+     *
+     * @param level the name of a level.
+     * @return a two dimensional array of Strings that contains the names,
+     * scores and dates of a levels highscores.
+     */
+    public String[][] getScores(String level) {
+        try {
             Connection conn = db.getConnection();
             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM "
                     + "Highscores WHERE level = '" + level + "' ORDER BY score DESC;");
@@ -55,12 +62,12 @@ public class HighscoresDAO {
             ArrayList<String> names = new ArrayList<>();
             ArrayList<String> score = new ArrayList<>();
             ArrayList<String> dates = new ArrayList<>();
-            while (set.next()){
+            while (set.next()) {
                 names.add(set.getString("name"));
                 score.add(set.getString("score"));
                 dates.add(set.getString("date"));
             }
-            
+
             String[][] r = new String[3][names.size()];
             for (int i = 0; i < names.size(); i++) {
                 r[0][i] = names.get(i);
@@ -69,18 +76,23 @@ public class HighscoresDAO {
             }
             conn.close();
             return r;
-        } catch (SQLException e){
+        } catch (SQLException e) {
             return null;
-        }    
+        }
     }
-    
-    public void delete(String level){
-        try{
+
+    /**
+     * Used to delete all scoreinformations of a level.
+     *
+     * @param level name of a level
+     */
+    public void delete(String level) {
+        try {
             Connection conn = db.getConnection();
             PreparedStatement stmt = conn.prepareStatement("DELETE FROM Highscores WHERE level = '" + level + "';");
             stmt.execute();
             conn.close();
-        }catch(SQLException e){
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Deleting failed, please try again");
         }
     }

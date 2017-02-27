@@ -7,12 +7,11 @@ import java.util.PriorityQueue;
 import pacman.levelmanagement.LevelRunner;
 
 /**
- *
- * @author eerop
- *
  * The parent class of all ghosts that contains the needed methods for the
  * ghosts' functions. e.g. getting the ghosts direction with a* -search
  * algorithm.
+ *
+ * @author eerop
  */
 public class Ghost implements GameObject {
 
@@ -27,6 +26,13 @@ public class Ghost implements GameObject {
     protected BufferedImage img, ppImg;
     protected LevelRunner lr;
 
+    /**
+     * Constructor for the Ghost-class.
+     *
+     * @param x x coordinate
+     * @param y y coordinate
+     * @param pacman reference to pacman
+     */
     public Ghost(int x, int y, PacMan pacman) {
         this.x = x * 32 - 32;
         this.y = y * 32 - 32;
@@ -155,7 +161,7 @@ public class Ghost implements GameObject {
 
     /**
      * Used to stop the movement of ghost and change it position so that it
-     * doesn't get stuck in a wall
+     * doesn't get stuck in a wall.
      */
     public void stop() {
         if (d == Direction.Right) {
@@ -200,6 +206,7 @@ public class Ghost implements GameObject {
     }
 
     /**
+     * Used to know how long the ghost has been eatable.
      *
      * @return the time that the ghost has been eatable
      */
@@ -239,6 +246,12 @@ public class Ghost implements GameObject {
         y = origY;
     }
 
+    /**
+     * Sets the images for a ghost.
+     *
+     * @param img image of the ghost in normal state
+     * @param ppImg image of the ghost in eatable state
+     */
     public void setImages(BufferedImage img, BufferedImage ppImg) {
         this.img = img;
         this.ppImg = ppImg;

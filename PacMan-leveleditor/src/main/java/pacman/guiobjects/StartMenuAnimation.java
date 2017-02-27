@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 
 /**
+ * This class provides the animation for the StartMenu.
  *
  * @author eerop
  */
@@ -15,6 +16,12 @@ public class StartMenuAnimation implements ActionListener {
     private BufferedImage[] images;
     private boolean b;
 
+    /**
+     * Constructor for the StartMenuAnimation-class.
+     *
+     * @param sm reference to the startmenu
+     * @param images images used for the animation
+     */
     public StartMenuAnimation(StartMenu sm, BufferedImage[] images) {
         this.sm = sm;
         this.images = images;
@@ -57,6 +64,12 @@ public class StartMenuAnimation implements ActionListener {
         sm.repaint();
     }
 
+    /**
+     * This method is used to know which phase of the animation is currently
+     * running.
+     *
+     * @return a boolean-value
+     */
     public boolean isb() {
         return b;
     }

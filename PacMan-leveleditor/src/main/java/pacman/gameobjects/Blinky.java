@@ -1,16 +1,16 @@
 package pacman.gameobjects;
 
 /**
- *
- * @author eerop
- *
  * This class is responsible for managing the Blinky-ghosts. Blinky is the ghost
  * that follows and tries to catch pacman when it gets close enough. until then
  * it moves randomly.
+ *
+ * @author eerop
  */
 public class Blinky extends Ghost {
 
     /**
+     * Equal to Ghost class -constructor.
      *
      * @param x starting x position of this ghost
      * @param y starting y position of this ghost
@@ -22,7 +22,7 @@ public class Blinky extends Ghost {
     }
 
     /**
-     * Used to move this ghost and to set it's direction and movement speed
+     * Used to move this ghost and to set it's direction and movement speed.
      */
     @Override
     public void move() {

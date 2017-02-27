@@ -7,15 +7,19 @@ import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
 import javax.swing.KeyStroke;
 
 /**
+ * This class is used by Levelrunner and it enables controlling of PacMan.
  *
  * @author eerop
- *
- * This class is used by Levelrunner and it enables controlling of PacMan.
  */
 public final class ControlSetUp {
 
     private final LevelRunner lr;
 
+    /**
+     * Constructor for the ControlSetUp-class.
+     *
+     * @param lr reference to LevelRunner
+     */
     public ControlSetUp(LevelRunner lr) {
         this.lr = lr;
         right();

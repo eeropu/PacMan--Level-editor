@@ -17,8 +17,9 @@ public class Database {
     /**
      * Constructor that defines the address to the database.
      *
-     * @param databaseAddress
-     * @throws ClassNotFoundException
+     * @param databaseAddress the path that is used by jdbc-blugin to create a
+     * connection to database.
+     * @throws ClassNotFoundException needed exception throw.
      */
     public Database(String databaseAddress) throws ClassNotFoundException {
         this.databaseAddress = databaseAddress;
@@ -29,7 +30,7 @@ public class Database {
      * access the databases contents.
      *
      * @return returns the connection to the database
-     * @throws SQLException
+     * @throws SQLException needed incase connecting to database fails.
      */
     public Connection getConnection() throws SQLException {
         return DriverManager.getConnection(databaseAddress);

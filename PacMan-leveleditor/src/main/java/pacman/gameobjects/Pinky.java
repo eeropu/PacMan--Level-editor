@@ -1,15 +1,21 @@
 package pacman.gameobjects;
 
 /**
- *
- * @author eerop
- *
  * This class is responsible for managing the Pinky-ghost. Pinky is the ghost
  * that tries to position itself infront of pacman until it gets close enough
  * and then it just tries to catch it.
+ *
+ * @author eerop
  */
 public class Pinky extends Ghost {
 
+    /**
+     * Constructor for the Pinky-class.
+     * 
+     * @param x x coordinate
+     * @param y y coordinate
+     * @param pacman reference to pacman
+     */
     public Pinky(int x, int y, PacMan pacman) {
         super(x, y, pacman);
     }

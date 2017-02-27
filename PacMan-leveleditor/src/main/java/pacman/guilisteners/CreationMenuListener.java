@@ -15,10 +15,25 @@ public class CreationMenuListener implements ActionListener {
     private JButton createNew, modifyOld, back, delete;
     private WindowHandler wh;
 
+    /**
+     * Constructor for the CreationMenuListener-class.
+     *
+     * @param wh reference to windowhandler that allows buttons used in this
+     * class to change the content on screen
+     */
     public CreationMenuListener(WindowHandler wh) {
         this.wh = wh;
     }
 
+    /**
+     * Sets the buttons that this class gives actions to.
+     *
+     * @param create button directing to a creation mode of a new level
+     * @param modify button directiong to the creation mode of an existing level
+     * @param back button direction to the start menu
+     * @param delete buttom directiong to levelselection where user can delete
+     * levels
+     */
     public void setButtons(JButton create, JButton modify, JButton back, JButton delete) {
         this.createNew = create;
         this.modifyOld = modify;

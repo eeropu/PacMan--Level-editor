@@ -6,7 +6,6 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -14,12 +13,11 @@ import pacman.pacman.leveleditor.ImageGetter;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
- *
- * @author eerop
- *
  * Menu that will be shown to the user when the program starts. From here user
  * can go to Levelselectionmenu and play a level, go to creation- mode to make
  * new levels or modify existing levels or view the highscores of the levels.
+ *
+ * @author eerop
  */
 public class StartMenu extends JPanel {
 
@@ -32,6 +30,12 @@ public class StartMenu extends JPanel {
     private StartMenuAnimation sma;
     private Timer timer;
 
+    /**
+     * Constructor for the StartMenu-class.
+     *
+     * @param wh windowhandler that is used to change the content on the screen
+     * @param imgGetter provides the images for this menu
+     */
     public StartMenu(WindowHandler wh, ImageGetter imgGetter) {
         this.wh = wh;
         this.imgGetter = imgGetter;
@@ -40,7 +44,6 @@ public class StartMenu extends JPanel {
         this.chasingGhost = imgGetter.getImage("Pictures/Startmenu/chaising-ghost.png");
         this.chaisingPacman = imgGetter.getImage("Pictures/Startmenu/chaising-pacman.png");
         this.ghostRunaway = imgGetter.getImage("Pictures/Startmenu/ghost-runaway.png");
-        this.buttons = imgGetter.getImage("Pictures/Button_background.png");
         this.pacmanrunawayX = -128;
         this.chasingGhostX = -384;
         this.chaisingpacmanX = 1216;
@@ -81,10 +84,7 @@ public class StartMenu extends JPanel {
         timer.start();
     }
 
-    /**
-     * Sets the images used for the start menu animation
-     */
-    public void setImages() {
+    private void setImages() {
         for (int i = 1; i <= 16; i++) {
             String s = "Pictures/Startmenu/PacMan_Animation" + i + ".png";
             images[i - 1] = imgGetter.getImage(s);
@@ -120,14 +120,14 @@ public class StartMenu extends JPanel {
     /**
      * Sets the delay of the timer.
      *
-     * @param delay
+     * @param delay timers delay in milliseconds
      */
     public void setDelay(int delay) {
         timer.setDelay(delay);
     }
 
     /**
-     * Used for the animation in the start screen
+     * Used for the animation in the start screen.
      */
     public void pacmanrunaway() {
         this.pacmanrunawayX += 2;
@@ -135,7 +135,7 @@ public class StartMenu extends JPanel {
     }
 
     /**
-     * Used for the animation in the start screen
+     * Used for the animation in the start screen.
      */
     public void resetPacmanrun() {
         this.pacmanrunawayX = -128;
@@ -143,7 +143,7 @@ public class StartMenu extends JPanel {
     }
 
     /**
-     * Used for the animation in the start screen
+     * Used for the animation in the start screen.
      */
     public void pacmanchase() {
         this.chaisingpacmanX -= 2;
@@ -151,7 +151,7 @@ public class StartMenu extends JPanel {
     }
 
     /**
-     * Used for the animation in the start screen
+     * Used for the animation in the start screen.
      */
     public void resetPacmanchase() {
         this.chaisingpacmanX = 1216;

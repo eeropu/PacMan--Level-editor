@@ -11,10 +11,9 @@ import pacman.gameobjects.PowerPellet;
 import pacman.gameobjects.Wall;
 
 /**
+ * This class is used by the levelrunner to control the updating of gameobjects.
  *
  * @author eerop
- *
- * This class is used by the levelrunner to control the updating of gameobjects.
  */
 public class GameLoop implements ActionListener {
 
@@ -28,6 +27,17 @@ public class GameLoop implements ActionListener {
     private long now, respawn;
     private CollisionChecker cc;
 
+    /**
+     * Constructor for the GameLoop-class.
+     *
+     * @param lr reference to LevelRunner
+     * @param pacman current levels pacman
+     * @param walls current levels walls
+     * @param ghosts current levels ghosts
+     * @param points current levels pointbubbles
+     * @param pp current levels powerpellets
+     * @param ghostStartingPositions current levels ghost starting positions
+     */
     public GameLoop(LevelRunner lr, PacMan pacman, HashSet<Wall> walls, HashSet<Ghost> ghosts, HashSet<Pointbubble> points,
             HashSet<PowerPellet> pp, HashMap<Integer, HashSet<Integer>> ghostStartingPositions) {
 
@@ -48,7 +58,7 @@ public class GameLoop implements ActionListener {
     }
 
     /**
-     * Moves the gameobjects
+     * Moves the gameobjects.
      */
     public void move() {
         now = System.currentTimeMillis();

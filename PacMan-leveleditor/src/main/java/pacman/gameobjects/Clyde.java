@@ -2,11 +2,11 @@ package pacman.gameobjects;
 
 /**
  *
- * @author eerop
- *
  * This class is responsible for managing the Clyde-ghost. Clyde is the Ghost
  * that follows pacman until it gets close enough and then it runs away towards
  * "home".
+ *
+ * @author eerop
  */
 public class Clyde extends Ghost {
 

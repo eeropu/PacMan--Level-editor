@@ -6,10 +6,9 @@ import java.awt.image.BufferedImage;
 import pacman.levelmanagement.LevelRunner;
 
 /**
+ * The class that manages the wall-objects.
  *
  * @author eerop
- *
- * The class that manages the wall-objects.
  */
 public class Wall implements GameObject {
 
@@ -17,6 +16,12 @@ public class Wall implements GameObject {
     private BufferedImage image;
     private LevelRunner lr;
 
+    /**
+     * Constructor for Wall-class.
+     *
+     * @param x x coordinate
+     * @param y y coordinate
+     */
     public Wall(int x, int y) {
         this.x = 32 * x - 32;
         this.y = 32 * y - 32;

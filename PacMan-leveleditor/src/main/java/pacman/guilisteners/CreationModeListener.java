@@ -22,6 +22,28 @@ public class CreationModeListener implements MouseListener {
     private JLabel[][] labels;
     private String[][] objectPositioning;
 
+    /**
+     * Constructor for the CreationMOdeListener-class.
+     *
+     * @param grid image of the grid in creationmode
+     * @param wall image of a wall
+     * @param pacman image of the Pacman
+     * @param blinky image of Blinky
+     * @param pinky image of Pinky
+     * @param clyde image of Clyde
+     * @param randomghost image of randomghost
+     * @param pb image of pointbubble
+     * @param pp image of powerpellet
+     * @param wallR radiobutton for wall
+     * @param pacmanR radiobutton for Pacman
+     * @param blinkyR radiobutton for Blinky
+     * @param pinkyR radiobutton for Pinky
+     * @param clydeR radiobutton for Clyde
+     * @param randomghostR radiobutton for randomghost
+     * @param pbR radiobutton for pointbubble
+     * @param ppR radiobutton for PowerPellet
+     * @param autofill radiobutton for autofill
+     */
     public CreationModeListener(BufferedImage grid, BufferedImage wall, BufferedImage pacman,
             BufferedImage blinky, BufferedImage pinky, BufferedImage clyde, BufferedImage randomghost,
             BufferedImage pb, BufferedImage pp, JRadioButton wallR, JRadioButton pacmanR,
@@ -235,7 +257,7 @@ public class CreationModeListener implements MouseListener {
 
     /**
      * Removes the corresponding wall from the other side of screen if one wall
-     * is removed
+     * is removed.
      *
      * @param l the first modified label
      */
@@ -274,7 +296,7 @@ public class CreationModeListener implements MouseListener {
      * adds a wall to the other side of screen if one wall is added.
      *
      * @param l first clicked label
-     * @param i
+     * @param i image
      */
     public void wallCheck(JLabel l, ImageIcon i) {
         try {

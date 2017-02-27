@@ -17,11 +17,10 @@ import pacman.database.LevelsDAO;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
- *
- * @author eerop
- *
  * Menu that will be shown to the player once he/she has decided to play or
  * modify a level.
+ *
+ * @author eerop
  */
 public class LevelSelectionMenu extends JPanel {
 
@@ -31,6 +30,13 @@ public class LevelSelectionMenu extends JPanel {
     private final WindowHandler wh;
     private String selection;
 
+    /**
+     * Constructor for the LevelSelectionMenu-class.
+     *
+     * @param ldao data-access-object that is used to get access to the levels
+     * database
+     * @param wh windowhandler that is used to change the contents on the screen
+     */
     public LevelSelectionMenu(LevelsDAO ldao, WindowHandler wh) {
         this.ldao = ldao;
         this.wh = wh;
@@ -94,7 +100,7 @@ public class LevelSelectionMenu extends JPanel {
         setLayout(new BoxLayout(this, WIDTH));
 
         JScrollPane jsp = new JScrollPane(panel);
-        
+
         JPanel panel2 = new JPanel();
         panel2.setMaximumSize(new Dimension(960, 32));
         panel2.setLayout(new GridLayout(1, 1));
@@ -111,7 +117,7 @@ public class LevelSelectionMenu extends JPanel {
         });
 
         panel2.add(back);
-        
+
         this.add(jsp);
         this.add(panel2);
     }
@@ -120,27 +126,27 @@ public class LevelSelectionMenu extends JPanel {
      * Used to start playing, modifying or to delete a level based on the
      * parameter s in the build-method.
      *
-     * @param s
+     * @param s levels' name
      */
     public void levelAction(String s) {
         switch (selection) {
-            case "play":
+            case "play": {
                 wh.runLevel(s, ldao.getLevel(s));
                 break;
-            case "modify":
-                {
-                    int dialogresult = JOptionPane.showConfirmDialog(null, "Warning! this will permanently delete all "
-                            + "information regarding the chosen level, including highscores and the older "
-                            + "version of the level. Continue?",
-                            "Warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
-                    if (dialogresult == JOptionPane.YES_OPTION) {
-                        wh.createMode(ldao.getLevel(s));
-                        ldao.delete(s);
-                        hsdao.delete(s);
-            }       break;
+            }
+            case "modify": {
+                int dialogresult = JOptionPane.showConfirmDialog(null, "Warning! this will permanently delete all "
+                        + "information regarding the chosen level, including highscores and the older "
+                        + "version of the level. Continue?",
+                        "Warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+                if (dialogresult == JOptionPane.YES_OPTION) {
+                    wh.createMode(ldao.getLevel(s));
+                    ldao.delete(s);
+                    hsdao.delete(s);
                 }
-            case "delete":
-            {
+                break;
+            }
+            case "delete": {
                 int dialogresult = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete "
                         + "this level and all information regarding it?", "Warning!",
                         JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
@@ -148,11 +154,13 @@ public class LevelSelectionMenu extends JPanel {
                     ldao.delete(s);
                     hsdao.delete(s);
                     wh.creationmenu();
-            }       break;
                 }
-            case "highscores":
+                break;
+            }
+            case "highscores": {
                 wh.highscores(s);
                 break;
+            }
         }
     }
 }

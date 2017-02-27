@@ -15,6 +15,7 @@ import pacman.database.HighscoresDAO;
 import pacman.pacman.leveleditor.WindowHandler;
 
 /**
+ * Used to show the highscores of a level.
  *
  * @author eerop
  */
@@ -24,9 +25,15 @@ public class Highscores extends JPanel {
     private String level;
     private HighscoresDAO hsdao;
 
-    public Highscores(WindowHandler wh, String s) {
+    /**
+     * Constructor for the Highscores-class.
+     *
+     * @param wh windowhandler that is used to change the contents on the screen
+     * @param level the name of the level which highscores will be shown
+     */
+    public Highscores(WindowHandler wh, String level) {
         this.wh = wh;
-        level = s;
+        this.level = level;
         hsdao = new HighscoresDAO();
         setLayout(null);
         header();
@@ -38,7 +45,7 @@ public class Highscores extends JPanel {
         JLabel header = new JLabel(level);
         header.setOpaque(true);
         header.setFont(new Font("Verdana", Font.BOLD, 40));
-        header.setHorizontalAlignment((int)CENTER_ALIGNMENT);
+        header.setHorizontalAlignment((int) CENTER_ALIGNMENT);
         header.setBackground(Color.black);
         header.setForeground(new Color(87, 0, 127));
         header.setBounds(0, 0, 960, 96);
@@ -54,7 +61,7 @@ public class Highscores extends JPanel {
         for (int j = 0; j < s[0].length; j++) {
             i[j] = "" + (j + 1);
         }
-        
+
         Color c = new Color(87, 0, 127);
         Font f = new Font("Verdana", Font.BOLD, 12);
         JList<String> position = new JList(i);
@@ -73,23 +80,23 @@ public class Highscores extends JPanel {
         date.setForeground(Color.black);
         date.setBackground(c);
         date.setFont(f);
-        
+
         panel.add(position);
         panel.add(name);
         panel.add(score);
         panel.add(date);
-        
+
         JScrollPane jsp = new JScrollPane(panel);
-        
+
         JPanel help = new JPanel();
         help.setLayout(new BoxLayout(help, WIDTH));
         help.setBounds(0, 96, 960, 544);
         help.add(jsp);
-        
+
         add(help);
     }
-    
-    private void setReturn(){
+
+    private void setReturn() {
         JButton r = new JButton("Return");
         r.setBounds(0, 640, 960, 32);
         r.setForeground(new Color(87, 0, 127));

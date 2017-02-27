@@ -1,10 +1,9 @@
 package pacman.gameobjects;
 
 /**
+ * Used by ghosts and pacman to move to a specified direction.
  *
  * @author eerop
- *
- * Used by ghosts and pacman to move to a specified direction.
  */
 public enum Direction {
 

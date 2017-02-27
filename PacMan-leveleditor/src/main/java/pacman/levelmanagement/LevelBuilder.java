@@ -7,11 +7,10 @@ import java.util.Random;
 import pacman.pacman.leveleditor.ImageGetter;
 
 /**
- *
- * @author eerop
- *
  * This class is used by the Levelrunner to build the Level according to the
  * information retrieved from the database.
+ *
+ * @author eerop
  */
 public class LevelBuilder {
 
@@ -27,6 +26,13 @@ public class LevelBuilder {
     private BufferedImage wall, pacman1, pacman2, pink, blink, clyd, randomghost,
             eatableghost, pbimg, ppimg;
 
+    /**
+     * Constructor for the LevelBuilder-class.
+     *
+     * @param lr reference to LevelRunner
+     * @param objectpositioning String representation of the objectpositioning
+     * for the current level
+     */
     public LevelBuilder(LevelRunner lr, String objectpositioning) {
         this.lr = lr;
         this.objectpositioning = objectpositioning;
@@ -41,7 +47,7 @@ public class LevelBuilder {
 
     /**
      * Builds the level by adding objects with correct coordinates to the
-     * object-sets based on the objectPositioning-string;
+     * object-sets based on the objectPositioning-string.
      */
     public void build() {
         int[][] graph = new int[32][22];
@@ -131,10 +137,10 @@ public class LevelBuilder {
                 i = 3;
             }
             lr.setTime(Integer.parseInt(objectpositioning.substring(602, 602 + i)));
-            if(objectpositioning.charAt(602 + i) == '1'){
+            if (objectpositioning.charAt(602 + i) == '1') {
                 lr.setDeadline(true);
             }
-            if(objectpositioning.charAt(603 + i) == '1'){
+            if (objectpositioning.charAt(603 + i) == '1') {
                 lr.setPointspersec(Integer.parseInt(objectpositioning.substring(604 + i)));
             }
         }
