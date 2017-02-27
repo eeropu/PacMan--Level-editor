@@ -199,7 +199,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> *</span></pre></td></tr>
+<td class=''><pre><span  class=''> * The parent class of all ghosts that contains the needed methods for the</span></pre></td></tr>
 
 
 <tr>
@@ -213,7 +213,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * @author eerop</span></pre></td></tr>
+<td class=''><pre><span  class=''> * ghosts&#39; functions. e.g. getting the ghosts direction with a* -search</span></pre></td></tr>
 
 
 <tr>
@@ -227,7 +227,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> *</span></pre></td></tr>
+<td class=''><pre><span  class=''> * algorithm.</span></pre></td></tr>
 
 
 <tr>
@@ -241,7 +241,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * The parent class of all ghosts that contains the needed methods for the</span></pre></td></tr>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
 
 
 <tr>
@@ -255,7 +255,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * ghosts&#39; functions. e.g. getting the ghosts direction with a* -search</span></pre></td></tr>
+<td class=''><pre><span  class=''> * @author eerop</span></pre></td></tr>
 
 
 <tr>
@@ -269,7 +269,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * algorithm.</span></pre></td></tr>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
 
 
 <tr>
@@ -283,7 +283,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> */</span></pre></td></tr>
+<td class=''><pre><span  class=''>public class Ghost implements GameObject {</span></pre></td></tr>
 
 
 <tr>
@@ -297,7 +297,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>public class Ghost implements GameObject {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -311,7 +311,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    protected int x, origX, y, origY, move, eatable;</span></pre></td></tr>
 
 
 <tr>
@@ -325,7 +325,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    protected int x, origX, y, origY, move, eatable;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    protected Direction d;</span></pre></td></tr>
 
 
 <tr>
@@ -339,7 +339,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    protected Direction d;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    protected PacMan pacman;</span></pre></td></tr>
 
 
 <tr>
@@ -353,7 +353,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    protected PacMan pacman;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    protected int[][] graph;</span></pre></td></tr>
 
 
 <tr>
@@ -367,7 +367,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    protected int[][] graph;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    protected RandomDirection randir;</span></pre></td></tr>
 
 
 <tr>
@@ -381,7 +381,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    protected RandomDirection randir;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    protected boolean randomghost, ppEaten;</span></pre></td></tr>
 
 
 <tr>
@@ -395,7 +395,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    protected boolean randomghost, ppEaten;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    protected long timer, now;</span></pre></td></tr>
 
 
 <tr>
@@ -409,7 +409,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    protected long timer, now;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    protected boolean dSetRandomly;  //This variable is for testpurposes</span></pre></td></tr>
 
 
 <tr>
@@ -423,7 +423,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    protected boolean dSetRandomly;  //This variable is for testpurposes</span></pre></td></tr>
+<td class=''><pre><span  class=''>    protected BufferedImage img, ppImg;</span></pre></td></tr>
 
 
 <tr>
@@ -437,7 +437,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    protected BufferedImage img, ppImg;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    protected LevelRunner lr;</span></pre></td></tr>
 
 
 <tr>
@@ -451,7 +451,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    protected LevelRunner lr;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -465,11 +465,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_30'/>
 30
 </td>
@@ -479,49 +479,39 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    public Ghost(int x, int y, PacMan pacman) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Constructor for the Ghost-class.</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_31'/>
 31
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_31'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_31'></a>
 <span>
-
-1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
-
-2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        this.x = x * 32 - 32;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_32'/>
 32
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_32'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_32'></a>
 <span>
-
-1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
-
-2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        this.y = y * 32 - 32;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param x x coordinate</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_33'/>
 33
 </td>
@@ -531,11 +521,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.origX = this.x;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param y y coordinate</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_34'/>
 34
 </td>
@@ -545,11 +535,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.origY = this.y;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param pacman reference to pacman</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_35'/>
 35
 </td>
@@ -559,7 +549,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.move = 2;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -573,7 +563,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.d = Direction.Up;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    public Ghost(int x, int y, PacMan pacman) {</span></pre></td></tr>
 
 
 <tr>
@@ -581,13 +571,18 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_37'/>
 37
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_37'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_37'>2</a>
 <span>
+
+1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
+
+2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.pacman = pacman;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        this.x = x * 32 - 32;</span></pre></td></tr>
 
 
 <tr>
@@ -595,13 +590,18 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_38'/>
 38
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_38'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_38'>2</a>
 <span>
+
+1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
+
+2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.randir = new RandomDirection();</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        this.y = y * 32 - 32;</span></pre></td></tr>
 
 
 <tr>
@@ -615,7 +615,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.ppEaten = false;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.origX = this.x;</span></pre></td></tr>
 
 
 <tr>
@@ -629,7 +629,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.eatable = 10000;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.origY = this.y;</span></pre></td></tr>
 
 
 <tr>
@@ -643,11 +643,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.move = 2;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_42'/>
 42
 </td>
@@ -657,11 +657,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.d = Direction.Up;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_43'/>
 43
 </td>
@@ -671,11 +671,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.pacman = pacman;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_44'/>
 44
 </td>
@@ -685,28 +685,25 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void paint(Graphics g) {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.randir = new RandomDirection();</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_45'/>
 45
 </td>
-<td class='survived'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_45'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_45'></a>
 <span>
-
-1. paint : negated conditional &rarr; NO_COVERAGE<br/>
-
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>        if (ppEaten) {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.ppEaten = false;</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_46'/>
 46
 </td>
@@ -716,11 +713,11 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>            g.drawImage(ppImg, x, y, lr);</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.eatable = 10000;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_47'/>
 47
 </td>
@@ -730,11 +727,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        } else {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_48'/>
 48
 </td>
@@ -744,7 +741,7 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>            g.drawImage(img, x, y, lr);</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -758,11 +755,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_50'/>
 50
 </td>
@@ -772,25 +769,28 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void paint(Graphics g) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_51'/>
 51
 </td>
-<td class=''>
+<td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_51'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_51'>1</a>
 <span>
+
+1. paint : negated conditional &rarr; NO_COVERAGE<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='uncovered'><pre><span  class='survived'>        if (ppEaten) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_52'/>
 52
 </td>
@@ -800,7 +800,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>            g.drawImage(ppImg, x, y, lr);</span></pre></td></tr>
 
 
 <tr>
@@ -814,109 +814,91 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void move() {</span></pre></td></tr>
+<td class=''><pre><span  class=''>        } else {</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_54'/>
 54
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_54'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_54'></a>
 <span>
-
-1. move : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        if (d == Direction.Right) {</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>            g.drawImage(img, x, y, lr);</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_55'/>
 55
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_55'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_55'></a>
 <span>
-
-1. move : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>            x += move;</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_56'/>
 56
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_56'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_56'></a>
 <span>
-
-1. move : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Left) {</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_57'/>
 57
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_57'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_57'></a>
 <span>
-
-1. move : Replaced integer subtraction with addition &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>            x -= move;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_58'/>
 58
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_58'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_58'></a>
 <span>
-
-1. move : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Down) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_59'/>
 59
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_59'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_59'></a>
 <span>
-
-1. move : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>            y += move;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void move() {</span></pre></td></tr>
 
 
 <tr>
@@ -933,7 +915,7 @@ body{
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Up) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        if (d == Direction.Right) {</span></pre></td></tr>
 
 
 <tr>
@@ -946,25 +928,28 @@ body{
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_61'>1</a>
 <span>
 
-1. move : Replaced integer subtraction with addition &rarr; KILLED<br/>
+1. move : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>            y -= move;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            x += move;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_62'/>
 62
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_62'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_62'>1</a>
 <span>
+
+1. move : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Left) {</span></pre></td></tr>
 
 
 <tr>
@@ -972,69 +957,84 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_63'/>
 63
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_63'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_63'>1</a>
 <span>
+
+1. move : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            x -= move;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_64'/>
 64
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_64'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_64'>1</a>
 <span>
+
+1. move : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Down) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_65'/>
 65
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_65'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_65'>1</a>
 <span>
+
+1. move : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            y += move;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_66'/>
 66
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_66'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_66'>1</a>
 <span>
+
+1. move : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Uses A*-algorithm to find the best route to the destination of the ghost</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Up) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_67'/>
 67
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_67'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_67'>1</a>
 <span>
+
+1. move : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>     * and sets the Direction.</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            y -= move;</span></pre></td></tr>
 
 
 <tr>
@@ -1048,11 +1048,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_69'/>
 69
 </td>
@@ -1062,7 +1062,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param searchX x-coordinate of the destination.</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1076,7 +1076,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param searchY y-coordinate of the destination.</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -1090,7 +1090,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param runAway false, if goal is to get to the target and true if goal is</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -1104,7 +1104,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * to get away from it.</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Uses A*-algorithm to find the best route to the destination of the ghost</span></pre></td></tr>
 
 
 <tr>
@@ -1118,7 +1118,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * and sets the Direction.</span></pre></td></tr>
 
 
 <tr>
@@ -1132,11 +1132,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    protected void setDirectionAStar(int searchX, int searchY, boolean runAway) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_75'/>
 75
 </td>
@@ -1146,17 +1146,101 @@ body{
 <span>
 </span>
 </td>
+<td class=''><pre><span  class=''>     * @param searchX x-coordinate of the destination.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_76'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param searchY y-coordinate of the destination.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_77'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param runAway false, if goal is to get to the target and true if goal is</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_78'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * to get away from it.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_79'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_80'/>
+80
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_80'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected void setDirectionAStar(int searchX, int searchY, boolean runAway) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_81'></a>
+<span>
+</span>
+</td>
 <td class='covered'><pre><span  class=''>        int[][] map = new int[graph.length][];</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_76'/>
-76
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_82'/>
+82
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_76'>3</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_82'>3</a>
 <span>
 
 1. setDirectionAStar : changed conditional boundary &rarr; KILLED<br/>
@@ -1172,12 +1256,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_77'/>
-77
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_83'/>
+83
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_77'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_83'></a>
 <span>
 </span>
 </td>
@@ -1186,12 +1270,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_78'/>
-78
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_84'/>
+84
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_78'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_84'>1</a>
 <span>
 
 1. setDirectionAStar : removed call to java/lang/System::arraycopy &rarr; KILLED<br/>
@@ -1203,108 +1287,16 @@ body{
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_79'/>
-79
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_85'/>
+85
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_79'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_85'></a>
 <span>
 </span>
 </td>
 <td class=''><pre><span  class=''>        }</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_80'/>
-80
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_80'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>        PriorityQueue&#60;Coordinate&#62; priorityq = new PriorityQueue&#60;&#62;();</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_81'/>
-81
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_81'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>        Coordinate current = new Coordinate(x, y, 0, searchX, searchY, null, runAway);</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_82'/>
-82
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_82'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>        priorityq.add(current);</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_83'/>
-83
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_83'>1</a>
-<span>
-
-1. setDirectionAStar : negated conditional &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        while (!priorityq.isEmpty()) {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_84'/>
-84
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_84'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>            current = priorityq.poll();</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_85'/>
-85
-</td>
-<td class='survived'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_85'>2</a>
-<span>
-
-1. setDirectionAStar : changed conditional boundary &rarr; SURVIVED<br/>
-
-2. setDirectionAStar : negated conditional &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='survived'>            if (current.getHeuristic() &#60; 32) {</span></pre></td></tr>
 
 
 <tr>
@@ -1318,11 +1310,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>                break;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        PriorityQueue&#60;Coordinate&#62; priorityq = new PriorityQueue&#60;&#62;();</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_87'/>
 87
 </td>
@@ -1332,11 +1324,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>            } //right from current</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        Coordinate current = new Coordinate(x, y, 0, searchX, searchY, null, runAway);</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_88'/>
 88
 </td>
@@ -1346,7 +1338,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>            try {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        priorityq.add(current);</span></pre></td></tr>
 
 
 <tr>
@@ -1356,7 +1348,99 @@ body{
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_89'>5</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_89'>1</a>
+<span>
+
+1. setDirectionAStar : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        while (!priorityq.isEmpty()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_90'/>
+90
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_90'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            current = priorityq.poll();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_91'/>
+91
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_91'>2</a>
+<span>
+
+1. setDirectionAStar : changed conditional boundary &rarr; SURVIVED<br/>
+
+2. setDirectionAStar : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            if (current.getHeuristic() &#60; 32) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_92'/>
+92
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_92'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                break;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_93'/>
+93
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_93'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            } //right from current</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_94'/>
+94
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_94'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            try {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_95'/>
+95
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_95'>5</a>
 <span>
 
 1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
@@ -1376,114 +1460,6 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_90'/>
-90
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_90'>1</a>
-<span>
-
-1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>                    priorityq.add(new Coordinate(current.getX() + 32, current.getY(),</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_91'/>
-91
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_91'>1</a>
-<span>
-
-1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>                            current.getDistance() + 32, searchX, searchY, current, runAway));</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_92'/>
-92
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_92'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_93'/>
-93
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_93'>4</a>
-<span>
-
-1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
-2. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
-
-3. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
-4. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>                    map[(current.getX() + 64) / 32][(current.getY() + 32) / 32] = 0;</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_94'/>
-94
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_94'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>                } //left from current</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_95'/>
-95
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_95'>4</a>
-<span>
-
-1. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
-
-2. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
-3. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
-
-4. setDirectionAStar : negated conditional &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>                if (map[(current.getX()) / 32][(current.getY() + 32) / 32] == 1) {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_96'/>
 96
 </td>
@@ -1492,11 +1468,11 @@ body{
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_96'>1</a>
 <span>
 
-1. setDirectionAStar : Replaced integer subtraction with addition &rarr; KILLED<br/>
+1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>                    priorityq.add(new Coordinate(current.getX() - 32, current.getY(),</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>                    priorityq.add(new Coordinate(current.getX() + 32, current.getY(),</span></pre></td></tr>
 
 
 <tr>
@@ -1537,18 +1513,20 @@ body{
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_99'>3</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_99'>4</a>
 <span>
 
-1. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
+1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
-2. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
+2. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
 
-3. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
+3. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+4. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>                    map[(current.getX()) / 32][(current.getY() + 32) / 32] = 0;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>                    map[(current.getX() + 64) / 32][(current.getY() + 32) / 32] = 0;</span></pre></td></tr>
 
 
 <tr>
@@ -1562,7 +1540,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>                } //down from current</span></pre></td></tr>
+<td class=''><pre><span  class=''>                } //left from current</span></pre></td></tr>
 
 
 <tr>
@@ -1572,22 +1550,20 @@ body{
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_101'>5</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_101'>4</a>
 <span>
 
-1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
+1. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
 
-2. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
+2. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
-3. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
+3. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
 
-4. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
-
-5. setDirectionAStar : negated conditional &rarr; KILLED<br/>
+4. setDirectionAStar : negated conditional &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>                if (map[(current.getX() + 32) / 32][(current.getY() + 64) / 32] == 1) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>                if (map[(current.getX()) / 32][(current.getY() + 32) / 32] == 1) {</span></pre></td></tr>
 
 
 <tr>
@@ -1600,11 +1576,11 @@ body{
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_102'>1</a>
 <span>
 
-1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
+1. setDirectionAStar : Replaced integer subtraction with addition &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>                    priorityq.add(new Coordinate(current.getX(), current.getY() + 32,</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>                    priorityq.add(new Coordinate(current.getX() - 32, current.getY(),</span></pre></td></tr>
 
 
 <tr>
@@ -1645,20 +1621,18 @@ body{
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_105'>4</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_105'>3</a>
 <span>
 
-1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
+1. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
 
-2. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
+2. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
-3. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
-4. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
+3. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>                    map[(current.getX() + 32) / 32][(current.getY() + 64) / 32] = 0;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>                    map[(current.getX()) / 32][(current.getY() + 32) / 32] = 0;</span></pre></td></tr>
 
 
 <tr>
@@ -1672,7 +1646,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>                } //up from current</span></pre></td></tr>
+<td class=''><pre><span  class=''>                } //down from current</span></pre></td></tr>
 
 
 <tr>
@@ -1682,20 +1656,22 @@ body{
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_107'>4</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_107'>5</a>
 <span>
 
 1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
 2. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
 
-3. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
+3. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
-4. setDirectionAStar : negated conditional &rarr; KILLED<br/>
+4. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
+
+5. setDirectionAStar : negated conditional &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>                if (map[(current.getX() + 32) / 32][(current.getY()) / 32] == 1) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>                if (map[(current.getX() + 32) / 32][(current.getY() + 64) / 32] == 1) {</span></pre></td></tr>
 
 
 <tr>
@@ -1708,11 +1684,11 @@ body{
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_108'>1</a>
 <span>
 
-1. setDirectionAStar : Replaced integer subtraction with addition &rarr; KILLED<br/>
+1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>                    priorityq.add(new Coordinate(current.getX(), current.getY() - 32,</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>                    priorityq.add(new Coordinate(current.getX(), current.getY() + 32,</span></pre></td></tr>
 
 
 <tr>
@@ -1753,7 +1729,115 @@ body{
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_111'>3</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_111'>4</a>
+<span>
+
+1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+2. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
+
+3. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+4. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                    map[(current.getX() + 32) / 32][(current.getY() + 64) / 32] = 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_112'/>
+112
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_112'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                } //up from current</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_113'/>
+113
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_113'>4</a>
+<span>
+
+1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+2. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
+
+3. setDirectionAStar : Replaced integer division with multiplication &rarr; KILLED<br/>
+
+4. setDirectionAStar : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                if (map[(current.getX() + 32) / 32][(current.getY()) / 32] == 1) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_114'/>
+114
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_114'>1</a>
+<span>
+
+1. setDirectionAStar : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                    priorityq.add(new Coordinate(current.getX(), current.getY() - 32,</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_115'/>
+115
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_115'>1</a>
+<span>
+
+1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                            current.getDistance() + 32, searchX, searchY, current, runAway));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_116'/>
+116
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_116'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_117'/>
+117
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_117'>3</a>
 <span>
 
 1. setDirectionAStar : Replaced integer addition with subtraction &rarr; KILLED<br/>
@@ -1769,106 +1853,16 @@ body{
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_112'/>
-112
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_118'/>
+118
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_112'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_118'></a>
 <span>
 </span>
 </td>
 <td class=''><pre><span  class=''>                }</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_113'/>
-113
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_113'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>            } catch (ArrayIndexOutOfBoundsException e) {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_114'/>
-114
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_114'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>                continue;</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_115'/>
-115
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_115'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>            }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_116'/>
-116
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_116'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_117'/>
-117
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_117'>1</a>
-<span>
-
-1. setDirectionAStar : negated conditional &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        if (priorityq.isEmpty()) {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_118'/>
-118
-</td>
-<td class='survived'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_118'>1</a>
-<span>
-
-1. setDirectionAStar : removed call to pacman/gameobjects/RandomDirection::randomDirection &rarr; SURVIVED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='survived'>            randir.randomDirection(this);</span></pre></td></tr>
 
 
 <tr>
@@ -1882,11 +1876,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            return;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>            } catch (ArrayIndexOutOfBoundsException e) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_120'/>
 120
 </td>
@@ -1896,11 +1890,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>                continue;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_121'/>
 121
 </td>
@@ -1910,17 +1904,107 @@ body{
 <span>
 </span>
 </td>
+<td class='covered'><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_122'/>
+122
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_122'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_123'/>
+123
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_123'>1</a>
+<span>
+
+1. setDirectionAStar : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (priorityq.isEmpty()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_124'/>
+124
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_124'>1</a>
+<span>
+
+1. setDirectionAStar : removed call to pacman/gameobjects/RandomDirection::randomDirection &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            randir.randomDirection(this);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_125'/>
+125
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_125'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            return;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_126'/>
+126
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_126'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_127'/>
+127
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_127'></a>
+<span>
+</span>
+</td>
 <td class=''><pre><span  class=''>        while (true) {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_122'/>
-122
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_128'/>
+128
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_122'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_128'>1</a>
 <span>
 
 1. setDirectionAStar : negated conditional &rarr; KILLED<br/>
@@ -1932,12 +2016,12 @@ body{
 
 <tr>
 <td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_123'/>
-123
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_129'/>
+129
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_123'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_129'></a>
 <span>
 </span>
 </td>
@@ -1946,12 +2030,12 @@ body{
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_124'/>
-124
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_130'/>
+130
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_124'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_130'></a>
 <span>
 </span>
 </td>
@@ -1960,12 +2044,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_125'/>
-125
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_131'/>
+131
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_125'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_131'>1</a>
 <span>
 
 1. setDirectionAStar : negated conditional &rarr; KILLED<br/>
@@ -1977,12 +2061,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_126'/>
-126
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_132'/>
+132
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_126'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_132'>2</a>
 <span>
 
 1. setDirectionAStar : changed conditional boundary &rarr; KILLED<br/>
@@ -1996,12 +2080,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_127'/>
-127
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_133'/>
+133
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_127'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_133'></a>
 <span>
 </span>
 </td>
@@ -2010,12 +2094,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_128'/>
-128
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_134'/>
+134
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_128'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_134'>2</a>
 <span>
 
 1. setDirectionAStar : changed conditional boundary &rarr; KILLED<br/>
@@ -2029,12 +2113,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_129'/>
-129
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_135'/>
+135
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_129'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_135'></a>
 <span>
 </span>
 </td>
@@ -2043,12 +2127,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_130'/>
-130
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_136'/>
+136
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_130'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_136'>2</a>
 <span>
 
 1. setDirectionAStar : changed conditional boundary &rarr; SURVIVED<br/>
@@ -2062,12 +2146,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_131'/>
-131
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_137'/>
+137
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_131'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_137'></a>
 <span>
 </span>
 </td>
@@ -2076,12 +2160,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_132'/>
-132
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_138'/>
+138
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_132'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_138'>2</a>
 <span>
 
 1. setDirectionAStar : changed conditional boundary &rarr; SURVIVED<br/>
@@ -2095,90 +2179,6 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_133'/>
-133
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_133'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>                    this.d = Direction.Down;</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_134'/>
-134
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_134'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>                }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_135'/>
-135
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_135'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>                break;</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_136'/>
-136
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_136'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>            }</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_137'/>
-137
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_137'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>            current = current.getPrevious();</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_138'/>
-138
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_138'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_139'/>
 139
 </td>
@@ -2188,11 +2188,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class=''>                    this.d = Direction.Down;</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_140'/>
 140
 </td>
@@ -2202,7 +2202,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>                }</span></pre></td></tr>
 
 
 <tr>
@@ -2216,7 +2216,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>                break;</span></pre></td></tr>
 
 
 <tr>
@@ -2230,11 +2230,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_143'/>
 143
 </td>
@@ -2244,24 +2244,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public Rectangle getBounds() {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>            current = current.getPrevious();</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_144'/>
 144
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_144'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_144'></a>
 <span>
-
-1. getBounds : mutated return of Object value for pacman/gameobjects/Ghost::getBounds to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return new Rectangle(x, y, 32, 32);</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
@@ -2275,11 +2272,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_146'/>
 146
 </td>
@@ -2289,7 +2286,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -2303,7 +2300,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -2317,38 +2314,38 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public boolean checkCollision(PacMan pacman) {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_149'/>
-149
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_149'>1</a>
-<span>
-
-1. checkCollision : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        return getBounds().intersects(pacman.getBounds());</span></pre></td></tr>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_150'/>
-150
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_149'/>
+149
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_150'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_149'></a>
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public Rectangle getBounds() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_150'/>
+150
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_150'>1</a>
+<span>
+
+1. getBounds : mutated return of Object value for pacman/gameobjects/Ghost::getBounds to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return new Rectangle(x, y, 32, 32);</span></pre></td></tr>
 
 
 <tr>
@@ -2362,7 +2359,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -2376,11 +2373,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void setGraph(int[][] graph) {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_153'/>
 153
 </td>
@@ -2390,11 +2387,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.graph = graph;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_154'/>
 154
 </td>
@@ -2404,21 +2401,24 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public boolean checkCollision(PacMan pacman) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_155'/>
 155
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_155'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_155'>1</a>
 <span>
+
+1. checkCollision : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return getBounds().intersects(pacman.getBounds());</span></pre></td></tr>
 
 
 <tr>
@@ -2432,7 +2432,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -2446,7 +2446,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Used to stop the movement of ghost and change it position so that it</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -2460,11 +2460,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * doesn&#39;t get stuck in a wall</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void setGraph(int[][] graph) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_159'/>
 159
 </td>
@@ -2474,11 +2474,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.graph = graph;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_160'/>
 160
 </td>
@@ -2488,109 +2488,91 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void stop() {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_161'/>
 161
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_161'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_161'></a>
 <span>
-
-1. stop : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        if (d == Direction.Right) {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_162'/>
 162
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_162'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_162'></a>
 <span>
-
-1. stop : Replaced integer subtraction with addition &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>            x -= move;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_163'/>
 163
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_163'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_163'></a>
 <span>
-
-1. stop : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Left) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Used to stop the movement of ghost and change it position so that it</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_164'/>
 164
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_164'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_164'></a>
 <span>
-
-1. stop : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>            x += move;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * doesn&#39;t get stuck in a wall.</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_165'/>
 165
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_165'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_165'></a>
 <span>
-
-1. stop : negated conditional &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Down) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_166'/>
 166
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_166'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_166'></a>
 <span>
-
-1. stop : Replaced integer subtraction with addition &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>            y -= move;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void stop() {</span></pre></td></tr>
 
 
 <tr>
@@ -2607,7 +2589,7 @@ body{
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Up) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        if (d == Direction.Right) {</span></pre></td></tr>
 
 
 <tr>
@@ -2620,25 +2602,28 @@ body{
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_168'>1</a>
 <span>
 
-1. stop : Replaced integer addition with subtraction &rarr; KILLED<br/>
+1. stop : Replaced integer subtraction with addition &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>            y += move;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            x -= move;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_169'/>
 169
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_169'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_169'>1</a>
 <span>
+
+1. stop : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Left) {</span></pre></td></tr>
 
 
 <tr>
@@ -2646,13 +2631,16 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_170'/>
 170
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_170'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_170'>1</a>
 <span>
+
+1. stop : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        d = Direction.Stop;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            x += move;</span></pre></td></tr>
 
 
 <tr>
@@ -2660,55 +2648,67 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_171'/>
 171
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_171'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_171'>1</a>
 <span>
+
+1. stop : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Down) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_172'/>
 172
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_172'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_172'>1</a>
 <span>
+
+1. stop : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            y -= move;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_173'/>
 173
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_173'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_173'>1</a>
 <span>
+
+1. stop : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        } else if (d == Direction.Up) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_174'/>
 174
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_174'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_174'>1</a>
 <span>
+
+1. stop : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Changes the ppEaten value of this ghost that makes it eatable for pacman.</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            y += move;</span></pre></td></tr>
 
 
 <tr>
@@ -2722,11 +2722,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Also slows the ghosts movementand sets the timers value.</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_176'/>
 176
 </td>
@@ -2736,11 +2736,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        d = Direction.Stop;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_177'/>
 177
 </td>
@@ -2750,7 +2750,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param ln current time</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -2764,7 +2764,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -2778,11 +2778,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void eatPowerpellet(long ln) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_180'/>
 180
 </td>
@@ -2792,11 +2792,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        ppEaten = true;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Changes the ppEaten value of this ghost that makes it eatable for pacman.</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_181'/>
 181
 </td>
@@ -2806,11 +2806,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        timer = ln;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Also slows the ghosts movementand sets the timers value.</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_182'/>
 182
 </td>
@@ -2820,11 +2820,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        move = 1;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_183'/>
 183
 </td>
@@ -2834,7 +2834,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param ln current time</span></pre></td></tr>
 
 
 <tr>
@@ -2848,7 +2848,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -2862,11 +2862,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void eatPowerpellet(long ln) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_186'/>
 186
 </td>
@@ -2876,11 +2876,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        ppEaten = true;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_187'/>
 187
 </td>
@@ -2890,11 +2890,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * checks how long the ghost has been in eatale state. If the time has</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        timer = ln;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_188'/>
 188
 </td>
@@ -2904,11 +2904,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * expired it returns it to the normal state.</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        move = 1;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_189'/>
 189
 </td>
@@ -2918,7 +2918,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -2932,7 +2932,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param now current time</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -2946,7 +2946,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -2960,11 +2960,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void eatableTimer(long now) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_193'/>
 193
 </td>
@@ -2974,17 +2974,101 @@ body{
 <span>
 </span>
 </td>
+<td class=''><pre><span  class=''>     * checks how long the ghost has been in eatale state. If the time has</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_194'/>
+194
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_194'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * expired it returns it to the normal state.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_195'/>
+195
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_195'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_196'/>
+196
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_196'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param now current time</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_197'/>
+197
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_197'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_198'/>
+198
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_198'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void eatableTimer(long now) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_199'/>
+199
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_199'></a>
+<span>
+</span>
+</td>
 <td class='covered'><pre><span  class=''>        this.now = now;</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_194'/>
-194
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_200'/>
+200
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_194'>3</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_200'>3</a>
 <span>
 
 1. eatableTimer : changed conditional boundary &rarr; KILLED<br/>
@@ -3000,12 +3084,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_195'/>
-195
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_201'/>
+201
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_195'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_201'></a>
 <span>
 </span>
 </td>
@@ -3014,12 +3098,12 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_196'/>
-196
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_202'/>
+202
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_196'>4</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_202'>4</a>
 <span>
 
 1. eatableTimer : Replaced integer modulus with multiplication &rarr; KILLED<br/>
@@ -3037,90 +3121,6 @@ body{
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_197'/>
-197
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_197'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>                move = 2;</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_198'/>
-198
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_198'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>            }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_199'/>
-199
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_199'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_200'/>
-200
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_200'></a>
-<span>
-</span>
-</td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_201'/>
-201
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_201'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_202'/>
-202
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_202'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_203'/>
 203
 </td>
@@ -3130,7 +3130,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>                move = 2;</span></pre></td></tr>
 
 
 <tr>
@@ -3144,7 +3144,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @return the time that the ghost has been eatable</span></pre></td></tr>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
 
 
 <tr>
@@ -3158,11 +3158,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_206'/>
 206
 </td>
@@ -3172,26 +3172,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public long timeLeft() {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_207'/>
 207
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_207'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_207'></a>
 <span>
-
-1. timeLeft : Replaced long subtraction with addition &rarr; KILLED<br/>
-
-2. timeLeft : replaced return of long value with value + 1 for pacman/gameobjects/Ghost::timeLeft &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return now - timer;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -3205,7 +3200,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -3219,7 +3214,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Used to know how long the ghost has been eatable.</span></pre></td></tr>
 
 
 <tr>
@@ -3233,24 +3228,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public boolean isPpEaten() {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_211'/>
 211
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_211'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_211'></a>
 <span>
-
-1. isPpEaten : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return ppEaten;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @return the time that the ghost has been eatable</span></pre></td></tr>
 
 
 <tr>
@@ -3264,7 +3256,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -3278,25 +3270,30 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_214'/>
-214
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_214'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>    public void setX(int x) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public long timeLeft() {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_214'/>
+214
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_214'>2</a>
+<span>
+
+1. timeLeft : Replaced long subtraction with addition &rarr; KILLED<br/>
+
+2. timeLeft : replaced return of long value with value + 1 for pacman/gameobjects/Ghost::timeLeft &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return now - timer;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_215'/>
 215
 </td>
@@ -3306,11 +3303,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.x = x;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_216'/>
 216
 </td>
@@ -3320,7 +3317,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -3334,25 +3331,28 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_218'/>
-218
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_218'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>    public void setY(int y) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public boolean isPpEaten() {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_218'/>
+218
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_218'>1</a>
+<span>
+
+1. isPpEaten : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return ppEaten;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_219'/>
 219
 </td>
@@ -3362,11 +3362,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.y = y;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_220'/>
 220
 </td>
@@ -3376,7 +3376,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -3390,11 +3390,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void setX(int x) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_222'/>
 222
 </td>
@@ -3404,7 +3404,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void setPpEaten(boolean ppEaten) {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.x = x;</span></pre></td></tr>
 
 
 <tr>
@@ -3418,11 +3418,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.ppEaten = ppEaten;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_224'/>
 224
 </td>
@@ -3432,7 +3432,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -3446,11 +3446,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void setY(int y) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_226'/>
 226
 </td>
@@ -3460,7 +3460,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public int getX() {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.y = y;</span></pre></td></tr>
 
 
 <tr>
@@ -3468,16 +3468,13 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_227'/>
 227
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_227'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_227'></a>
 <span>
-
-1. getX : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return x;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -3491,7 +3488,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -3505,11 +3502,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void setPpEaten(boolean ppEaten) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_230'/>
 230
 </td>
@@ -3519,7 +3516,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public int getY() {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.ppEaten = ppEaten;</span></pre></td></tr>
 
 
 <tr>
@@ -3527,16 +3524,13 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_231'/>
 231
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_231'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_231'></a>
 <span>
-
-1. getY : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return y;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -3550,7 +3544,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -3564,21 +3558,24 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    public int getX() {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_234'/>
 234
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_234'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_234'>1</a>
 <span>
+
+1. getX : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return x;</span></pre></td></tr>
 
 
 <tr>
@@ -3592,7 +3589,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * moves the ghost to it&#39;s starting position.</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -3606,7 +3603,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -3620,7 +3617,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void reset() {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public int getY() {</span></pre></td></tr>
 
 
 <tr>
@@ -3628,17 +3625,20 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_238'/>
 238
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_238'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_238'>1</a>
 <span>
+
+1. getY : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        x = origX;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return y;</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_239'/>
 239
 </td>
@@ -3648,11 +3648,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        y = origY;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_240'/>
 240
 </td>
@@ -3662,7 +3662,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -3676,7 +3676,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -3690,11 +3690,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void setImages(BufferedImage img, BufferedImage ppImg) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * moves the ghost to it&#39;s starting position.</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_243'/>
 243
 </td>
@@ -3704,11 +3704,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.img = img;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_244'/>
 244
 </td>
@@ -3718,7 +3718,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.ppImg = ppImg;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void reset() {</span></pre></td></tr>
 
 
 <tr>
@@ -3732,11 +3732,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        x = origX;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_246'/>
 246
 </td>
@@ -3746,11 +3746,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        y = origY;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_247'/>
 247
 </td>
@@ -3760,7 +3760,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -3774,7 +3774,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Sets the imageObserver that is used to draw the ghost.</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -3788,7 +3788,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -3802,7 +3802,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param lr Imageobserver that&#39;s class is LevelRunner</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Sets the images for a ghost.</span></pre></td></tr>
 
 
 <tr>
@@ -3816,7 +3816,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
@@ -3830,11 +3830,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void setImageObserver(LevelRunner lr) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param img image of the ghost in normal state</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_253'/>
 253
 </td>
@@ -3844,11 +3844,11 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>        this.lr = lr;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param ppImg image of the ghost in eatable state</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_254'/>
 254
 </td>
@@ -3858,7 +3858,7 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -3872,6 +3872,188 @@ body{
 <span>
 </span>
 </td>
+<td class=''><pre><span  class=''>    public void setImages(BufferedImage img, BufferedImage ppImg) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_256'/>
+256
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_256'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.img = img;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_257'/>
+257
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_257'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.ppImg = ppImg;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_258'/>
+258
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_258'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_259'/>
+259
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_259'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_260'/>
+260
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_260'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_261'/>
+261
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_261'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * Sets the imageObserver that is used to draw the ghost.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_262'/>
+262
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_262'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_263'/>
+263
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_263'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param lr Imageobserver that&#39;s class is LevelRunner</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_264'/>
+264
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_264'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_265'/>
+265
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_265'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void setImageObserver(LevelRunner lr) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_266'/>
+266
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_266'></a>
+<span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        this.lr = lr;</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_267'/>
+267
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_267'></a>
+<span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2c0dca15_268'/>
+268
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_268'></a>
+<span>
+</span>
+</td>
 <td class=''><pre><span  class=''>}</span></pre></td></tr>
 
 
@@ -3880,101 +4062,35 @@ body{
 
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_31'>31</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_37'>37</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_31'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_37'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.GhostTest.getBounds(pacman.gameobjects.GhostTest)</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.GhostTest.getBounds(pacman.gameobjects.GhostTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_32'>32</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_38'>38</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_32'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_38'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.GhostTest.getBounds(pacman.gameobjects.GhostTest)</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.GhostTest.getBounds(pacman.gameobjects.GhostTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_45'>45</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_51'>51</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_45'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_51'/> 
 
 <p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>paint<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_54'>54</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_54'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.move(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_55'>55</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_55'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.move(pacman.gameobjects.GhostTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_56'>56</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_56'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.move(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_57'>57</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_57'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.move(pacman.gameobjects.GhostTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_58'>58</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_58'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.move(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_59'>59</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_59'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.move(pacman.gameobjects.GhostTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -3985,7 +4101,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_60'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.move(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -3996,51 +4112,95 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_61'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.move(pacman.gameobjects.GhostTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_76'>76</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_62'>62</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_76'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_62'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.eatableTimer(pacman.gameobjects.ClydeTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.eatableTimer(pacman.gameobjects.ClydeTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.eatableTimer(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_78'>78</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_63'>63</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_78'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_63'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> removed call to java/lang/System::arraycopy &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.checkCollision(pacman.gameobjects.GhostTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_83'>83</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_64'>64</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_83'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_64'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_85'>85</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_65'>65</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_85'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_65'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.move(pacman.gameobjects.GhostTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_66'>66</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_66'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_67'>67</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_67'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_82'>82</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_82'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_84'>84</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_84'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> removed call to java/lang/System::arraycopy &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4051,18 +4211,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_89'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_90'>90</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_90'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4073,18 +4222,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_91'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_93'>93</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_93'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4095,7 +4233,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_95'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4106,7 +4244,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_96'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4117,7 +4255,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_97'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4128,7 +4266,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_99'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4139,7 +4277,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_101'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4150,7 +4288,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_102'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4161,7 +4299,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_103'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4172,7 +4310,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_105'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4183,7 +4321,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_107'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.PinkyTest.moveDistance(pacman.gameobjects.PinkyTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4194,7 +4332,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_108'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4216,7 +4354,40 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_111'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.PinkyTest.moveDistance(pacman.gameobjects.PinkyTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.PinkyTest.moveDistance(pacman.gameobjects.PinkyTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.PinkyTest.moveDistance(pacman.gameobjects.PinkyTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_113'>113</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_113'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_114'>114</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_114'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_115'>115</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_115'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4227,51 +4398,29 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_117'/> 
 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.PinkyTest.moveDistance(pacman.gameobjects.PinkyTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.PinkyTest.moveDistance(pacman.gameobjects.PinkyTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.PinkyTest.moveDistance(pacman.gameobjects.PinkyTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_123'>123</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_123'/> 
+
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_118'>118</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_124'>124</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_118'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_124'/> 
 
 <p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>none</span></span> removed call to pacman/gameobjects/RandomDirection::randomDirection &rarr; SURVIVED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_122'>122</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_122'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_125'>125</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_125'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_126'>126</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_126'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4282,18 +4431,18 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_128'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_130'>130</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_131'>131</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_130'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_131'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4304,95 +4453,62 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_132'/> 
 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_134'>134</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_134'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_136'>136</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_136'/> 
+
 <p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_144'>144</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_138'>138</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_144'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_138'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setDirectionAStar<br/><b>Killed by : </b>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_150'>150</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_150'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.getBounds(pacman.gameobjects.GhostTest)</span></span> mutated return of Object value for pacman/gameobjects/Ghost::getBounds to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_149'>149</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_155'>155</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_149'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_155'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkCollision<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.checkCollision(pacman.gameobjects.GhostTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_161'>161</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_161'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_162'>162</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_162'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_163'>163</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_163'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_164'>164</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_164'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_165'>165</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_165'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_166'>166</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_166'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -4414,71 +4530,137 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_168'/> 
 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_169'>169</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_169'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_170'>170</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_170'/> 
+
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_194'>194</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_171'>171</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_194'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_171'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_172'>172</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_172'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_173'>173</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_173'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_174'>174</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_174'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>stop<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_200'>200</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_200'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>eatableTimer<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>eatableTimer<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> Replaced long subtraction with addition &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>eatableTimer<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_196'>196</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_202'>202</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_196'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_202'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>eatableTimer<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> Replaced integer modulus with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>eatableTimer<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> Replaced integer modulus with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>eatableTimer<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>eatableTimer<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_207'>207</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_214'>214</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_207'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_214'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>timeLeft<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.timeleft(pacman.gameobjects.GhostTest)</span></span> Replaced long subtraction with addition &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>timeLeft<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.timeleft(pacman.gameobjects.GhostTest)</span></span> replaced return of long value with value + 1 for pacman/gameobjects/Ghost::timeLeft &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_211'>211</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_218'>218</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_211'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_218'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPpEaten<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.ppEaten(pacman.gameobjects.GhostTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_227'>227</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_234'>234</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_227'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_234'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getX<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.getx(pacman.gameobjects.GhostTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_231'>231</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2c0dca15_238'>238</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_231'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2c0dca15_238'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getY<br/><b>Killed by : </b>pacman.gameobjects.GhostTest.gety(pacman.gameobjects.GhostTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
@@ -4508,7 +4690,7 @@ body{
 
 <h2>Tests examined</h2>
 <ul>
-<li>pacman.gameobjects.PinkyTest.moveToTwo(pacman.gameobjects.PinkyTest) (0 ms)</li><li>pacman.gameobjects.GhostTest.move(pacman.gameobjects.GhostTest) (0 ms)</li><li>pacman.gameobjects.ClydeTest.homeCoordinates(pacman.gameobjects.ClydeTest) (1 ms)</li><li>pacman.gameobjects.BlinkyTest.moveDistance(pacman.gameobjects.BlinkyTest) (2 ms)</li><li>pacman.gameobjects.ClydeTest.eatableTimer(pacman.gameobjects.ClydeTest) (1 ms)</li><li>pacman.gameobjects.BlinkyTest.moveToTwo(pacman.gameobjects.BlinkyTest) (1 ms)</li><li>pacman.gameobjects.PinkyTest.moveDistance(pacman.gameobjects.PinkyTest) (0 ms)</li><li>pacman.gameobjects.GhostTest.gety(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.setGraph(pacman.gameobjects.GhostTest) (2 ms)</li><li>pacman.gameobjects.BlinkyTest.setUp(pacman.gameobjects.BlinkyTest) (1 ms)</li><li>pacman.gameobjects.ClydeTest.moveDistance(pacman.gameobjects.ClydeTest) (6 ms)</li><li>pacman.gameobjects.RandomDirectionTest.randomDirectionDown(pacman.gameobjects.RandomDirectionTest) (0 ms)</li><li>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.setImages(pacman.gameobjects.GhostTest) (126 ms)</li><li>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest) (2 ms)</li><li>pacman.gameobjects.GhostTest.eatPowerPellet(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.ClydeTest.setUp(pacman.gameobjects.ClydeTest) (1 ms)</li><li>pacman.gameobjects.ClydeTest.moveToTwo(pacman.gameobjects.ClydeTest) (15 ms)</li><li>pacman.gameobjects.BlinkyTest.eatableTimer(pacman.gameobjects.BlinkyTest) (114 ms)</li><li>pacman.gameobjects.RandomDirectionTest.randomDirectionLeft(pacman.gameobjects.RandomDirectionTest) (0 ms)</li><li>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest) (2 ms)</li><li>pacman.gameobjects.GhostTest.getx(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.checkCollision(pacman.gameobjects.GhostTest) (8 ms)</li><li>pacman.gameobjects.GhostTest.ppEaten(pacman.gameobjects.GhostTest) (0 ms)</li><li>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest) (15 ms)</li><li>pacman.gameobjects.BlinkyTest.moveDirection(pacman.gameobjects.BlinkyTest) (2 ms)</li><li>pacman.gameobjects.GhostTest.reset(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.getBounds(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.timeleft(pacman.gameobjects.GhostTest) (0 ms)</li><li>pacman.gameobjects.PinkyTest.eatableTimer(pacman.gameobjects.PinkyTest) (0 ms)</li><li>pacman.gameobjects.RandomDirectionTest.RandomDirecitonUp(pacman.gameobjects.RandomDirectionTest) (0 ms)</li><li>pacman.gameobjects.PinkyTest.setUp(pacman.gameobjects.PinkyTest) (0 ms)</li><li>pacman.gameobjects.RandomDirectionTest.setDirectionRight(pacman.gameobjects.RandomDirectionTest) (0 ms)</li><li>pacman.gameobjects.GhostTest.settingXY(pacman.gameobjects.GhostTest) (0 ms)</li>
+<li>pacman.gameobjects.PinkyTest.moveToTwo(pacman.gameobjects.PinkyTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.move(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.ClydeTest.homeCoordinates(pacman.gameobjects.ClydeTest) (1 ms)</li><li>pacman.gameobjects.BlinkyTest.moveDistance(pacman.gameobjects.BlinkyTest) (2 ms)</li><li>pacman.gameobjects.ClydeTest.eatableTimer(pacman.gameobjects.ClydeTest) (2 ms)</li><li>pacman.gameobjects.BlinkyTest.moveToTwo(pacman.gameobjects.BlinkyTest) (1 ms)</li><li>pacman.gameobjects.PinkyTest.moveDistance(pacman.gameobjects.PinkyTest) (2 ms)</li><li>pacman.gameobjects.GhostTest.gety(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.setGraph(pacman.gameobjects.GhostTest) (3 ms)</li><li>pacman.gameobjects.BlinkyTest.setUp(pacman.gameobjects.BlinkyTest) (1 ms)</li><li>pacman.gameobjects.ClydeTest.moveDistance(pacman.gameobjects.ClydeTest) (7 ms)</li><li>pacman.gameobjects.RandomDirectionTest.randomDirectionDown(pacman.gameobjects.RandomDirectionTest) (1 ms)</li><li>pacman.gameobjects.ClydeTest.moveDirectionHome(pacman.gameobjects.ClydeTest) (2 ms)</li><li>pacman.gameobjects.GhostTest.setImages(pacman.gameobjects.GhostTest) (153 ms)</li><li>pacman.gameobjects.ClydeTest.move(pacman.gameobjects.ClydeTest) (3 ms)</li><li>pacman.gameobjects.GhostTest.eatPowerPellet(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.ClydeTest.setUp(pacman.gameobjects.ClydeTest) (19 ms)</li><li>pacman.gameobjects.ClydeTest.moveToTwo(pacman.gameobjects.ClydeTest) (12 ms)</li><li>pacman.gameobjects.BlinkyTest.eatableTimer(pacman.gameobjects.BlinkyTest) (104 ms)</li><li>pacman.gameobjects.RandomDirectionTest.randomDirectionLeft(pacman.gameobjects.RandomDirectionTest) (0 ms)</li><li>pacman.gameobjects.ClydeTest.moveDirection(pacman.gameobjects.ClydeTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.eatableTimer(pacman.gameobjects.GhostTest) (0 ms)</li><li>pacman.gameobjects.GhostTest.getx(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.checkCollision(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.ppEaten(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.stop(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.BlinkyTest.moveDirection(pacman.gameobjects.BlinkyTest) (2 ms)</li><li>pacman.gameobjects.GhostTest.reset(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.GhostTest.getBounds(pacman.gameobjects.GhostTest) (0 ms)</li><li>pacman.gameobjects.GhostTest.timeleft(pacman.gameobjects.GhostTest) (1 ms)</li><li>pacman.gameobjects.PinkyTest.eatableTimer(pacman.gameobjects.PinkyTest) (1 ms)</li><li>pacman.gameobjects.RandomDirectionTest.RandomDirecitonUp(pacman.gameobjects.RandomDirectionTest) (1 ms)</li><li>pacman.gameobjects.PinkyTest.setUp(pacman.gameobjects.PinkyTest) (1 ms)</li><li>pacman.gameobjects.RandomDirectionTest.setDirectionRight(pacman.gameobjects.RandomDirectionTest) (0 ms)</li><li>pacman.gameobjects.GhostTest.settingXY(pacman.gameobjects.GhostTest) (1 ms)</li>
 </ul>
 
 <br/>

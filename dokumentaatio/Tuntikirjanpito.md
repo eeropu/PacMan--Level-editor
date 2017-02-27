@@ -23,3 +23,4 @@ Päivä | Tunnit | Kuvaus
 17.02.2017 | 5h | Testejä ja javadocseja, deadline5 (ilman kaavioita)
 25.02.2017 | 5h | Huipputulosten lisäys
 26.02.2017 | 6h | javadocseja ja monenlaista parantelua
+27.02.2017 | 5h | kaavioita ja muuta dokumentaatiota

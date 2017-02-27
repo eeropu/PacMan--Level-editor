@@ -185,7 +185,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> *</span></pre></td></tr>
+<td class=''><pre><span  class=''> * This class contains the functions for the Pointbubbles. PointBubbles are</span></pre></td></tr>
 
 
 <tr>
@@ -199,7 +199,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * @author eerop</span></pre></td></tr>
+<td class=''><pre><span  class=''> * collectables that PacMan needs to collect to gain points and finally complete</span></pre></td></tr>
 
 
 <tr>
@@ -213,7 +213,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> *</span></pre></td></tr>
+<td class=''><pre><span  class=''> * a level.</span></pre></td></tr>
 
 
 <tr>
@@ -227,7 +227,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * This class contains the functions for the Pointbubbles. PointBubbles are</span></pre></td></tr>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
 
 
 <tr>
@@ -241,7 +241,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * collectables that PacMan needs to collect to gain points and finally complete</span></pre></td></tr>
+<td class=''><pre><span  class=''> * @author eerop</span></pre></td></tr>
 
 
 <tr>
@@ -255,7 +255,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * a level.</span></pre></td></tr>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
 
 
 <tr>
@@ -269,7 +269,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> */</span></pre></td></tr>
+<td class=''><pre><span  class=''>public class Pointbubble implements GameObject {</span></pre></td></tr>
 
 
 <tr>
@@ -283,7 +283,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>public class Pointbubble implements GameObject {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -297,7 +297,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    private int x, y;</span></pre></td></tr>
 
 
 <tr>
@@ -311,7 +311,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private int x, y;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private BufferedImage image;</span></pre></td></tr>
 
 
 <tr>
@@ -325,7 +325,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private BufferedImage image;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private LevelRunner lr;</span></pre></td></tr>
 
 
 <tr>
@@ -339,7 +339,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private LevelRunner lr;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -353,11 +353,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_22'/>
 22
 </td>
@@ -367,49 +367,39 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    public Pointbubble(int x, int y) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Constructor for Pointbubble-class.</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_23'/>
 23
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_23'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_23'></a>
 <span>
-
-1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
-
-2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        this.x = x * 32 - 32;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_24'/>
 24
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_24'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_24'></a>
 <span>
-
-1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
-
-2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        this.y = y * 32 - 32;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param x x coordinate</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_25'/>
 25
 </td>
@@ -419,7 +409,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param y y coordinate</span></pre></td></tr>
 
 
 <tr>
@@ -433,11 +423,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_27'/>
 27
 </td>
@@ -447,39 +437,49 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    public Pointbubble(int x, int y) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_28'/>
 28
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_28'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_28'>2</a>
 <span>
+
+1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
+
+2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void paint(Graphics g) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        this.x = x * 32 - 32;</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_29'/>
 29
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_29'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_29'>2</a>
 <span>
+
+1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
+
+2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>        g.drawImage(image, x, y, lr);</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        this.y = y * 32 - 32;</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_30'/>
 30
 </td>
@@ -489,7 +489,7 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -531,7 +531,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void move() {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void paint(Graphics g) {</span></pre></td></tr>
 
 
 <tr>
@@ -545,11 +545,11 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>        g.drawImage(image, x, y, lr);</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_35'/>
 35
 </td>
@@ -559,7 +559,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -573,7 +573,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -587,32 +587,25 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public Rectangle getBounds() {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_38'/>
-38
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_38'>3</a>
-<span>
-
-1. getBounds : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
-2. getBounds : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
-3. getBounds : mutated return of Object value for pacman/gameobjects/Pointbubble::getBounds to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        return new Rectangle(x + 12, y + 12, 8, 8);</span></pre></td></tr>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_38'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void move() {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_39'/>
 39
 </td>
@@ -622,7 +615,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -664,7 +657,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public boolean checkCollision(PacMan pacman) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public Rectangle getBounds() {</span></pre></td></tr>
 
 
 <tr>
@@ -674,14 +667,18 @@ body{
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_43'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_43'>3</a>
 <span>
 
-1. checkCollision : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+1. getBounds : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+2. getBounds : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+3. getBounds : mutated return of Object value for pacman/gameobjects/Pointbubble::getBounds to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return this.getBounds().intersects(pacman.getBounds());</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return new Rectangle(x + 12, y + 12, 8, 8);</span></pre></td></tr>
 
 
 <tr>
@@ -723,11 +720,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void setImage(BufferedImage img) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_47'/>
 47
 </td>
@@ -737,7 +734,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.image = img;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public boolean checkCollision(PacMan pacman) {</span></pre></td></tr>
 
 
 <tr>
@@ -745,13 +742,16 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_48'/>
 48
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_48'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_48'>1</a>
 <span>
+
+1. checkCollision : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return this.getBounds().intersects(pacman.getBounds());</span></pre></td></tr>
 
 
 <tr>
@@ -765,7 +765,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -779,11 +779,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void setImageObserver(LevelRunner lr) {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_51'/>
 51
 </td>
@@ -793,11 +793,11 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>        this.lr = lr;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void setImage(BufferedImage img) {</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_52'/>
 52
 </td>
@@ -807,11 +807,11 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.image = img;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_53'/>
 53
 </td>
@@ -821,7 +821,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /*</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -835,7 +835,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Following classes are for test purposes</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -849,11 +849,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void setImageObserver(LevelRunner lr) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_56'/>
 56
 </td>
@@ -863,11 +863,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>        this.lr = lr;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_57'/>
 57
 </td>
@@ -877,24 +877,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public int getX() {</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_58'/>
 58
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_58'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_58'></a>
 <span>
-
-1. getX : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return x;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /*</span></pre></td></tr>
 
 
 <tr>
@@ -908,7 +905,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Following classes are for test purposes</span></pre></td></tr>
 
 
 <tr>
@@ -922,7 +919,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -936,38 +933,38 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public int getY() {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_62'/>
-62
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_62'>1</a>
-<span>
-
-1. getY : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        return y;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_63'/>
-63
+<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_62'/>
+62
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_63'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_62'></a>
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public int getX() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_63'/>
+63
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_63'>1</a>
+<span>
+
+1. getX : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return x;</span></pre></td></tr>
 
 
 <tr>
@@ -981,7 +978,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -995,38 +992,38 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public BufferedImage getImage() {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_66'/>
-66
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_66'>1</a>
-<span>
-
-1. getImage : mutated return of Object value for pacman/gameobjects/Pointbubble::getImage to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        return image;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_67'/>
-67
+<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_66'/>
+66
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_67'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_66'></a>
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public int getY() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_67'/>
+67
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_67'>1</a>
+<span>
+
+1. getY : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return y;</span></pre></td></tr>
 
 
 <tr>
@@ -1040,6 +1037,79 @@ body{
 <span>
 </span>
 </td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_69'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_70'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public BufferedImage getImage() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_71'/>
+71
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_71'>1</a>
+<span>
+
+1. getImage : mutated return of Object value for pacman/gameobjects/Pointbubble::getImage to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return image;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_72'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@351ede23_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_73'></a>
+<span>
+</span>
+</td>
 <td class=''><pre><span  class=''>}</span></pre></td></tr>
 
 
@@ -1048,35 +1118,24 @@ body{
 
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_23'>23</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_28'>28</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_23'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_28'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.setUp(pacman.gameobjects.PointbubbleTest)</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.setUp(pacman.gameobjects.PointbubbleTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_24'>24</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_29'>29</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_24'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_29'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.setUp(pacman.gameobjects.PointbubbleTest)</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.setUp(pacman.gameobjects.PointbubbleTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_38'>38</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_38'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.checkCollision(pacman.gameobjects.PointbubbleTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.checkCollision(pacman.gameobjects.PointbubbleTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.checkCollision(pacman.gameobjects.PointbubbleTest)</span></span> mutated return of Object value for pacman/gameobjects/Pointbubble::getBounds to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -1087,38 +1146,49 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_43'/> 
 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.checkCollision(pacman.gameobjects.PointbubbleTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.checkCollision(pacman.gameobjects.PointbubbleTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.checkCollision(pacman.gameobjects.PointbubbleTest)</span></span> mutated return of Object value for pacman/gameobjects/Pointbubble::getBounds to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_48'>48</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_48'/> 
+
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkCollision<br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.checkCollision(pacman.gameobjects.PointbubbleTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_58'>58</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_63'>63</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_58'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_63'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getX<br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.setUp(pacman.gameobjects.PointbubbleTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_62'>62</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_67'>67</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_62'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_67'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getY<br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.setUp(pacman.gameobjects.PointbubbleTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_66'>66</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@351ede23_71'>71</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_66'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@351ede23_71'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getImage<br/><b>Killed by : </b>pacman.gameobjects.PointbubbleTest.setImage(pacman.gameobjects.PointbubbleTest)</span></span> mutated return of Object value for pacman/gameobjects/Pointbubble::getImage to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
@@ -1148,7 +1218,7 @@ body{
 
 <h2>Tests examined</h2>
 <ul>
-<li>pacman.gameobjects.PointbubbleTest.checkCollision(pacman.gameobjects.PointbubbleTest) (0 ms)</li><li>pacman.gameobjects.PointbubbleTest.setImage(pacman.gameobjects.PointbubbleTest) (22 ms)</li><li>pacman.gameobjects.PointbubbleTest.setUp(pacman.gameobjects.PointbubbleTest) (0 ms)</li>
+<li>pacman.gameobjects.PointbubbleTest.checkCollision(pacman.gameobjects.PointbubbleTest) (1 ms)</li><li>pacman.gameobjects.PointbubbleTest.setImage(pacman.gameobjects.PointbubbleTest) (11 ms)</li><li>pacman.gameobjects.PointbubbleTest.setUp(pacman.gameobjects.PointbubbleTest) (0 ms)</li>
 </ul>
 
 <br/>

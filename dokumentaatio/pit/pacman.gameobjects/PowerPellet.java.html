@@ -213,7 +213,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> *</span></pre></td></tr>
+<td class=''><pre><span  class=''> * This class contains the functions of the Powerpellets. Powerpellets can be</span></pre></td></tr>
 
 
 <tr>
@@ -227,7 +227,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * @author eerop</span></pre></td></tr>
+<td class=''><pre><span  class=''> * collected by PacMan. After one is collected PacMan will be able to eat the</span></pre></td></tr>
 
 
 <tr>
@@ -241,7 +241,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> *</span></pre></td></tr>
+<td class=''><pre><span  class=''> * ghosts for a short period of time.</span></pre></td></tr>
 
 
 <tr>
@@ -255,7 +255,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * This class contains the functions of the Powerpellets. Powerpellets can be</span></pre></td></tr>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
 
 
 <tr>
@@ -269,7 +269,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * collected by PacMan. After one is collected PacMan will be able to eat the</span></pre></td></tr>
+<td class=''><pre><span  class=''> * @author eerop</span></pre></td></tr>
 
 
 <tr>
@@ -283,7 +283,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * ghosts for a short period of time.</span></pre></td></tr>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
 
 
 <tr>
@@ -297,7 +297,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> */</span></pre></td></tr>
+<td class=''><pre><span  class=''>public class PowerPellet implements GameObject {</span></pre></td></tr>
 
 
 <tr>
@@ -311,7 +311,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>public class PowerPellet implements GameObject {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -325,7 +325,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    private int x, y;</span></pre></td></tr>
 
 
 <tr>
@@ -339,7 +339,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private int x, y;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private BufferedImage image;</span></pre></td></tr>
 
 
 <tr>
@@ -353,7 +353,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private BufferedImage image;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private LevelRunner lr;</span></pre></td></tr>
 
 
 <tr>
@@ -367,7 +367,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private LevelRunner lr;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private AffineTransform aT;</span></pre></td></tr>
 
 
 <tr>
@@ -381,7 +381,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private AffineTransform aT;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private double rotation;</span></pre></td></tr>
 
 
 <tr>
@@ -395,7 +395,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private double rotation;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -409,11 +409,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_26'/>
 26
 </td>
@@ -423,49 +423,39 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    public PowerPellet(int x, int y) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Costructor for the PowerPellet-class.</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_27'/>
 27
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_27'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_27'></a>
 <span>
-
-1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
-
-2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        this.x = x * 32 - 32;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_28'/>
 28
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_28'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_28'></a>
 <span>
-
-1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
-
-2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        this.y = y * 32 - 32;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param x x coordinate</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_29'/>
 29
 </td>
@@ -475,11 +465,11 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.aT = new AffineTransform();</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param y y coordinate</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_30'/>
 30
 </td>
@@ -489,7 +479,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.rotation = 0;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -503,39 +493,49 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    public PowerPellet(int x, int y) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_32'/>
 32
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_32'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_32'>2</a>
 <span>
+
+1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
+
+2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        this.x = x * 32 - 32;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_33'/>
 33
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_33'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_33'>2</a>
 <span>
+
+1. <init> : Replaced integer multiplication with division &rarr; KILLED<br/>
+
+2. <init> : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        this.y = y * 32 - 32;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_34'/>
 34
 </td>
@@ -545,11 +545,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void paint(Graphics g) {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.aT = new AffineTransform();</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_35'/>
 35
 </td>
@@ -559,17 +559,87 @@ body{
 <span>
 </span>
 </td>
+<td class='covered'><pre><span  class=''>        this.rotation = 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_36'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_37'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_38'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_39'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void paint(Graphics g) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_40'></a>
+<span>
+</span>
+</td>
 <td class='uncovered'><pre><span  class=''>        Graphics2D g2d = (Graphics2D) g;</span></pre></td></tr>
 
 
 <tr>
 <td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_36'/>
-36
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_41'/>
+41
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_36'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_41'>1</a>
 <span>
 
 1. paint : removed call to java/awt/geom/AffineTransform::rotate &rarr; NO_COVERAGE<br/>
@@ -581,12 +651,12 @@ body{
 
 <tr>
 <td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_37'/>
-37
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_42'/>
+42
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_37'>3</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_42'>3</a>
 <span>
 
 1. paint : Replaced integer addition with subtraction &rarr; NO_COVERAGE<br/>
@@ -602,12 +672,12 @@ body{
 
 <tr>
 <td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_38'/>
-38
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_43'/>
+43
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_38'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_43'></a>
 <span>
 </span>
 </td>
@@ -616,12 +686,12 @@ body{
 
 <tr>
 <td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_39'/>
-39
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_44'/>
+44
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_39'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_44'>1</a>
 <span>
 
 1. paint : removed call to java/awt/Graphics2D::setTransform &rarr; NO_COVERAGE<br/>
@@ -633,12 +703,12 @@ body{
 
 <tr>
 <td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_40'/>
-40
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_45'/>
+45
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_40'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_45'></a>
 <span>
 </span>
 </td>
@@ -647,84 +717,6 @@ body{
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_41'/>
-41
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_41'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_42'/>
-42
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_42'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_43'/>
-43
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_43'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>    public void move() {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_44'/>
-44
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_44'>1</a>
-<span>
-
-1. move : Replaced double addition with subtraction &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        rotation += 0.1;</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_45'/>
-45
-</td>
-<td class='survived'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_45'>2</a>
-<span>
-
-1. move : changed conditional boundary &rarr; SURVIVED<br/>
-
-2. move : negated conditional &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='survived'>        if (rotation &#62;= Math.PI * 2) {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_46'/>
 46
 </td>
@@ -734,7 +726,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            rotation = 0;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -748,11 +740,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_48'/>
 48
 </td>
@@ -762,39 +754,47 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void move() {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_49'/>
 49
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_49'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_49'>1</a>
 <span>
+
+1. move : Replaced double addition with subtraction &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        rotation += 0.1;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_50'/>
 50
 </td>
-<td class=''>
+<td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_50'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_50'>2</a>
 <span>
+
+1. move : changed conditional boundary &rarr; SURVIVED<br/>
+
+2. move : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>        if (rotation &#62;= Math.PI * 2) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_51'/>
 51
 </td>
@@ -804,32 +804,25 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public Rectangle getBounds() {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_52'/>
-52
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_52'>3</a>
-<span>
-
-1. getBounds : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
-2. getBounds : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
-3. getBounds : mutated return of Object value for pacman/gameobjects/PowerPellet::getBounds to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        return new Rectangle(x + 6, y + 6, 20, 20);</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>            rotation = 0;</span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_52'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_53'/>
 53
 </td>
@@ -839,7 +832,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -881,7 +874,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public boolean checkCollision(PacMan pacman) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public Rectangle getBounds() {</span></pre></td></tr>
 
 
 <tr>
@@ -891,14 +884,18 @@ body{
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_57'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_57'>3</a>
 <span>
 
-1. checkCollision : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+1. getBounds : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+2. getBounds : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+3. getBounds : mutated return of Object value for pacman/gameobjects/PowerPellet::getBounds to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return this.getBounds().intersects(pacman.getBounds());</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return new Rectangle(x + 6, y + 6, 20, 20);</span></pre></td></tr>
 
 
 <tr>
@@ -940,11 +937,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void setImage(BufferedImage img) {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_61'/>
 61
 </td>
@@ -954,7 +951,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.image = img;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public boolean checkCollision(PacMan pacman) {</span></pre></td></tr>
 
 
 <tr>
@@ -962,13 +959,16 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_62'/>
 62
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_62'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_62'>1</a>
 <span>
+
+1. checkCollision : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return this.getBounds().intersects(pacman.getBounds());</span></pre></td></tr>
 
 
 <tr>
@@ -982,7 +982,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -996,11 +996,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void setImageObserver(LevelRunner lr) {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_65'/>
 65
 </td>
@@ -1010,11 +1010,11 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>        this.lr = lr;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void setImage(BufferedImage img) {</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_66'/>
 66
 </td>
@@ -1024,11 +1024,11 @@ body{
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.image = img;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_67'/>
 67
 </td>
@@ -1038,7 +1038,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1052,7 +1052,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /*</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -1066,11 +1066,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Following classes are for test purposes</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void setImageObserver(LevelRunner lr) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_70'/>
 70
 </td>
@@ -1080,11 +1080,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>        this.lr = lr;</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_71'/>
 71
 </td>
@@ -1094,24 +1094,21 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public int getX() {</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_72'/>
 72
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_72'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_72'></a>
 <span>
-
-1. getX : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return x;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -1125,7 +1122,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /*</span></pre></td></tr>
 
 
 <tr>
@@ -1139,7 +1136,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Following classes are for test purposes</span></pre></td></tr>
 
 
 <tr>
@@ -1153,38 +1150,38 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public int getY() {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_76'/>
-76
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_76'>1</a>
-<span>
-
-1. getY : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        return y;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_77'/>
-77
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_76'/>
+76
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_77'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_76'></a>
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public int getX() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_77'/>
+77
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_77'>1</a>
+<span>
+
+1. getX : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return x;</span></pre></td></tr>
 
 
 <tr>
@@ -1198,7 +1195,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1212,38 +1209,38 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public BufferedImage getImage() {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_80'/>
-80
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_80'>1</a>
-<span>
-
-1. getImage : mutated return of Object value for pacman/gameobjects/PowerPellet::getImage to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        return image;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_81'/>
-81
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_80'/>
+80
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_81'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_80'></a>
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public int getY() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_81'/>
+81
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_81'>1</a>
+<span>
+
+1. getY : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return y;</span></pre></td></tr>
 
 
 <tr>
@@ -1257,7 +1254,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1271,38 +1268,38 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public double getRotation() {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_84'/>
-84
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_84'>1</a>
-<span>
-
-1. getRotation : replaced return of double value with -(x + 1) for pacman/gameobjects/PowerPellet::getRotation &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        return rotation;</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_85'/>
-85
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_84'/>
+84
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_85'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_84'></a>
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public BufferedImage getImage() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_85'/>
+85
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_85'>1</a>
+<span>
+
+1. getImage : mutated return of Object value for pacman/gameobjects/PowerPellet::getImage to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return image;</span></pre></td></tr>
 
 
 <tr>
@@ -1316,7 +1313,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1330,11 +1327,11 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void setRotation(double rotation) {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_88'/>
 88
 </td>
@@ -1344,7 +1341,7 @@ body{
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.rotation = rotation;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public double getRotation() {</span></pre></td></tr>
 
 
 <tr>
@@ -1352,13 +1349,16 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_89'/>
 89
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_89'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_89'>1</a>
 <span>
+
+1. getRotation : replaced return of double value with -(x + 1) for pacman/gameobjects/PowerPellet::getRotation &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return rotation;</span></pre></td></tr>
 
 
 <tr>
@@ -1372,7 +1372,7 @@ body{
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1386,6 +1386,76 @@ body{
 <span>
 </span>
 </td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_92'/>
+92
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_92'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void setRotation(double rotation) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_93'/>
+93
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_93'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.rotation = rotation;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_94'/>
+94
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_94'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_95'/>
+95
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_95'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_96'/>
+96
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_96'></a>
+<span>
+</span>
+</td>
 <td class=''><pre><span  class=''>}</span></pre></td></tr>
 
 
@@ -1394,57 +1464,46 @@ body{
 
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_27'>27</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_32'>32</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_27'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_32'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.setUp(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.setUp(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_28'>28</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_33'>33</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_28'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_33'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.setUp(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b><init><br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.setUp(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_36'>36</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_41'>41</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_36'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_41'/> 
 
 <p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>paint<br/><b>Killed by : </b>none</span></span> removed call to java/awt/geom/AffineTransform::rotate &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_37'>37</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_42'>42</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_37'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_42'/> 
 
 <p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>paint<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>paint<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>paint<br/><b>Killed by : </b>none</span></span> removed call to java/awt/Graphics2D::rotate &rarr; NO_COVERAGE</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_39'>39</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_39'/> 
-
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>paint<br/><b>Killed by : </b>none</span></span> removed call to java/awt/Graphics2D::setTransform &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 
@@ -1455,29 +1514,29 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_44'/> 
 
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>paint<br/><b>Killed by : </b>none</span></span> removed call to java/awt/Graphics2D::setTransform &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_49'>49</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_49'/> 
+
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.rotate(pacman.gameobjects.PowerPelletTest)</span></span> Replaced double addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_45'>45</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_50'>50</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_45'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_50'/> 
 
 <p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>move<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>move<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.rotate(pacman.gameobjects.PowerPelletTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_52'>52</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_52'/> 
-
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest)</span></span> mutated return of Object value for pacman/gameobjects/PowerPellet::getBounds to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -1488,49 +1547,60 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_57'/> 
 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getBounds<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest)</span></span> mutated return of Object value for pacman/gameobjects/PowerPellet::getBounds to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_62'>62</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_62'/> 
+
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkCollision<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.checkCollision(pacman.gameobjects.PowerPelletTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_72'>72</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_77'>77</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_72'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_77'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getX<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.setUp(pacman.gameobjects.PowerPelletTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_76'>76</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_81'>81</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_76'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_81'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getY<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.setUp(pacman.gameobjects.PowerPelletTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_80'>80</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_85'>85</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_80'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_85'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getImage<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.setImage(pacman.gameobjects.PowerPelletTest)</span></span> mutated return of Object value for pacman/gameobjects/PowerPellet::getImage to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_84'>84</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5e8f0f98_89'>89</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_84'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5e8f0f98_89'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getRotation<br/><b>Killed by : </b>pacman.gameobjects.PowerPelletTest.rotate(pacman.gameobjects.PowerPelletTest)</span></span> replaced return of double value with -(x + 1) for pacman/gameobjects/PowerPellet::getRotation &rarr; KILLED</p> 
 </td>
@@ -1560,7 +1630,7 @@ body{
 
 <h2>Tests examined</h2>
 <ul>
-<li>pacman.gameobjects.PowerPelletTest.setImage(pacman.gameobjects.PowerPelletTest) (0 ms)</li><li>pacman.gameobjects.PowerPelletTest.checkCollision(pacman.gameobjects.PowerPelletTest) (0 ms)</li><li>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest) (0 ms)</li><li>pacman.gameobjects.PowerPelletTest.rotate(pacman.gameobjects.PowerPelletTest) (0 ms)</li><li>pacman.gameobjects.PowerPelletTest.setUp(pacman.gameobjects.PowerPelletTest) (0 ms)</li>
+<li>pacman.gameobjects.PowerPelletTest.setImage(pacman.gameobjects.PowerPelletTest) (6 ms)</li><li>pacman.gameobjects.PowerPelletTest.checkCollision(pacman.gameobjects.PowerPelletTest) (1 ms)</li><li>pacman.gameobjects.PowerPelletTest.getBounds(pacman.gameobjects.PowerPelletTest) (1 ms)</li><li>pacman.gameobjects.PowerPelletTest.rotate(pacman.gameobjects.PowerPelletTest) (1 ms)</li><li>pacman.gameobjects.PowerPelletTest.setUp(pacman.gameobjects.PowerPelletTest) (0 ms)</li>
 </ul>
 
 <br/>
