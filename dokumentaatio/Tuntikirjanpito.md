@@ -24,3 +24,4 @@ Päivä | Tunnit | Kuvaus
 25.02.2017 | 5h | Huipputulosten lisäys
 26.02.2017 | 6h | javadocseja ja monenlaista parantelua
 27.02.2017 | 5h | kaavioita ja muuta dokumentaatiota
+01.03.2017 | 2h | Bugien korjailua

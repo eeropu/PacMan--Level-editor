@@ -5,6 +5,7 @@ import java.awt.Font;
 import pacman.gameobjects.*;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -94,7 +95,7 @@ public class LevelRunner extends JPanel {
             g.drawString("LIFE LOST!", 90, 384);
         }
         if (lives < 0) {
-            wh.lvlFailed();
+            failed();
         }
         if (deadline) {
             g.setColor(Color.red);
@@ -150,6 +151,7 @@ public class LevelRunner extends JPanel {
      */
     public void start() {
         loop.start();
+        timer.start();
     }
 
     /**
@@ -199,11 +201,12 @@ public class LevelRunner extends JPanel {
     public void setTImer() {
         this.timer = new Timer(1000, (ActionEvent e) -> {
             time = time - 1;
+            System.out.println(time);
+            System.out.println(loop.isRunning());
             if (deadline && time <= 0) {
                 failed();
             }
         });
-        timer.start();
     }
 
     /**
