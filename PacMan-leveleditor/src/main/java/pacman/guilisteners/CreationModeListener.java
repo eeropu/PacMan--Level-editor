@@ -23,7 +23,7 @@ public class CreationModeListener implements MouseListener {
     private String[][] objectPositioning;
 
     /**
-     * Constructor for the CreationMOdeListener-class.
+     * Constructor for the CreationModeListener-class.
      *
      * @param grid image of the grid in creationmode
      * @param wall image of a wall
@@ -81,41 +81,7 @@ public class CreationModeListener implements MouseListener {
         if (wallR.isSelected()) {
             if (autofill.isSelected()) {
                 if (first) {
-                    if (l.getX() / 32 == previousX) {
-                        if (l.getY() / 32 < previousY) {
-                            for (int i = l.getY() / 32; i <= previousY; i++) {
-                                objectPositioning[previousX][i] = "W";
-                                setImage(labels[previousX][i], wall);
-                            }
-                        } else {
-                            for (int i = previousY; i <= l.getY() / 32; i++) {
-                                objectPositioning[previousX][i] = "W";
-                                setImage(labels[previousX][i], wall);
-                            }
-                        }
-                    } else if (l.getY() / 32 == previousY) {
-                        if (l.getX() / 32 < previousX) {
-                            for (int i = l.getX() / 32; i <= previousX; i++) {
-                                objectPositioning[i][previousY] = "W";
-                                setImage(labels[i][previousY], wall);
-                            }
-                        } else {
-                            for (int i = previousX; i <= l.getX() / 32; i++) {
-                                objectPositioning[i][previousY] = "W";
-                                setImage(labels[i][previousY], wall);
-                            }
-                        }
-                    }
-                    for (int i = 0; i < 30; i++) {
-                        labels[i][previousY].setBackground(null);
-                        labels[i][previousY].setOpaque(false);
-                    }
-                    for (int i = 0; i < 20; i++) {
-                        labels[previousX][i].setBackground(null);
-                        labels[previousX][i].setOpaque(false);
-                    }
-
-                    first = false;
+                    fillLine(l);
                 } else {
                     previousX = l.getX() / 32;
                     previousY = l.getY() / 32;
@@ -179,6 +145,50 @@ public class CreationModeListener implements MouseListener {
                 clearSelectable();
             }
         }
+    }
+
+    /**
+     * Used to fill the area between two selected boxes with walls if they are
+     * on the same row or column.
+     *
+     * @param l The selected JLabel
+     */
+    public void fillLine(JLabel l) {
+        if (l.getX() / 32 == previousX) {
+            if (l.getY() / 32 < previousY) {
+                for (int i = l.getY() / 32; i <= previousY; i++) {
+                    objectPositioning[previousX][i] = "W";
+                    setImage(labels[previousX][i], wall);
+                }
+            } else {
+                for (int i = previousY; i <= l.getY() / 32; i++) {
+                    objectPositioning[previousX][i] = "W";
+                    setImage(labels[previousX][i], wall);
+                }
+            }
+        } else if (l.getY() / 32 == previousY) {
+            if (l.getX() / 32 < previousX) {
+                for (int i = l.getX() / 32; i <= previousX; i++) {
+                    objectPositioning[i][previousY] = "W";
+                    setImage(labels[i][previousY], wall);
+                }
+            } else {
+                for (int i = previousX; i <= l.getX() / 32; i++) {
+                    objectPositioning[i][previousY] = "W";
+                    setImage(labels[i][previousY], wall);
+                }
+            }
+        }
+        for (int i = 0; i < 30; i++) {
+            labels[i][previousY].setBackground(null);
+            labels[i][previousY].setOpaque(false);
+        }
+        for (int i = 0; i < 20; i++) {
+            labels[previousX][i].setBackground(null);
+            labels[previousX][i].setOpaque(false);
+        }
+
+        first = false;
     }
 
     @Override

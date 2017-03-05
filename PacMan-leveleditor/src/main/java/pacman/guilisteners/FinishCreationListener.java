@@ -106,54 +106,64 @@ public class FinishCreationListener implements ActionListener {
             }
 
             if (ok) {
-                level = level + txtlives.getText();
-                if (xtrapoints.isSelected() || deadline.isSelected()) {
-
-                    if (txttime.getText().length() == 1) {
-                        level = level + 1;
-                    } else if (txttime.getText().length() == 2) {
-                        level = level + 2;
-                    } else if (txttime.getText().length() == 3) {
-                        level = level + 3;
-                    }
-                    level = level + txttime.getText();
-
-                    if (deadline.isSelected()) {
-                        level = level + 1;
-                    } else {
-                        level = level + 0;
-                    }
-
-                    if (xtrapoints.isSelected()) {
-                        level = level + 1;
-                        level = level + pPerSec.getText();
-                    } else {
-                        level = level + 0;
-                    }
-
-                } else {
-                    level = level + 0;
-                }
-
-                if (fillbubbles.isSelected()) {
-                    for (int i = 0; i < level.length(); i++) {
-                        level = level.replace('x', 'b');
-                    }
-                }
-                String check = ldao.add(txtname.getText(), level);
-                if (check.equals("double")) {
-                    JOptionPane.showMessageDialog(null, "There already exists a level with the given name!",
-                            "Warning", JOptionPane.ERROR_MESSAGE);
-                } else if (check.equals("error")) {
-                    JOptionPane.showMessageDialog(null, "Something went wrong, please try again",
-                            "Warning", JOptionPane.ERROR_MESSAGE);
-                    System.out.println(level.length());
-                } else {
-                    wh.startMenu();
-                }
-
+                finish();
             }
             ok = true;
+        }
+    }
+
+    /**
+     * Finishes levels creation and saves it to the database if all inputs are
+     * valid.
+     */
+    public void finish() {
+        level = level + txtlives.getText();
+        if (xtrapoints.isSelected() || deadline.isSelected()) {
+
+            if (txttime.getText().length() == 1) {
+                level = level + 1;
+            } else if (txttime.getText().length() == 2) {
+                level = level + 2;
+            } else if (txttime.getText().length() == 3) {
+                level = level + 3;
+            }
+            level = level + txttime.getText();
+
+            if (deadline.isSelected()) {
+                level = level + 1;
+            } else {
+                level = level + 0;
+            }
+
+            if (xtrapoints.isSelected()) {
+                level = level + 1;
+                level = level + pPerSec.getText();
+            } else {
+                level = level + 0;
+            }
+
+        } else {
+            level = level + 0;
+        }
+
+        if (fillbubbles.isSelected()) {
+            for (int i = 0; i < level.length(); i++) {
+                level = level.replace('x', 'b');
+            }
+        }
+        String check = ldao.add(txtname.getText(), level);
+        switch (check) {
+            case "double":
+                JOptionPane.showMessageDialog(null, "There already exists a level with the given name!",
+                        "Warning", JOptionPane.ERROR_MESSAGE);
+                break;
+            case "error":
+                JOptionPane.showMessageDialog(null, "Something went wrong, please try again",
+                        "Warning", JOptionPane.ERROR_MESSAGE);
+                break;
+            default:
+                wh.startMenu();
+                break;
         }
     }
 

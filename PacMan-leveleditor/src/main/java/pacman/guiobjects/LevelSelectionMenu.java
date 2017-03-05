@@ -130,11 +130,11 @@ public class LevelSelectionMenu extends JPanel {
      */
     public void levelAction(String s) {
         switch (selection) {
-            case "play": {
+            case "play":
                 wh.runLevel(s, ldao.getLevel(s));
                 break;
-            }
-            case "modify": {
+
+            case "modify":
                 int dialogresult = JOptionPane.showConfirmDialog(null, "Warning! this will permanently delete all "
                         + "information regarding the chosen level, including highscores and the older "
                         + "version of the level. Continue?",
@@ -145,22 +145,22 @@ public class LevelSelectionMenu extends JPanel {
                     hsdao.delete(s);
                 }
                 break;
-            }
-            case "delete": {
-                int dialogresult = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete "
+
+            case "delete":
+                int dialogresult2 = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete "
                         + "this level and all information regarding it?", "Warning!",
                         JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
-                if (dialogresult == JOptionPane.YES_OPTION) {
+                if (dialogresult2 == JOptionPane.YES_OPTION) {
                     ldao.delete(s);
                     hsdao.delete(s);
                     wh.creationmenu();
                 }
                 break;
-            }
-            case "highscores": {
+
+            case "highscores":
                 wh.highscores(s);
                 break;
-            }
+
         }
     }
 }

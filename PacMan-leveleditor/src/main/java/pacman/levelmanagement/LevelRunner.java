@@ -201,8 +201,6 @@ public class LevelRunner extends JPanel {
     public void setTImer() {
         this.timer = new Timer(1000, (ActionEvent e) -> {
             time = time - 1;
-            System.out.println(time);
-            System.out.println(loop.isRunning());
             if (deadline && time <= 0) {
                 failed();
             }
