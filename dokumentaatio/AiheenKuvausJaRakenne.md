@@ -28,3 +28,9 @@ Luodut tasot ja niissä saadut huipputulokset tallennetaan tietokantoihin, joka 
 ###Luokkakaavio:
 ![luokkakaavio](https://raw.githubusercontent.com/eeropu/PacMan--Level-editor/master/dokumentaatio/Luokkakaavio.jpg)
 Viivan yläpuolella olevat luokat ovat käytössä pelitilassa ja liittyvät olennaisesti pelilogiikkaan. Alapuolella olevat ovat käyttöliittymään liittyviä luokkia. Alapuolella olevien luokkien väliset yhteydet ovat kaikki yhdestä yhteen, minkä vuoksi en ole niitä erikseen merkannut.
+###Sekvenssikaavio tason suorittamisesta ja tuloksen tallentamisesta:
+![suoritettu](https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/LevelCompleteSekvenssikaavio.jpg)
+Sekvenssikaavio kuvaa tilannetta, joka alkaa collisioncheckerin metodista checkcollision, jossa huomataan, että kaikki pointbubblet on syöty. Kuvaus jatkuu päävalikkoon palaamiseen asti.
+###Sekvenssikaavio tason luomisesta:
+![luonti](https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/LevelCreationSekvenssikaavio.jpg)
+Sekvenssikaavio kuvaa tilannetta, joka alkaa käyttäjän siirtymisestä tasonmuokkaustilaan ja päättyy kun taso on luotu ja tallennettu ja ohjelma palaa päävalikkoon.
