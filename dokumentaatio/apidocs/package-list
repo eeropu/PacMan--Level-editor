@@ -1,0 +1,6 @@
+pacman.database
+pacman.gameobjects
+pacman.guilisteners
+pacman.guiobjects
+pacman.levelmanagement
+pacman.pacman.leveleditor

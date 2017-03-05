@@ -6,13 +6,15 @@ PacMan-peli, jossa käyttäjä voi pelaamisen lisäksi luoda omia tasoja
 [Aihe ja Rakenne] (https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/AiheenKuvausJaRakenne.md)
 ###Tuntikirjanpito:
 [Tuntikirjanpito] (https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/Tuntikirjanpito.md)
-###Rakennekuvaus:
+###Laajempi Rakennekuvaus:
 [Rakennekuvaus](https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/Rakennekuvaus.md)
 ###Käyttöohje:
 [Käyttöohje](https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/Kayttoohjeet.md)
+###JavaDoc:
+[JavaDoc](https://htmlpreview.github.io/?https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/apidocs/index.html)
 ###Pit
 [Pit-raportti](https://htmlpreview.github.io/?https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/pit/index.html)
 ###Checkstyle
 [Checkstyle-raportti](https://htmlpreview.github.io/?https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/checkstyle/checkstyle.html)
 #####Huom!
-Checkstyle raportti sisältää virheitä, jotka liittyvät luokkien pituuten. Luokat ovat kuitenkin mielestäni järkeviä kokonaisuuksia, joiden toiminnallisuutta ei ole mielekästä jakaa osiin. 
+Checkstyle raportti sisältää virheitä, jotka liittyvät luokkien pituuten. Luokat ovat kuitenkin mielestäni järkeviä kokonaisuuksia, joiden toiminnallisuutta ei ole mielekästä jakaa osiin.
