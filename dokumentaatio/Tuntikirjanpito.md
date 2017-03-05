@@ -26,3 +26,4 @@ Päivä | Tunnit | Kuvaus
 27.02.2017 | 5h | kaavioita ja muuta dokumentaatiota
 01.03.2017 | 2h | Bugien korjailua
 04.03.2017 | 3h | viimeistelyä
+05.03.2017 | 5h | Loppupalautus
