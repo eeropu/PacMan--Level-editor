@@ -13,6 +13,6 @@ PacMan-peli, jossa käyttäjä voi pelaamisen lisäksi luoda omia tasoja
 ###Pit
 [Pit-raportti](https://htmlpreview.github.io/?https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/pit/index.html)
 ###Checkstyle
-[Checkstyle-raportti](https://htmlpreview.github.io/?https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/site/checkstyle.html)
+[Checkstyle-raportti](https://htmlpreview.github.io/?https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/checkstyle/checkstyle.html)
 #####Huom!
-Checkstyle raportti sisältää virheitä, jotka liittyvät luokkien pituuten. Luokat ovat kuitenkin mielestäni järkeviä kokonaisuuksia, joiden toiminnallisuutta ei ole mielekästä jakaa osiin. Virheitä on myös liian monen if-lauseen päällekkäisyyksistä, jotka kuitenkin ovat tarpeellisia.
+Checkstyle raportti sisältää virheitä, jotka liittyvät luokkien pituuten. Luokat ovat kuitenkin mielestäni järkeviä kokonaisuuksia, joiden toiminnallisuutta ei ole mielekästä jakaa osiin. 

@@ -29,7 +29,6 @@ public class WindowHandler implements Runnable {
 
     private CardLayout cardlayout;
     private JPanel cardPanel;
-    private LevelRunner lr;
     private LevelCompleteListener lcl;
     private LevelSelectionMenu lsm;
     private CreationMenu cm;
