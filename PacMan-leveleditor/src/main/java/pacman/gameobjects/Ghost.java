@@ -49,7 +49,25 @@ public class Ghost implements GameObject {
     @Override
     public void paint(Graphics g) {
         if (ppEaten) {
-            g.drawImage(ppImg, x, y, lr);
+            if (timeLeft() < 7500) {
+                g.drawImage(ppImg, x, y, lr);
+            } else if (timeLeft() < 8000) {
+                g.drawImage(img, x, y, lr);
+            } else if (timeLeft() < 8500) {
+                g.drawImage(ppImg, x, y, lr);
+            } else if (timeLeft() < 9000) {
+                g.drawImage(img, x, y, lr);
+            } else if (timeLeft() < 9200) {
+                g.drawImage(ppImg, x, y, lr);
+            } else if (timeLeft() < 9400) {
+                g.drawImage(img, x, y, lr);
+            } else if (timeLeft() < 9600) {
+                g.drawImage(ppImg, x, y, lr);
+            } else if (timeLeft() < 9800) {
+                g.drawImage(img, x, y, lr);
+            } else {
+                g.drawImage(ppImg, x, y, lr);
+            }
         } else {
             g.drawImage(img, x, y, lr);
         }
