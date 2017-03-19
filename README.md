@@ -14,7 +14,7 @@ PacMan-peli, jossa käyttäjä voi pelaamisen lisäksi luoda omia tasoja
 [JavaDoc](https://htmlpreview.github.io/?https://github.com/eeropu/PacMan--Level-editor/blob/master/javadoc/index.html)
 ### Testausdokumentaatio:
 [Testdoc](https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/Testausdokumentti.md)
-###Pit
+### Pit
 [Pit-raportti](https://htmlpreview.github.io/?https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/pit/index.html)
 ### Checkstyle
 [Checkstyle-raportti](https://htmlpreview.github.io/?https://github.com/eeropu/PacMan--Level-editor/blob/master/dokumentaatio/checkstyle/checkstyle.html)
